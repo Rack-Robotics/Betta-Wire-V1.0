@@ -10,6 +10,8 @@ Betta Wire V1.0 RevA is a proof-of-concept for an open-source, 3D printable 4-ax
 
 The Betta Wire V1.0 RevA is a dual core-xy machine. Each toolhead is controlled by one core-xy system: The top gantry moves the top tool, while the bottom gantry moves the bottom tool. Four motors (A, B, C, D) allow for movement in four axis (X, Y, U, V). This permits cutting angles walls, tappers, and chamfers. Mechanical power is transmitted from the C & D motors to the bottom gantry by a 304 stainless steel axel. 
 
+![Betta-Wire Tools](Images/Betta%20Wire%201.0%20RevA%20Tools.png)
+
 Linear rods are 304 stainless steel, rated for continuous immersion in distilled water. Linear bushings are IGUS iglide® H, which are rated for continuous immersion in water. These bushings do not require lubrication.
 
 ### Why not linear rails? 
