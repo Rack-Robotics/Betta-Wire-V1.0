@@ -1,5 +1,4 @@
 # Betta-Wire-V1.0
-![Betta-Wire](Images/Betta%20Wire%201.0%20RevA%20v79.png)
 Betta-Wire V1.0 is an affordable, open-source wire EDM machine designed for enthusiats. It allows users to cut electrically conductive materials such as steel and aluminum without the need for expensive industrial equipment like fiber lasers or CNC machines.
 
 ## Features 
