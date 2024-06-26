@@ -9,10 +9,20 @@ System-level requirements for the Betta Wire V1.0 RevB. This includes general co
 | Klipper Firmware | Use Klipper firmware | John (Rack Robotics) |
 | System Voltage | 24 VDC | John (Rack Robotics) |
 | EDM Wire Diameter | 0.3 mm | John (Rack Robotics) |
-| Required 3D Printer Build Area | X210 mm x Y210 mm x Z200 mm | John (Rack Robotics) |
 | Fasteners Count | Minimize quantity & diversity of fasteners | John (Rack Robotics) | 
 | Fastener Style | Metric, DIN 7991 Countersunk | John (Rack Robotics) | 
 | Fastener Type(s) | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6 | John (Rack Robotics) | 
+
+## 3D Printer Requirements
+Requirements for 3D printing Betta Wire V1.0 components. The Betta Wire V1.0 is sold as a hardware kit, in the style of Voron. The plastic components are printed by the customer. This reduces kit cost significantly, and allows for user to customize their build's color scheme or materials.
+
+> WARNING: CF-PA (carbon-fiber nylon) is not suitable for use on the Betta Wire or Wire Tool. CF-PA Filament deteriorates rapidly in water, loosing mechanical stiffness within days. Parts printed in CF-PA cannot be submerged in water. 
+
+| Requirement | Description | Owner |
+| :-----------| :-----------| :-----|
+| Required 3D Printer Build Area | X210 mm x Y210 mm x Z200 mm | John (Rack Robotics) |
+| Recommended 3D Printer | Prusa MK4/MK3, Bambu X1C, Bambu P1P |
+| Recommended Filament | [CF-PLA](https://us.store.bambulab.com/products/pla-cf?variant=41003202248840), [ASA](https://www.prusa3d.com/category/prusament-asa/) | John (Rack Robotics) |
 
 ## Controls Requirements 
 Control requirements for the Betta Wire V1.0 RevB. Methods used to manage and direct the behavior of the machine and devices to achieve desired outputs. 
@@ -78,7 +88,7 @@ To achieve this behavior, new features must be added to Klipper:
 | Read PWM Duty Cycle| Read PWM duty cycle of GPIO pin on Manta M5P control board, from Powercore V2.0 ALRT port | John Rack Robotics |
 | Automatic Feedrate Adjustment | Automatically increase/decrease/maintain feedrate in response to PWM duty cycle | John (Rack Robotics) |
 | Display feedback on GUI       | Provide machine operator with PWM telemetry | John (Rack Robotics) |
-| Target Feedrate | 1 mm/min to 64 mm/min | John (Rack Robotics) |
+| Target Feedrate Range | 0.1 mm/min to 64 mm/min | John (Rack Robotics) |
 | Response Time | 100 ms to 1,000 ms | John (Rack Robotics) |
 | Feedrate Acceleration | Rate of change of feedrate must be limited to prevent sudden velocity changes which may disrupt machining | John (Rack Robotics) | 
 | Powercore V2.0 PWM Voltage (ALRT Port)| 3.3 VDC | John (Rack Robotics) |
