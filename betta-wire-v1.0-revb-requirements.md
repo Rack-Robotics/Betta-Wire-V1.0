@@ -1,17 +1,20 @@
 # Betta Wire V1.0, RevB Requirements
 This document is for the recording of requirements for the Betta Wire V1.0, RevB. Requirements are organized by category, assembly, or component. All requirements must have a description and owner. Requirement headings are optimized for hyperlink referencing in other documents.  
 
-## System Requirements 
+## System Requirements
 System-level requirements for the Betta Wire V1.0 RevB. This includes general constraints, such as system voltage or firmware.
 
 | Requirement | Description | Owner |
 | :-----------| :-----------| :-----|
-| Klipper Firmware | Use Klipper firmware | John (Rack Robotics) |
-| System Voltage | 24 VDC | John (Rack Robotics) |
-| EDM Wire Diameter | 0.3 mm | John (Rack Robotics) |
-| Fasteners Count | Minimize quantity & diversity of fasteners | John (Rack Robotics) | 
-| Fastener Style | Metric, DIN 7991 Countersunk | John (Rack Robotics) | 
-| Fastener Type(s) | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6 | John (Rack Robotics) | 
+| Klipper Firmware  | Use Klipper firmware                                                     | John (Rack Robotics) |
+| System Voltage    | 24 VDC                                                                   | John (Rack Robotics) |
+| EDM Wire Diameter | 0.3 mm                                                                   | John (Rack Robotics) |
+
+## Hardware Requirements
+| Fastener Material | Stainless Steel 316L > Stainless Steel 304                               | John (Rack Robotics) |
+| Fasteners Count   | Minimize quantity & diversity of fasteners                               | John (Rack Robotics) | 
+| Fastener Style    | Metric, DIN 7991 Countersunk                                             | John (Rack Robotics) | 
+| Fastener Type(s)  | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6 | John (Rack Robotics) |
 
 ## 3D Printer Requirements
 Requirements for 3D printing Betta Wire V1.0 components. The Betta Wire V1.0 is sold as a hardware kit, in the style of Voron. The plastic components are printed by the customer. This reduces kit cost significantly, and allows for user to customize their build's color scheme or materials.
@@ -50,23 +53,23 @@ Requirements for the top toolhead of the Betta Wire V1.0 RevB. The top toolhead 
 
 | Requirement | Description | Owner |
 | :-----------| :-----------| :-----| 
-| Tension Sensor | Provide means of measuring wire tension within a range of 0 - 31 N | John (Rack Robotics) |
-| Belt Drive     | Use belts to manipulate EDM wire | John (Rack Robotics) |
-| [IP68](#Description-of-IP68-Waterproofing) Motor     | Use IP68 rated motor for belt drive actuation | John (Rack Robotics) | 
-| User Maintenance | Ensure means of replacing worn belts in belt drive | John (Rack Robotics) |
-| 4 mm OD Tube | Use 4 mm OD teflon, PU, or PA tubing for wire/fluid interconnects | John (Rack Robotics) | 
-| Testing | Design for testing on stationary test rig | John (Rack Robotics) | 
+| Tension Sensor | Provide means of measuring wire tension within a range of 0 - 31 N                                                   | John (Rack Robotics) |
+| Belt Drive     | Use belts to manipulate EDM wire                                                                                     | John (Rack Robotics) |
+| [IP68](#Description-of-IP68-Waterproofing) Motor     | Use IP68 rated motor for belt drive actuation                                  | John (Rack Robotics) | 
+| User Maintenance | Ensure means of replacing worn belts in belt drive                                                                 | John (Rack Robotics) |
+| 4 mm OD Tube | Use 4 mm OD teflon, PU, or PA tubing for wire/fluid interconnects                                                      | John (Rack Robotics) | 
+| Testing | Design for testing on stationary test rig                                                                                   | John (Rack Robotics) | 
 
 ## Bottom Toolhead Requirements
 Requirements for the bottom toolhead of the Betta Wire V1.0 RevB. The bottom toolhead sits inside the water tank, on the bottom gantry. It is responsible for receiving the EDM wire from the top toolhead, after passing through the cut. 
 
 | Requirement | Description | Owner |
 | :-----------| :-----------| :-----| 
-| Belt Drive     | Use belts to manipulate EDM wire | John (Rack Robotics) |
-| [IP68](#Description-of-IP68-Waterproofing) Motor     | Use IP68 rated motor for belt drive actuation | John (Rack Robotics) | 
-| Energizer      | Energize EDM wire with waveforms from Powercore EDM spark generator | John (Rack Robotics) |
-| 4 mm OD Tube | Use 4 mm OD teflon, PU, or PA tubing for wire/fluid interconnects | John (Rack Robotics) | 
-| Testing | Design for testing on stationary test rig | John (Rack Robotics) |
+| Belt Drive     | Use belts to manipulate EDM wire                                                                                     | John (Rack Robotics) |
+| [IP68](#Description-of-IP68-Waterproofing) Motor     | Use IP68 rated motor for belt drive actuation                                  | John (Rack Robotics) | 
+| Energizer      | Energize EDM wire with waveforms from Powercore EDM spark generator                                                  | John (Rack Robotics) |
+| 4 mm OD Tube | Use 4 mm OD teflon, PU, or PA tubing for wire/fluid interconnects                                                      | John (Rack Robotics) | 
+| Testing | Design for testing on stationary test rig                                                                                   | John (Rack Robotics) |
 
 ## Closed-Loop Feedrate Control
 Requirements for closed-loop feedrate control using Klipper firmware: 
@@ -85,16 +88,36 @@ To achieve this behavior, new features must be added to Klipper:
 
 | Requirement | Description | Owner |
 | :-----------| :-----------| :-----| 
-| Read PWM Duty Cycle| Read PWM duty cycle of GPIO pin on Manta M5P control board, from Powercore V2.0 ALRT port | John Rack Robotics |
-| Automatic Feedrate Adjustment | Automatically increase/decrease/maintain feedrate in response to PWM duty cycle | John (Rack Robotics) |
-| Display feedback on GUI       | Provide machine operator with PWM telemetry | John (Rack Robotics) |
-| Target Feedrate Range | 0.1 mm/min to 64 mm/min | John (Rack Robotics) |
-| Response Time | 100 ms to 1,000 ms | John (Rack Robotics) |
-| Feedrate Acceleration | Rate of change of feedrate must be limited to prevent sudden velocity changes which may disrupt machining | John (Rack Robotics) | 
-| Powercore V2.0 PWM Voltage (ALRT Port)| 3.3 VDC | John (Rack Robotics) |
-| Powercore V2.0 PWM Frequency | TBD              | John (Rack Robotics) |
+| Read PWM Duty Cycle| Read PWM duty cycle of GPIO pin on Manta M5P control board, from Powercore V2.0 ALRT port                        | John (Rack Robotics) |
+| Automatic Feedrate Adjustment                     | Automatically increase/decrease/maintain feedrate in response to PWM duty cycle   | John (Rack Robotics) |
+| Display feedback on GUI                           | Provide machine operator with PWM telemetry                                       | John (Rack Robotics) |
+| Target Feedrate Range                             | 0.1 mm/min to 64 mm/min                                                           | John (Rack Robotics) |
+| Response Time                                     | 100 ms to 1,000 ms                                                                | John (Rack Robotics) |
+| Feedrate Acceleration | Rate of change of feedrate must be limited to prevent sudden velocity changes which may disrupt machining     | John (Rack Robotics) | 
+| Powercore V2.0 PWM Voltage (ALRT Port)            | 3.3 VDC                                                                           | John (Rack Robotics) |
+| Powercore V2.0 PWM Frequency                      | TBD                                                                               | John (Rack Robotics) |
 
-## Description of IP68 Waterproofing 
+## Dual Gantry Motion for Klipper
+Requirements for new Klipper kinematics module, allowing for independent control of two coreXY gantries. The secondary coreXY system is provides two additional axis: The U-axis and the V-axis. The U-axis is parallel to the X-axis, and the V-axis is parallel to the Y-axis.
+
+| Requirement | Description | Owner |
+| :-----------| :-----------| :-----|
+| Dual coreXY Motion Module | Allow for independent control over two coreXY gantries                                                    | John (Rack Robotics)|
+| Top coreXY Axis       | X-axis & Y-axis                                                                                               | John (Rack Robotics)| 
+| Bottom coreUV Axis    | U-axis & V-axis                                                                                               | John (Rack Robotics)| 
+| gcode example         | G1 X69 Y420 U69 V420                                                                                          | John (Rack Robotics)|
+
+## Wire Tension Module for Klipper
+Requirements for new Klipper section for use in printer.cfg, to be used for controlling wire tension. 
+
+| Requirement | Description | Owner |
+| :-----------| :-----------| :-----| 
+| edm_wire_toolhead     | Section name                                                                                                  | John (Rack Robotics) | 
+| sensor_type           | TBD                                                                                                           | John (Rack Robotics) |
+| tension_actuator_pin  | PWM pin for DC motor control                                                                                  | John (Rack Robotics) |
+| control               | PID, bang-bang                                                                                                | John (Rack Robotics) |
+
+## Description of IP68 Waterproofing
 
 >An IP68 rating is an Ingress Protection (IP) code that indicates the degree of protection an electrical enclosure provides against the intrusion of solid objects (like dust) and liquids (like water). The IP code is defined by the International Electrotechnical Commission [(IEC) standard 60529](https://www.iec.ch/ip-ratings).
 
