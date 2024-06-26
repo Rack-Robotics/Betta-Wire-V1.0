@@ -21,7 +21,7 @@ Requirements for 3D printing Betta Wire V1.0 components. The Betta Wire V1.0 is 
 | Requirement | Description | Owner |
 | :-----------| :-----------| :-----|
 | Required 3D Printer Build Area | X210 mm x Y210 mm x Z200 mm | John (Rack Robotics) |
-| Recommended 3D Printer | Prusa MK4/MK3, Bambu X1C, Bambu P1P |
+| Recommended 3D Printer | Prusa MK4/MK3, Bambu X1C, Bambu P1P | John (Rack Robotics)
 | Recommended Filament | [CF-PLA](https://us.store.bambulab.com/products/pla-cf?variant=41003202248840), [ASA](https://www.prusa3d.com/category/prusament-asa/) | John (Rack Robotics) |
 
 ## Controls Requirements 
