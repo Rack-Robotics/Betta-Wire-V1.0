@@ -76,7 +76,7 @@ Requirements for closed-loop feedrate control using Klipper firmware:
 
 >Closed-loop control is a control-scheme that continuously monitors its output and automatically adjusts its inputs to maintain the desired output, using feedback to correct any deviations from the target performance. This ensures precision and stability in achieving the set goals.
 
-Wire EDM failures often occur because the rate of travel (feedrate) of the electrode outpaces the material-removal rate (MRR). To eliminate this failure mode, the feedrate must be adjusted in response to feedback from the Powercore V2.0 spark generator. The Powercore V2.0 provides feedback using the PWM output port (ALRT). The PWM duty cycle is mapped to the Powercore's "observed spark ignition rate", which is strongly correlated to the material-removal rate. As the material-removal rate increases, the PWM duty cycle increases.
+Wire EDM failures often occur because the rate of travel (feedrate) of the electrode outpaces the material-removal rate (MRR). To eliminate this failure mode, the feedrate must be adjusted in response to feedback from the Powercore V2.0 spark generator. The Powercore V2.0 provides feedback using the PWM output port (ALRT). The PWM duty cycle (or 0-3.3v analog voltage) is mapped to the Powercore's "observed spark ignition rate", which is strongly correlated to the material-removal rate. As the material-removal rate increases, the PWM duty cycle increases.
 
 | PWM Duty Cycle | Description | Controls Response| 
 | :-----------| :-----------| :-----------|
@@ -95,6 +95,7 @@ To achieve this behavior, new features must be added to Klipper:
 | Response Time                                     | 100 ms to 1,000 ms                                                                | John (Rack Robotics) |
 | Feedrate Acceleration | Rate of change of feedrate must be limited to prevent sudden velocity changes which may disrupt machining     | John (Rack Robotics) | 
 | Powercore V2.0 PWM Voltage (ALRT Port)            | 3.3 VDC                                                                           | John (Rack Robotics) |
+| Powercore V2.0 Analog Voltage (ALRT Port)         | 0-3.3v VDC (RC lowpass filter on ALRT port PWM output)                            | John (Rack Robotics) |
 | Powercore V2.0 PWM Frequency                      | TBD                                                                               | John (Rack Robotics) |
 
 ## Dual Gantry Motion for Klipper
