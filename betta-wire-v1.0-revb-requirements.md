@@ -113,9 +113,43 @@ Requirements for new Klipper section for use in printer.cfg, to be used for cont
 | Requirement | Description | Owner |
 | :-----------| :-----------| :-----| 
 | edm_wire_toolhead     | Section name                                                                                                  | John (Rack Robotics) | 
-| sensor_type           | TBD                                                                                                           | John (Rack Robotics) |
-| tension_actuator_pin  | PWM pin for DC motor control                                                                                  | John (Rack Robotics) |
-| control               | PID, bang-bang                                                                                                | John (Rack Robotics) |
+| sensor_type           | load cell                                                                                                     | John (Rack Robotics) |
+| sensor_range          | 5 kg                                                                                                          | John (Rack Robotics) |
+| amplifier             | HX711                                                                                                         | John (Rack Robotics) |
+| control               | PID                                                                                                           | John (Rack Robotics) |
+| edm_wire_sender       | PWM pin for sender DC motor control                                                                           | John (Rack Robotics) |
+| edm_wire_receiver     | PWM pin for receiver DC motor control                                                                         | John (Rack Robotics) |
+| mainsail telemetry    | provide load cell value (in newtons of force) to user in mainsail GUI                                         | John (Rack Robotics) |
+
+## Wire EDM Macros
+
+Macro for "wire_EDM_toolhead_diagnostic" 
+- inform user 'conducting wire EDM toolhead diagnostic" 
+- deactivate sender motor (PWM = 0)
+- activate receiver motor (PWM = 255)
+- measure load cell reading 
+- print load cell value to user in newtons of force
+- store value in diagnostic data text file, with date
+
+Macro for "wire_EDM_safe_pause" 
+- inform user "pausing wire EDM" 
+- deactivate EDM PSU to stop high-voltage
+- stop motion 
+- lock motors 
+- do not home (to avoid crashing wire)
+
+Macro for "wire_EDM_toolhead_loading"
+- ask user to load EDM wire into sender
+- turn on wire sender DC motor at specified PWM level 
+- turn on wire receiver DC motor at specified PWM level 
+- wait until sensor detects tension 
+- begin tension PID loop
+- stop DC motors 
+
+Macro for "wire_EDM_toolhead_unloading"
+- ask user to cut EDM wire 
+- provide section for custom gcode commands
+- stop DC motors
 
 ## Description of IP68 Waterproofing
 
