@@ -87,7 +87,8 @@ Requirements for closed-loop feedrate control using Klipper firmware:
 Wire EDM failures often occur because the rate of travel (feedrate) of the electrode outpaces the material-removal rate (MRR). To eliminate this failure mode, the feedrate must be adjusted in response to feedback from the Powercore V2.0 spark generator. The Powercore V2.0 provides feedback using the PWM output port (ALRT). The PWM duty cycle is mapped to the Powercore's "observed spark ignition rate", which is strongly correlated to the material-removal rate. As the material-removal rate increases, the PWM duty cycle increases.
 
 | PWM Duty Cycle                | Description                                               | Controls Response                                                     | 
-| :-----------------------------| No machining is occurring                                 | Increase feedrate                                                     | 
+| :-----------------------------| :---------------------------------------------------------| :---------------------------------------------------------------------|
+| 20%                           | No machining is occurring                                 | Increase feedrate                                                     | 
 | 80%                           | Optimum material-removal rate                             | Maintain feedrate                                                     | 
 | 100%                          | Short circuit; EDM wire electrode has crashed into work   | Decrease feedrate, or move backwards in program until short is clear  |
 
@@ -158,7 +159,9 @@ Macro for loading wire into the belt drive systems.
 - wait until the tension detected by the load cell increases, and then begin PID control loop, to make sure the wire is loaded
 - stop DC motors 
 
-Macro for "wire_EDM_toolhead_unloading"
+**Macro for "wire_EDM_toolhead_unloading"**
+Macro for unloading wire into the belt drive systems. 
+
 - ask user to cut EDM wire 
 - provide section for custom gcode commands
 - stop DC motors
