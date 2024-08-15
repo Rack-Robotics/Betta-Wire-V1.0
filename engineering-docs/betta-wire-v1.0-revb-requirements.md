@@ -1,4 +1,4 @@
-# Betta Wire V1.0, RevB Requirements
+# Betta Wire V1.0 RevB Requirements
 This document is for the recording of requirements for the Betta Wire V1.0, RevB. Requirements are organized by category, assembly, or component. All requirements must have a description and owner. Requirement headings are optimized for hyperlink referencing in other documents.  
 
 ## System Requirements
@@ -6,9 +6,9 @@ System-level requirements for the Betta Wire V1.0 RevB. This includes general co
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Klipper Firmware              | Use Klipper firmware                                                                          | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md##Firmware)  |
+| Klipper Firmware              | Use Klipper firmware                                                                          | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            |
 | System Voltage                | 24 VDC                                                                                        | John (Rack Robotics)  | Preferred             | Industry Standard for FDM 3D printers             | 
-| EDM Wire Diameter             | 0.3 mm                                                                                        | John (Rack Robotics)  | Preferred             | [Design Decision](Design-Decisions.md##EDM-Wire)  | 
+| EDM Wire Diameter             | 0.3 mm                                                                                        | John (Rack Robotics)  | Preferred             | [Design Decision](Design-Decisions.md)            | 
 
 ## Hardware Requirements
 Requirements for hardware, such as fasteners. 
@@ -17,35 +17,14 @@ Requirements for hardware, such as fasteners.
 | Fastener Material             | Stainless Steel 316L (2) > Stainless Steel 304                                                | John (Rack Robotics)  | Mandatory             | Resistance against corrosion in distilled water   | 
 | Fasteners Count               | Minimize quantity & diversity of fasteners                                                    | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
 | Fastener Style                | Metric, DIN 7991 Countersunk                                                                  | John (Rack Robotics)  | Preferred             | Flush mounting of fasteners in FDM prints         |
-| Fastener Type(s)              | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6                      | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      |
-
-## 3D Printer Requirements
-Requirements for 3D printing Betta Wire V1.0 components. The Betta Wire V1.0 is sold as a hardware kit, in the style of Voron. The plastic components are printed by the customer. This reduces kit cost significantly, and allows for user to customize their build's color scheme or materials.
-
-> WARNING: CF-PA (carbon-fiber nylon) is not suitable for use on the Betta Wire or Wire Tool. CF-PA Filament deteriorates rapidly in water, loosing mechanical stiffness within days. Parts printed in CF-PA cannot be submerged in water. 
-
-| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
-| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Minimum 3D Printer Build Area | X210 mm x Y210 mm x Z200 mm                                                                   | John (Rack Robotics)  | Mandatory             | Compatibility with common 3D printer build volumes|
-| Recommended 3D Printer        | Prusa MK4/MK3, Bambu X1C, Bambu P1P                                                           | John (Rack Robotics)  | Mandatory             | Compatibility with common 3D printer build volumes|
-| Recommended Filament          | [CF-PLA](https://us.store.bambulab.com/products/pla-cf?variant=41003202248840)                | John (Rack Robotics)  | Preferred             | Excellent quality, minimum warping                | 
-| Alternative Filament          | [ASA](https://www.prusa3d.com/category/prusament-asa/)                                        | John (Rack Robotics)  | Preferred             | Minimal warping compared to ABS                   |
-
-## Hand Tool Requirements 
-Requirements for hand tools for user assembly. 
-| Requirement                   | Description                                                                                   | Owner                 |
-| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
-| Metric Allen Key Set          | Allen key set for assembly of metric fasteners                                                | John (Rack Robotics)  |
-| Metric Drill Bits for Plastic | M5, M4, & M3 Drill bits for sizing holes in FDM 3D prints                                     | John (Rack Robotics)  |
-| Hand drill                    | Small handheld drill for drill bits                                                           | John (Rack Robotics)  |
-| Gloves                        | Disposable gloves for applying super-glue and corrosion inhibitor                             | John (Rack Robotics)  |
+| Fastener Type(s)              | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6                      | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
 
 ## Controls Requirements 
 Control requirements for the Betta Wire V1.0 RevB. Methods used to manage and direct the behavior of the machine and devices to achieve desired outputs. 
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Open-Loop Motion Planning     | Open-loop control of linear motion axis                                                       | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md###Why-not-closed-loop-motors-for-kinematics?) |     
+| Open-Loop Motion Planning     | Open-loop control of linear motion axis                                                       | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            |     
 | Open-Loop Wire Velocity       | Open-loop control of EDM wire velocity                                                        | John (Rack Robotics)  | Preferred             | Outside of project scope                          | 
 | Closed-Loop Wire Tension      | Maintain wire tension using closed-loop control                                               | John (Rack Robotics)  | Mandatory             | Improve machining reliability                     | 
 | Closed-Loop Feedrate Control  | Adjust feedrate in response to EDM conditions                                                 | John (Rack Robotics)  | Mandatory             | Improve machining reliability                     | 
@@ -56,14 +35,22 @@ Kinematics requirements for the Betta Wire V1.0 RevB.
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Dual CoreXY                   | Independently actuated dual coreXY systems                                                    | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md##RevB-Kinematics    | 
+| Dual CoreXY                   | Independently actuated dual coreXY systems                                                    | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            | 
 | User Maintenance              | Ensure means of replacing wear components in gantry                                           | John (Rack Robotics)  | Mandatory             | Improve user experience                           | 
 | GT2 Timing Belts              | Use GT2 timing belts with glass-core                                                          | John (Rack Robotics)  | Mandatory             | Industry standard for FDM 3D printers             | 
 | Timing Belt Material          | EPDM Rubber w/ glass-fiber fore                                                               | John (Rack Robotics)  | Mandatory             | Reduce belt stretching over time                  | 
 
 ## Modules
+The Betta Wire is organized into several modules. 
 
-### Overall Wire EDM Toolhead Requirements
+- Sender Wire Toolhead
+- Receiver Wire Toolhead
+- Waterproof Endstop
+- Wire Sppol Box 
+- Wire Waste Box 
+- E-Box
+
+***Overall Wire EDM Toolhead Requirements***
 The sender toolhead and receiver toolhead work together to control the position, tension, and velocity of the wire used for EDM cutting.
 
 | Requirement                   | Description                                                                                   | Owner                 |
@@ -76,7 +63,7 @@ The sender toolhead and receiver toolhead work together to control the position,
 | Testing                       | Design for testing on stationary test rig                                                     | John (Rack Robotics)  |
 
 
-### Sender Toolhead Module Requirements
+***Sender Wire Toolhead Module Requirements***
 Requirements for the sender toolhead of the Betta Wire V1.0 RevB. The top toolhead sits above the water tank, on the bottom gantry. It is responsible for reporting EDM wire tension during machining, feeding new wire through the machine.
 
 | Requirement                   | Description                                                                                   | Owner                 |
@@ -86,25 +73,53 @@ Requirements for the sender toolhead of the Betta Wire V1.0 RevB. The top toolhe
 | Energizer                     | Energize EDM wire with waveforms from Powercore EDM spark generator                           | John (Rack Robotics)  |
 | Tube for Flushing             | Use 4 mm OD PU tube for providing delivering 100 PSI water for flushing                       | John (Rack Robotics)  |
 
-### Receiver Toolhead Module Requirements
+***Receiver Wire Toolhead Module Requirements***
 Requirements for the receiver toolhead of the Betta Wire V1.0 RevB. The bottom toolhead sits inside the water tank, on the bottom gantry. It is responsible for receiving the EDM wire from the top toolhead, after passing through the cut. 
 
 | Requirement                   | Description                                                                                   | Owner                 |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
 | Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  |
 
-### Waterproof Endstop Module
+***Waterproof Endstop Module***
 Requirements for waterproof endstops for homing kinematics
 
 | Requirement                   | Description                                                                                   | Owner                 |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
 | Hall Effect Sensor            | Use a hall-effect sensor for detection of a 6 mm x 2 mm magnet on the toolhead/carriage       | John (Rack Robotics)  |
 
-### Wire Spool Box Module
+***Wire Spool Box Module***
+Requirements for box in which the EDM wire spool is stored. 
 
-### Waste Wire Box Module
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Removable Magnetic Cover      | Removable magnetic cover for accessing interior of module                                     | John (Rack Robotics)  | Mandatory             | Aesthetics, user experience                       |
+| Suction Cup Mounting          | Mount to aquarium using suction cups.                                                         | John (Rack Robotics)  | Mandatory             | Aesthetics, user experience, ease of maintenance  |
+| Tube for Wire                 | Use 4 mm OD teflon tubing for wire interconnects                                              | John (Rack Robotics)  | Mandatory             | Industry standard for FDM 3D printers             | 
+| Powered Spool Motor           | Motor for rotating spool automatically to feed wire to sender toolhead                        | John (Rack Robotics)  | Preferred             | Reduce load on sender motor                       | 
+| Spool Tension Sensor          | Sensor for detecting tension of wire between spool box and sender toolhead                    | John (Rack Robotics)  | Preferred             | Reduce load on sender motor                       |
+| Quick-Detect Interconnect     | Use magnets and pogo-pins for quick-disconnect interconnects                                  | John (Rack Robotics)  | Preferred             | Aesthetics, user experience, ease of maintenance  |
 
-### E-Box Module
+***Waste Wire Box Module***
+Requirements for box in which waste EDM wire is stored (for recycling hopefully). 
+
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Removable Magnetic Cover      | Removable magnetic cover for accessing interior of module                                     | John (Rack Robotics)  | Mandatory             | Aesthetics, user experience                       |
+| Suction Cup Mounting          | Mount to aquarium using suction cups.                                                         | John (Rack Robotics)  | Mandatory             | Aesthetics, user experience, ease of maintenance  |
+| Tube for Wire                 | Use 4 mm OD teflon tubing for wire interconnects                                              | John (Rack Robotics)  | Mandatory             | Industry standard for FDM 3D printers             |
+| Powered Wire Cutter           | Automatically cut EDM wire into small pieces using blade or gears.                            | John (Rack Robotics)  | Preferred             | User experience improvement                       | 
+| Waste Box Full Sensor         | Sensor for detecting when waste box is full of wire                                           | John (Rack Robotics)  | Preferred             | User experience improvement                       |
+| Quick-Detect Interconnect     | Use magnets and pogo-pins for quick-disconnect interconnects                                  | John (Rack Robotics)  | Preferred             | Aesthetics, user experience, ease of maintenance  |
+
+***E-Box Module***
+Requirements for electronics box for storing SMPS, PEM, and Manta M5P control board. 
+
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Removable Magnetic Cover      | Removable magnetic cover for accessing interior of module                                     | John (Rack Robotics)  | Mandatory             | Aesthetics, user experience                       |
+| Suction Cup Mounting          | Mount to aquarium using suction cups.                                                         | John (Rack Robotics)  | Mandatory             | Aesthetics, user experience, ease of maintenance  |
+| Opening for SMPS Fan          | Add opening in removable cover for SMPS fan                                                   | John (Rack Robotics)  | Mandatory             | Cooling of SMPS                                   | 
+| Quick-Detect Interconnects    | Use magnets and pogo-pins for quick-disconnect interconnects                                  | John (Rack Robotics)  | Preferred             | Aesthetics, user experience, ease of maintenance  |
 
 ## Custom Klipper Modifications
 
@@ -194,6 +209,27 @@ Macro for unloading wire into the belt drive systems.
 - ask user to cut EDM wire 
 - provide section for custom gcode commands
 - stop DC motors
+
+## 3D Printer Requirements
+Requirements for 3D printing Betta Wire V1.0 components. The Betta Wire V1.0 is sold as a hardware kit, in the style of Voron. The plastic components are printed by the customer. This reduces kit cost significantly, and allows for user to customize their build's color scheme or materials.
+
+> WARNING: CF-PA (carbon-fiber nylon) is not suitable for use on the Betta Wire or Wire Tool. CF-PA Filament deteriorates rapidly in water, loosing mechanical stiffness within days. Parts printed in CF-PA cannot be submerged in water. 
+
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Minimum 3D Printer Build Area | X210 mm x Y210 mm x Z200 mm                                                                   | John (Rack Robotics)  | Mandatory             | Compatibility with common 3D printer build volumes|
+| Recommended 3D Printer        | Prusa MK4/MK3, Bambu X1C, Bambu P1P                                                           | John (Rack Robotics)  | Mandatory             | Compatibility with common 3D printer build volumes|
+| Recommended Filament          | [CF-PLA](https://us.store.bambulab.com/products/pla-cf?variant=41003202248840)                | John (Rack Robotics)  | Preferred             | Excellent quality, minimum warping                | 
+| Alternative Filament          | [ASA](https://www.prusa3d.com/category/prusament-asa/)                                        | John (Rack Robotics)  | Preferred             | Minimal warping compared to ABS                   |
+
+## Hand Tool Requirements 
+Requirements for hand tools for user assembly. 
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Metric Allen Key Set          | Allen key set for assembly of metric fasteners                                                | John (Rack Robotics)  | Mandatory             | Human fingers cannot fasten screws well           | 
+| Metric Drill Bits for Plastic | M5, M4, & M3 Drill bits for sizing holes in FDM 3D prints                                     | John (Rack Robotics)  | Mandatory             | Reduce need for FDM printer hole accuracy         | 
+| Hand drill                    | Small handheld drill for drill bits                                                           | John (Rack Robotics)  | Mandatory             | For using drill bits                              | 
+| Gloves                        | Disposable gloves for applying super-glue and corrosion inhibitor                             | John (Rack Robotics)  | Preferred             | Protect hands from glue and oil                   |
 
 ## IP68 Waterproofing
 

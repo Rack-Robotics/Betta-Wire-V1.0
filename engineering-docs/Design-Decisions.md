@@ -26,7 +26,7 @@ Design Goals for RevB Wire EDM Toolheads
 The RevB toolheads are inspired by the [Papilio](https://kevinakasam.com/papilio/), a 3D printer extruder optimized for pushing 1.75 mm filament. 
 
 
-## RevB Kinematics 
+## RevB Kinematics
 The kinematics of the Betta Wire were designed to maximize performance while maintaining a reasonable construction cost.
 
 **Why not linear rails?** Linear rails able to operate underwater are not readily available. To use linear rails, while maintaining a reasonable cost, requires a sub $35 dollar solution.
