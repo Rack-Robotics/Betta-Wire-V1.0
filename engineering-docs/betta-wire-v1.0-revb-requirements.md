@@ -53,39 +53,37 @@ The Betta Wire is organized into several modules.
 ***Overall Wire EDM Toolhead Requirements***
 The sender toolhead and receiver toolhead work together to control the position, tension, and velocity of the wire used for EDM cutting.
 
-| Requirement                   | Description                                                                                   | Owner                 |
-| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
-| Maximum Tension of Wire       |                                                                                               | John (Rack Robotics)  |
-| Maximum Velocity of Wire      |                                                                                               | John (Rack Robotics)  |
-| Minimum Velocity of Wire      |                                                                                               | John (Rack Robotics)  |
-| Tube for Wire                 | Use 4 mm OD teflon tubing for wire interconnects                                              | John (Rack Robotics)  |
-| [IP68](#P68-Waterproofing)    | Use IP68 rated motor for belt drive actuation                                                 | John (Rack Robotics)  |
-| Testing                       | Design for testing on stationary test rig                                                     | John (Rack Robotics)  |
-
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Maximum Tension of Wire       | 59 N (5 Kg)                                                                                   | John (Rack Robotics)  | Preferred             | ~80% of tensile strength of wire (67N)            |
+| Maximum Velocity of Wire      | 20 mm/s                                                                                       | John (Rack Robotics)  | Preferred             | Calculated for 41 RPM motor with 16T GT2 pulley   |
+| Minimum Velocity of Wire      | 0.2 mm/s                                                                                      | John (Rack Robotics)  | Preferred             | For cutting thicker materials                     |
+| Tube for Wire                 | Use 4 mm OD teflon tubing for wire interconnects                                              | John (Rack Robotics)  | Mandatory             | Industry standard for FDM 3D printers             | 
 
 ***Sender Wire Toolhead Module Requirements***
 Requirements for the sender toolhead of the Betta Wire V1.0 RevB. The top toolhead sits above the water tank, on the bottom gantry. It is responsible for reporting EDM wire tension during machining, feeding new wire through the machine.
 
-| Requirement                   | Description                                                                                   | Owner                 |
-| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
-| Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  |
-| Tension Sensor                | Use load cell for measuring wire tension                                                      | John (Rack Robotics)  |
-| Energizer                     | Energize EDM wire with waveforms from Powercore EDM spark generator                           | John (Rack Robotics)  |
-| Tube for Flushing             | Use 4 mm OD PU tube for providing delivering 100 PSI water for flushing                       | John (Rack Robotics)  |
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  | Mandatory             | Miniaturization of toolhead                       |
+| Tension Sensor                | Use load cell for measuring wire tension                                                      | John (Rack Robotics)  | Mandatory             | For closed-loop tension control feedback          |
+| Energizer                     | Energize EDM wire with waveforms from Powercore EDM spark generator                           | John (Rack Robotics)  | Mandatory             | EDM power delivery                                |
+| Tube for Flushing             | Use 4 mm OD PU tube for providing delivering 100 PSI water for flushing                       | John (Rack Robotics)  | Mandatory             | Improvement of reliability and maximum cutrate    |
 
 ***Receiver Wire Toolhead Module Requirements***
 Requirements for the receiver toolhead of the Betta Wire V1.0 RevB. The bottom toolhead sits inside the water tank, on the bottom gantry. It is responsible for receiving the EDM wire from the top toolhead, after passing through the cut. 
 
-| Requirement                   | Description                                                                                   | Owner                 |
-| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
-| Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  |
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  | Mandatory             | Miniaturization of toolhead                       |
+| [IP68](#P68-Waterproofing)    | Use IP68 rated motor for belt drive actuation                                                 | John (Rack Robotics)  | Mandatory             | Receiver toolhead is located underwater in tank   |
 
 ***Waterproof Endstop Module***
 Requirements for waterproof endstops for homing kinematics
 
-| Requirement                   | Description                                                                                   | Owner                 |
-| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------|
-| Hall Effect Sensor            | Use a hall-effect sensor for detection of a 6 mm x 2 mm magnet on the toolhead/carriage       | John (Rack Robotics)  |
+| Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
+| :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
+| Hall Effect Sensor            | Use a hall-effect sensor for detection of a 6 mm x 2 mm magnet on the toolhead/carriage       | John (Rack Robotics)  | Mandatory             | Ease of waterproofing, no moving parts            |
 
 ***Wire Spool Box Module***
 Requirements for box in which the EDM wire spool is stored. 
@@ -123,7 +121,7 @@ Requirements for electronics box for storing SMPS, PEM, and Manta M5P control bo
 
 ## Custom Klipper Modifications
 
-### Closed-Loop Feedrate Control
+**Closed-Loop Feedrate Control**
 Requirements for closed-loop feedrate control using Klipper firmware: 
 
 >Closed-loop control is a control-scheme that continuously monitors its output and automatically adjusts its inputs to maintain the desired output, using feedback to correct any deviations from the target performance. This ensures precision and stability in achieving the set goals.
@@ -149,7 +147,7 @@ To achieve this behavior, new features must be added to Klipper:
 | Powercore V2.0 ALRT Port      | 3.3 VDC                                                                                       | John (Rack Robotics)  |
 | Powercore V2.0 PWM Frequency  | 10-100 KHz                                                                                    | John (Rack Robotics)  |
 
-### Dual Gantry Motion Section for Klipper
+**Dual Gantry Motion Section for Klipper**
 Requirements for new Klipper kinematics module, allowing for independent control of two coreXY gantries. The secondary coreXY system is provides two additional axis: The U-axis and the V-axis. The U-axis is parallel to the X-axis, and the V-axis is parallel to the Y-axis.
 
 | Requirement                   | Description                                                                                   | Owner                 |
@@ -159,7 +157,7 @@ Requirements for new Klipper kinematics module, allowing for independent control
 | Bottom coreUV Axis            | U-axis & V-axis                                                                               | John (Rack Robotics)  | 
 | gcode example                 | G1 X69 Y420 U69 V420                                                                          | John (Rack Robotics)  |
 
-### Wire EDM Toolhead Section for Klipper
+**Wire EDM Toolhead Section for Klipper**
 Requirements for new Klipper section for use in printer.cfg, to be used for controlling wire tension. 
 
 | Requirement                   | Description                                                                                   | Owner                 |
@@ -175,7 +173,7 @@ Requirements for new Klipper section for use in printer.cfg, to be used for cont
 
 ### Wire EDM Macros
 
-**Macro for "wire_EDM_toolhead_diagnostic"**
+***Macro for "wire_EDM_toolhead_diagnostic"***
 Macro to test the maximum tension that the belt drive can provide. At the end of the test, the maximum value, in newtons of force, is printed for the user. 
 
 - inform user 'conducting wire EDM toolhead diagnostic" 
