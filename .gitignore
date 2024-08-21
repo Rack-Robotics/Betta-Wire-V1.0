@@ -1,9 +1,49 @@
-# OS generated files #
-######################
+# macOS files
 .DS_Store
-.DS_Store?
+.AppleDouble
+.LSOverride
+
+# macOS Folder settings
+Icon?
 ._*
+
+# Thumbnails
+._.DS_Store
+
+# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+.Trash-*
+
+# Files that might appear on network volumes
+.VolumeIcon.icns
+
+# Windows specific files
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# KiCAD files 
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
