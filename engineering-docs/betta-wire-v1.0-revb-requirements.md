@@ -8,7 +8,7 @@ System-level requirements for the Betta Wire V1.0 RevB. This includes general co
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
 | Klipper Firmware              | Use Klipper firmware                                                                          | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            |
 | System Voltage                | 24 VDC                                                                                        | John (Rack Robotics)  | Preferred             | Industry Standard for FDM 3D printers             | 
-| EDM Wire Diameter             | 0.3 mm                                                                                        | John (Rack Robotics)  | Preferred             | [Design Decision](Design-Decisions.md)            | 
+| EDM Wire Diameter             | 0.2 mm                                                                                        | John (Rack Robotics)  | Preferred             | [Design Decision](Design-Decisions.md)            | 
 
 ## Hardware Requirements
 Requirements for hardware, such as fasteners. 
@@ -55,7 +55,7 @@ The sender toolhead and receiver toolhead work together to control the position,
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Maximum Tension of Wire       | 59 N (5 Kg)                                                                                   | John (Rack Robotics)  | Preferred             | ~80% of tensile strength of wire (67N)            |
+| Maximum Tension of Wire       | 30 N (5 Kg)                                                                                   | John (Rack Robotics)  | Preferred             | ~80% of tensile strength of wire (67N)            |
 | Maximum Velocity of Wire      | 20 mm/s                                                                                       | John (Rack Robotics)  | Preferred             | Calculated for 41 RPM motor with 16T GT2 pulley   |
 | Minimum Velocity of Wire      | 0.2 mm/s                                                                                      | John (Rack Robotics)  | Preferred             | For cutting thicker materials                     |
 | Tube for Wire                 | Use 4 mm OD teflon tubing for wire interconnects                                              | John (Rack Robotics)  | Mandatory             | Industry standard for FDM 3D printers             | 

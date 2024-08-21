@@ -58,4 +58,4 @@ The Betta Wire V1.0 uses [Klipper](https://www.klipper3d.org) firmware. Klipper 
 The Betta Wire V1.0 utilizes the Powercore V1.0 wire EDM power supply. This is an open-source EDM power supply designed and sold by Rack Robotics, Inc.
 
 ## EDM Wire
-0.3 mm Diameter hardened brass wire was selected as a compromise between maximizing tensile strength, maximizing current capacity, and minimizing cut diameter. 
+0.2 mm Diameter hardened brass wire was selected as a compromise between maximizing tensile strength, maximizing current capacity, and minimizing cut diameter. Thinner EDM wire results in the need to remove less material for a given path. While thicker EDM wire is less prone to snap during machining. 
