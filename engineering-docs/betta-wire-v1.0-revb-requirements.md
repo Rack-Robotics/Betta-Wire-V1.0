@@ -16,7 +16,7 @@ Requirements for hardware, such as fasteners.
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
 | Fastener Material             | Stainless Steel 316 > Stainless Steel 304                                                | John (Rack Robotics)  | Mandatory             | Resistance against corrosion in distilled water   | 
 | Fasteners Count               | Minimize quantity & diversity of fasteners                                                    | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
-| Fastener Style                | Metric, ISO 7380 or ISO 14583                                                                  | Cooper (Rack Robotics)  | Preferred             | Low head height with larger bit size than countersunk heads. Head type resistant to strip out         |
+| Fastener Style                | Metric, ISO 7380 (Torx Button Head) or ISO 14583 (Torx Pan Head)                                                                  | Cooper (Rack Robotics)  | Preferred             | Low head height with larger bit size than countersunk heads. Head type resistant to strip out         |
 | Fastener Type(s)              | Pins preferred. Prefer over M3 size to make work easier and prevernt damage to fasteners                      | Cooper (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
 | Aquarium Sizing              | At least 50cm wide x 25cm deep x 28cm tall. Common 40L and 45L tanks likely to work | Cooper (Rack Robotics) | Mandatory | Ensure Mechanical Fit
 
