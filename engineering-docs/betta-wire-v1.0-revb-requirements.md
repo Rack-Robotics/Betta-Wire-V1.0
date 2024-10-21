@@ -14,10 +14,11 @@ System-level requirements for the Betta Wire V1.0 RevB. This includes general co
 Requirements for hardware, such as fasteners. 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Fastener Material             | Stainless Steel 316 (2) > Stainless Steel 304                                                | John (Rack Robotics)  | Mandatory             | Resistance against corrosion in distilled water   | 
+| Fastener Material             | Stainless Steel 316 > Stainless Steel 304                                                | John (Rack Robotics)  | Mandatory             | Resistance against corrosion in distilled water   | 
 | Fasteners Count               | Minimize quantity & diversity of fasteners                                                    | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
-| Fastener Style                | Metric, ISO 7380 or ISO 14583                                                                  | Cooper (Rack Robotics)  | Preferred             | Low head height with larger bit size than countersunk heads. Head type resistant to strip out.         |
-| Fastener Type(s)              | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6                      | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
+| Fastener Style                | Metric, ISO 7380 or ISO 14583                                                                  | Cooper (Rack Robotics)  | Preferred             | Low head height with larger bit size than countersunk heads. Head type resistant to strip out         |
+| Fastener Type(s)              | Pins preferred. Prefer over M3 size to make work easier and prevernt damage to fasteners                      | Cooper (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
+| Aquarium Sizing              | At least 50cm wide x 25cm deep x 28cm tall. Common 40L and 45L tanks likely to work | Cooper (Rack Robotics) | Mandatory | Ensure Mechanical Fit
 
 ## Controls Requirements 
 Control requirements for the Betta Wire V1.0 RevB. Methods used to manage and direct the behavior of the machine and devices to achieve desired outputs. 
@@ -68,7 +69,7 @@ Requirements for the sender toolhead of the Betta Wire V1.0 RevB. The top toolhe
 | Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  | Mandatory             | Miniaturization of toolhead                       |
 | Tension Sensor                | Use load cell for measuring wire tension                                                      | John (Rack Robotics)  | Mandatory             | For closed-loop tension control feedback          |
 | Energizer                     | Energize EDM wire with waveforms from Powercore EDM spark generator                           | John (Rack Robotics)  | Mandatory             | EDM power delivery                                |
-| Tube for Flushing             | Use 4 mm OD PU tube for providing delivering 100 PSI water for flushing                       | John (Rack Robotics)  | Mandatory             | Improvement of reliability and maximum cutrate    |
+| Tube for Flushing             | Use 4 mm OD PU tube for providing delivering 100 PSI water for flushing                       | John (Rack Robotics)  | Mandatory             | Improvement of reliability and maximum cut rate    |
 
 ***Receiver Wire Toolhead Module Requirements***
 Requirements for the receiver toolhead of the Betta Wire V1.0 RevB. The bottom toolhead sits inside the water tank, on the bottom gantry. It is responsible for receiving the EDM wire from the top toolhead, after passing through the cut. 
@@ -224,10 +225,10 @@ Requirements for 3D printing Betta Wire V1.0 components. The Betta Wire V1.0 is 
 Requirements for hand tools for user assembly. 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Metric Allen Key Set          | Allen key set for assembly of metric fasteners                                                | John (Rack Robotics)  | Mandatory             | Human fingers cannot fasten screws well           | 
+| Torx Drive or Key Set          | Required for Torx Fasteners. T20 most common                                               | John (Rack Robotics)  | Mandatory             | Human fingers cannot fasten screws well           | 
 | Metric Drill Bits for Plastic | M5, M4, & M3 Drill bits for sizing holes in FDM 3D prints                                     | John (Rack Robotics)  | Mandatory             | Reduce need for FDM printer hole accuracy         | 
 | Hand drill                    | Small handheld drill for drill bits                                                           | John (Rack Robotics)  | Mandatory             | For using drill bits                              | 
-| Gloves                        | Disposable gloves for applying super-glue and corrosion inhibitor                             | John (Rack Robotics)  | Preferred             | Protect hands from glue and oil                   |
+| Gloves                        | Disposable gloves for applying super-glue and corrosion inhibitor                             | John (Rack Robotics)  | Mandatory             | Protect hands from glue and oil                   |
 
 ## IP68 Waterproofing
 
