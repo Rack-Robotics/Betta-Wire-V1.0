@@ -6,17 +6,17 @@ System-level requirements for the Betta Wire V1.0 RevB. This includes general co
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Klipper Firmware              | Use Klipper firmware                                                                          | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            |
+| Klipper Firmware              | Use Klipper firmware                                                                          | John (Rack Robotics)  | Mandatory             | [Design Decision](https://github.com/Rack-Robotics/Betta-Wire-V1.0/blob/RevB/engineering-docs/Design-Decisions.md#firmware)            |
 | System Voltage                | 24 VDC                                                                                        | John (Rack Robotics)  | Preferred             | Industry Standard for FDM 3D printers             | 
-| EDM Wire Diameter             | 0.2 mm                                                                                        | John (Rack Robotics)  | Preferred             | [Design Decision](Design-Decisions.md)            | 
+| EDM Wire Diameter             | 0.2 mm                                                                                        | John (Rack Robotics)  | Preferred             | [Design Decision](https://github.com/Rack-Robotics/Betta-Wire-V1.0/blob/RevB/engineering-docs/Design-Decisions.md#edm-wire)            | 
 
 ## Hardware Requirements
 Requirements for hardware, such as fasteners. 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Fastener Material             | Stainless Steel 316L (2) > Stainless Steel 304                                                | John (Rack Robotics)  | Mandatory             | Resistance against corrosion in distilled water   | 
+| Fastener Material             | Stainless Steel 316 (2) > Stainless Steel 304                                                | John (Rack Robotics)  | Mandatory             | Resistance against corrosion in distilled water   | 
 | Fasteners Count               | Minimize quantity & diversity of fasteners                                                    | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
-| Fastener Style                | Metric, DIN 7991 Countersunk                                                                  | John (Rack Robotics)  | Preferred             | Flush mounting of fasteners in FDM prints         |
+| Fastener Style                | Metric, ISO 7380 or ISO 14583                                                                  | Cooper (Rack Robotics)  | Preferred             | Low head height with larger bit size than countersunk heads. Head type resistant to strip out.         |
 | Fastener Type(s)              | Pins > Countersunk M3 > Countersunk M4 > Countersunk M5 > Countersunk M6                      | John (Rack Robotics)  | Mandatory             | Minimize cost and complexity                      | 
 
 ## Controls Requirements 
@@ -24,7 +24,7 @@ Control requirements for the Betta Wire V1.0 RevB. Methods used to manage and di
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Open-Loop Motion Planning     | Open-loop control of linear motion axis                                                       | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            |     
+| Open-Loop Motion Planning     | Open-loop control of linear motion axis                                                       | John (Rack Robotics)  | Mandatory             | [Design Decision](https://github.com/Rack-Robotics/Betta-Wire-V1.0/blob/RevB/engineering-docs/Design-Decisions.md#revb-kinematics)            |     
 | Open-Loop Wire Velocity       | Open-loop control of EDM wire velocity                                                        | John (Rack Robotics)  | Preferred             | Outside of project scope                          | 
 | Closed-Loop Wire Tension      | Maintain wire tension using closed-loop control                                               | John (Rack Robotics)  | Mandatory             | Improve machining reliability                     | 
 | Closed-Loop Feedrate Control  | Adjust feedrate in response to EDM conditions                                                 | John (Rack Robotics)  | Mandatory             | Improve machining reliability                     | 
@@ -35,7 +35,7 @@ Kinematics requirements for the Betta Wire V1.0 RevB.
 
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
-| Dual CoreXY                   | Independently actuated dual coreXY systems                                                    | John (Rack Robotics)  | Mandatory             | [Design Decision](Design-Decisions.md)            | 
+| Dual CoreXY                   | Independently actuated dual coreXY systems                                                    | John (Rack Robotics)  | Mandatory             | [Design Decision](https://github.com/Rack-Robotics/Betta-Wire-V1.0/blob/RevB/engineering-docs/Design-Decisions.md#dual-core-xy)            | 
 | User Maintenance              | Ensure means of replacing wear components in gantry                                           | John (Rack Robotics)  | Mandatory             | Improve user experience                           | 
 | GT2 Timing Belts              | Use GT2 timing belts with glass-core                                                          | John (Rack Robotics)  | Mandatory             | Industry standard for FDM 3D printers             | 
 | Timing Belt Material          | EPDM Rubber w/ glass-fiber fore                                                               | John (Rack Robotics)  | Mandatory             | Reduce belt stretching over time                  | 
@@ -76,7 +76,7 @@ Requirements for the receiver toolhead of the Betta Wire V1.0 RevB. The bottom t
 | Requirement                   | Description                                                                                   | Owner                 | Importance            | Rational                                          |
 | :-----------------------------| :---------------------------------------------------------------------------------------------| :---------------------| :---------------------| :-------------------------------------------------|
 | Belt Drive                    | Use belts to manipulate EDM wire                                                              | John (Rack Robotics)  | Mandatory             | Miniaturization of toolhead                       |
-| [IP68](#P68-Waterproofing)    | Use IP68 rated motor for belt drive actuation                                                 | John (Rack Robotics)  | Mandatory             | Receiver toolhead is located underwater in tank   |
+| [IP68](https://github.com/Rack-Robotics/Betta-Wire-V1.0/blob/RevB/engineering-docs/betta-wire-v1.0-revb-requirements.md#ip68-waterproofing)    | Use IP68 rated motor for belt drive actuation                                                 | John (Rack Robotics)  | Mandatory             | Receiver toolhead is located underwater in tank   |
 
 ***Waterproof Endstop Module***
 Requirements for waterproof endstops for homing kinematics
