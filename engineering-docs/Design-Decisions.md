@@ -50,6 +50,8 @@ General improvements over RevA:
 
 - Endstops for automatic homing
 - Suction-cup mounting of e-box, and other accessory modules for easier assembly, maintenence, and greater flexibility in tank size
+- Improved kinematics to prevent binding and racking
+- Stainless steel components to prevent corrosion
 
 ## Motherboard & Electronics
 - The Manta M5P was chosen for it’s compact integration of a 32-bit microcontroller, up to five motor drivers, and a single-board computer. The dual coreXXY kinematics require 4 motor drivers, leaving 1 motor driver available for future expansions.   
@@ -62,3 +64,10 @@ The Betta Wire V1.0 utilizes the [Powercore V2.0 wire EDM power supply](https://
 
 ## EDM Wire
 0.2 mm Diameter hardened brass wire was selected as a compromise between maximizing tensile strength, maximizing current capacity, and minimizing cut diameter. Thinner EDM wire results in the need to remove less material for a given path. While thicker EDM wire is less prone to snap during machining. **Requires experimental verification**.
+
+## Quality of Life Changes
+Several quality of life changes and features will be implemented on RevB. Some key choices are as follows:
+- Design 3D prints to easily drain and to minimize water inclusion. May be be shelled or modified with voids in print for draining
+- Integrate tapped holes into aluminum extrusion frame for mounting of 3D prints without the use of t-nuts
+- Integrate drain ports into 3D prints that enable draining of entire aquarium from top of machine
+- Allowances in 3D printed service panels for toolless removal
