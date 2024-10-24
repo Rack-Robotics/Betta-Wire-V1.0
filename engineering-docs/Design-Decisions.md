@@ -72,3 +72,4 @@ Several quality of life changes and features will be implemented on RevB. Some k
 - Integrate drain ports into 3D prints that enable draining of entire aquarium from top of machine
 - Allowances in 3D printed service panels for toolless removal
 - Cable chain for toolheads
+- Integrated handles into frame prints for easy removal from aquarium
