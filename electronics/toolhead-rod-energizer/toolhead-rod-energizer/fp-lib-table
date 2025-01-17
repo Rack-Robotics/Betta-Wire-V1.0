@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "toolhead-rod-energizer")(type "KiCad")(uri "${KIPRJMOD}/toolhead-rod-energizer.pretty")(options "")(descr ""))
+)
