@@ -5,9 +5,9 @@
 	(uuid "9ee94a87-2af8-4146-8192-064bd5cb0cbd")
 	(paper "A4")
 	(title_block
-		(title "IP68-limit-switch")
-		(date "[24.08.20]")
-		(rev "RevA")
+		(title "magnetic-limit-switch")
+		(date "[25.01.16]")
+		(rev "RevB")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols
@@ -104,174 +104,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Connector_Generic:Conn_01x03"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x03_1_1"
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -842,6 +674,219 @@
 				)
 			)
 		)
+		(symbol "magnetic-limit-switch:S3B-PH-SM4-TB"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J1"
+				(at 2.794 2.794 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "S3B-PH-SM4-TB"
+				(at 4.826 -2.286 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "magnetic-limit-switch:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.079\" (2.00mm)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "Digikey Electronics, Inc."
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor#" "S3B-PH-SM4-TB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacterer#" "S3B-PH-SM4-TB"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacterer" "JST Sales America Inc."
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part #" "NULL"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "S3B-PH-SM4-TB_1_1"
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers hide)
@@ -1060,20 +1105,20 @@
 		)
 	)
 	(junction
-		(at 76.2 62.23)
+		(at 73.66 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "33584515-38e6-466f-8b52-a8f2c4bfa2a7")
 	)
 	(junction
-		(at 76.2 43.18)
+		(at 73.66 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "74c1b4c9-8a9e-4b64-a23a-9b393cee1d91")
 	)
 	(wire
 		(pts
-			(xy 76.2 43.18) (xy 76.2 44.45)
+			(xy 73.66 36.83) (xy 73.66 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1083,7 +1128,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 48.26) (xy 59.69 43.18)
+			(xy 57.15 41.91) (xy 57.15 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1093,7 +1138,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 53.34) (xy 135.89 50.8)
+			(xy 129.54 46.99) (xy 129.54 44.45)
 		)
 		(stroke
 			(width 0)
@@ -1103,7 +1148,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 91.44) (xy 40.64 87.63)
+			(xy 34.29 85.09) (xy 34.29 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1113,7 +1158,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 81.28) (xy 40.64 85.09)
+			(xy 34.29 74.93) (xy 34.29 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1123,7 +1168,7 @@
 	)
 	(polyline
 		(pts
-			(xy 138.43 67.31) (xy 139.7 67.31)
+			(xy 132.08 60.96) (xy 133.35 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1133,7 +1178,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 38.1) (xy 135.89 43.18)
+			(xy 129.54 33.02) (xy 129.54 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1143,7 +1188,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 62.23) (xy 76.2 62.23)
+			(xy 57.15 55.88) (xy 73.66 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1153,7 +1198,7 @@
 	)
 	(polyline
 		(pts
-			(xy 140.97 68.58) (xy 140.97 67.31)
+			(xy 134.62 62.23) (xy 134.62 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1163,7 +1208,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 81.28) (xy 33.02 85.09)
+			(xy 26.67 74.93) (xy 26.67 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1173,7 +1218,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 62.23) (xy 76.2 67.31)
+			(xy 73.66 55.88) (xy 73.66 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1183,7 +1228,7 @@
 	)
 	(polyline
 		(pts
-			(xy 140.97 67.31) (xy 142.24 67.31)
+			(xy 134.62 60.96) (xy 135.89 60.96)
 		)
 		(stroke
 			(width 0)
@@ -1193,7 +1238,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 41.91) (xy 39.37 63.5)
+			(xy 33.02 35.56) (xy 33.02 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1203,7 +1248,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 81.28) (xy 48.26 87.63)
+			(xy 41.91 74.93) (xy 41.91 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1213,7 +1258,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 66.04) (xy 135.89 60.96)
+			(xy 129.54 59.69) (xy 129.54 54.61)
 		)
 		(stroke
 			(width 0)
@@ -1223,7 +1268,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 39.37) (xy 76.2 43.18)
+			(xy 73.66 33.02) (xy 73.66 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1233,7 +1278,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 62.23) (xy 36.83 41.91)
+			(xy 30.48 55.88) (xy 30.48 35.56)
 		)
 		(stroke
 			(width 0)
@@ -1243,7 +1288,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 62.23) (xy 76.2 59.69)
+			(xy 73.66 55.88) (xy 73.66 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1253,7 +1298,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 43.18) (xy 76.2 43.18)
+			(xy 57.15 36.83) (xy 73.66 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1263,7 +1308,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 62.23) (xy 36.83 62.23)
+			(xy 29.21 55.88) (xy 30.48 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1273,7 +1318,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 85.09) (xy 36.83 91.44)
+			(xy 30.48 78.74) (xy 30.48 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1283,7 +1328,7 @@
 	)
 	(polyline
 		(pts
-			(xy 139.7 68.58) (xy 140.97 68.58)
+			(xy 133.35 62.23) (xy 134.62 62.23)
 		)
 		(stroke
 			(width 0)
@@ -1293,7 +1338,7 @@
 	)
 	(polyline
 		(pts
-			(xy 139.7 67.31) (xy 139.7 68.58)
+			(xy 133.35 60.96) (xy 133.35 62.23)
 		)
 		(stroke
 			(width 0)
@@ -1303,7 +1348,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 55.88) (xy 59.69 62.23)
+			(xy 57.15 49.53) (xy 57.15 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1313,7 +1358,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 41.91) (xy 34.29 45.72)
+			(xy 27.94 35.56) (xy 27.94 39.37)
 		)
 		(stroke
 			(width 0)
@@ -1323,7 +1368,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 85.09) (xy 36.83 85.09)
+			(xy 34.29 78.74) (xy 30.48 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1333,7 +1378,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 87.63) (xy 48.26 87.63)
+			(xy 34.29 81.28) (xy 41.91 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1343,7 +1388,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 63.5) (xy 35.56 62.23)
+			(xy 29.21 57.15) (xy 29.21 55.88)
 		)
 		(stroke
 			(width 0)
@@ -1353,7 +1398,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 52.07) (xy 92.71 52.07)
+			(xy 88.9 45.72) (xy 90.17 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1362,8 +1407,8 @@
 		(uuid "f52760fb-1077-44e4-b611-8e19df98e8a3")
 	)
 	(rectangle
-		(start 25.4 25.4)
-		(end 50.8 101.6)
+		(start 19.05 19.05)
+		(end 44.45 95.25)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1374,8 +1419,8 @@
 		(uuid 1845a10c-c446-4f51-bec5-5633ca84ae4d)
 	)
 	(rectangle
-		(start 165.1 25.4)
-		(end 231.14 55.88)
+		(start 152.4 19.05)
+		(end 215.9 50.8)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1386,8 +1431,8 @@
 		(uuid 2f6efbac-f432-4b79-9b14-32c7120f7483)
 	)
 	(rectangle
-		(start 127 25.4)
-		(end 152.4 101.6)
+		(start 114.3 19.05)
+		(end 146.05 95.25)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1398,8 +1443,8 @@
 		(uuid 5d47f13d-9700-4e85-80f2-b66ad9542548)
 	)
 	(rectangle
-		(start 53.34 25.4)
-		(end 114.3 101.6)
+		(start 50.8 19.05)
+		(end 107.95 95.25)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1409,20 +1454,9 @@
 		)
 		(uuid d1b255dd-3042-4160-96f2-6e8b24438179)
 	)
-	(text "CHECK PHYSICAL PINPUT COMPATIBILITY WITH MANTA M5P BEFORE ORDERING"
-		(exclude_from_sim no)
-		(at 124.206 100.838 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "2787470b-37d7-417c-8575-8328ebebaec0")
-	)
 	(text "NOTE: 	HALL-EFFECT IS PUSH-PULL TYPE \n		LOGIC IS INVERTED"
 		(exclude_from_sim no)
-		(at 53.848 29.972 0)
+		(at 51.308 23.622 0)
 		(effects
 			(font
 				(size 1.2192 1.2192)
@@ -1433,7 +1467,7 @@
 	)
 	(text "CONNECTOR"
 		(exclude_from_sim no)
-		(at 26.162 26.416 0)
+		(at 19.812 20.066 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1444,7 +1478,7 @@
 	)
 	(text "HALL-EFFECT SENSOR"
 		(exclude_from_sim no)
-		(at 53.848 26.416 0)
+		(at 51.308 20.066 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1455,7 +1489,7 @@
 	)
 	(text "STATUS LED"
 		(exclude_from_sim no)
-		(at 128.27 26.924 0)
+		(at 121.92 20.574 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1466,7 +1500,7 @@
 	)
 	(text "SPECIFICATIONS\n\nVCC			5		V	TYP\nVCC			5.5		V	MAX\nPOWER		20		mW	MAX\n\nOUTPUT		HIGH-IMPEDANCE\nOUTPUT		5.3		V	MAX\nOUTPUT	   	-0.3	V	MIN\nRESPONSE	10		Hz	MIN"
 		(exclude_from_sim no)
-		(at 166.116 26.924 0)
+		(at 153.67 20.955 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1477,7 +1511,7 @@
 	)
 	(text "I_OUT 5 mA MAX"
 		(exclude_from_sim no)
-		(at 77.47 44.704 0)
+		(at 88.9 48.768 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1488,7 +1522,7 @@
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 92.71 52.07 0)
+		(at 90.17 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1498,7 +1532,7 @@
 		)
 		(uuid "232d1ff0-abe5-4a96-a861-61cf4f0c52f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.8229 52.07 0)
+			(at 104.2829 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1510,7 +1544,7 @@
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 135.89 66.04 270)
+		(at 129.54 59.69 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1520,7 +1554,7 @@
 		)
 		(uuid "59bc46a1-fdbb-4a56-9b06-85ac3bc322da")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 135.89 80.1529 90)
+			(at 129.54 73.8029 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1532,7 +1566,7 @@
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 33.02 85.09 270)
+		(at 26.67 78.74 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1542,7 +1576,7 @@
 		)
 		(uuid "a467b98a-0d0d-4457-9e6c-c055e20eb997")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 33.02 99.2029 90)
+			(at 26.67 92.8529 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1554,7 +1588,7 @@
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 34.29 45.72 270)
+		(at 27.94 39.37 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1564,7 +1598,7 @@
 		)
 		(uuid "e4b3ab94-4380-4c2c-a073-73d1ecb5e74c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.29 59.8329 90)
+			(at 27.94 53.4829 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1576,7 +1610,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 35.56 63.5 0)
+		(at 29.21 57.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1584,7 +1618,7 @@
 		(dnp no)
 		(uuid "0655a41b-d11b-4a38-b5bd-874457ca76ee")
 		(property "Reference" "#PWR05"
-			(at 35.56 69.85 0)
+			(at 29.21 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1593,7 +1627,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 68.326 90)
+			(at 29.21 61.976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1601,7 +1635,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 63.5 0)
+			(at 29.21 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1610,7 +1644,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 63.5 0)
+			(at 29.21 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1619,7 +1653,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 35.56 63.5 0)
+			(at 29.21 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1641,15 +1675,15 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 33.02 81.28 0)
+		(at 26.67 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "0ffc46b6-9d5e-423a-9361-aae6b5cbfaed")
 		(property "Reference" "TP1"
-			(at 28.194 81.788 90)
+			(at 21.844 75.438 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1658,7 +1692,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 30.734 81.788 90)
+			(at 24.384 75.438 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1666,8 +1700,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 38.1 81.28 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 31.75 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1675,8 +1709,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 38.1 81.28 0)
+		(property "Datasheet" "NULL"
+			(at 31.75 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1685,7 +1719,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 33.02 81.28 0)
+			(at 26.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1693,8 +1727,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" ""
-			(at 33.02 81.28 0)
+		(property "Supplier" "NULL"
+			(at 26.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1702,8 +1736,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier#" ""
-			(at 33.02 81.28 0)
+		(property "Supplier#" "NULL"
+			(at 26.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1711,8 +1745,44 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacterer" ""
-			(at 33.02 81.28 0)
+		(property "Manufacterer" "NULL"
+			(at 26.67 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "NULL"
+			(at 26.67 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "NULL"
+			(at 26.67 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "NULL"
+			(at 26.67 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "NULL"
+			(at 26.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1733,101 +1803,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 40.64 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "38c4caf3-6acf-47f4-9551-cd82f0dc9e3c")
-		(property "Reference" "TP2"
-			(at 35.814 81.788 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 38.354 81.788 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 45.72 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 45.72 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 40.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" ""
-			(at 40.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" ""
-			(at 40.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" ""
-			(at 40.64 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9ba4024a-4b8d-43a6-8c81-e51055d65550")
-		)
-		(instances
-			(project "IP68-limit-switch"
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:SM351LT")
-		(at 81.28 52.07 0)
+		(at 78.74 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1835,7 +1812,7 @@
 		(dnp no)
 		(uuid "44abbe48-b25b-47bb-80be-1fa694f472fd")
 		(property "Reference" "U1"
-			(at 80.01 40.894 0)
+			(at 77.724 36.322 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1844,7 +1821,7 @@
 			)
 		)
 		(property "Value" "TMAG5231"
-			(at 87.122 42.926 0)
+			(at 88.138 36.322 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1853,7 +1830,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 80.01 52.07 0)
+			(at 77.47 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1862,7 +1839,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmag5231.pdf"
-			(at 80.01 52.07 0)
+			(at 77.47 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1871,7 +1848,7 @@
 			)
 		)
 		(property "Description" "Digital Switch Omnipolar Switch Push-Pull Hall Effect SOT-23-3"
-			(at 81.28 52.07 0)
+			(at 78.74 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1879,8 +1856,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" "Digikey Electronics"
-			(at 81.28 52.07 0)
+		(property "Distributor" "Digikey Electronics"
+			(at 78.74 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1888,8 +1865,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier#" "296-TMAG5231A2DQDBZRCT-ND"
-			(at 81.28 52.07 0)
+		(property "Distributor#" "296-TMAG5231A2DQDBZRCT-ND"
+			(at 78.74 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1898,7 +1875,25 @@
 			)
 		)
 		(property "Manufacterer" "Texas Instruments"
-			(at 81.28 52.07 0)
+			(at 78.74 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "TMAG5231A2DQDBZR"
+			(at 78.74 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "NULL"
+			(at 78.74 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1926,7 +1921,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 76.2 39.37 0)
+		(at 73.66 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1934,7 +1929,7 @@
 		(dnp no)
 		(uuid "4cb336bb-5d82-4c4b-9a06-b748bbb0bf81")
 		(property "Reference" "#PWR03"
-			(at 76.2 43.18 0)
+			(at 73.66 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1943,7 +1938,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 79.502 37.592 0)
+			(at 76.962 31.242 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1951,7 +1946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 39.37 0)
+			(at 73.66 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1960,7 +1955,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 39.37 0)
+			(at 73.66 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1969,7 +1964,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 76.2 39.37 0)
+			(at 73.66 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1990,8 +1985,137 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 41.91 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "50e9ca85-7565-4fff-92dd-361d02885e78")
+		(property "Reference" "TP3"
+			(at 37.084 75.438 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 39.624 75.438 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 46.99 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "NULL"
+			(at 46.99 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier#" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "NULL"
+			(at 41.91 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f20057c7-cc1f-4419-84f0-7b23c3317baa")
+		)
+		(instances
+			(project "magnetic-limit-switch"
+				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VCC")
-		(at 39.37 63.5 180)
+		(at 33.02 57.15 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1999,7 +2123,7 @@
 		(dnp no)
 		(uuid "54c871bf-2bd2-4a41-a615-f2ada3e5ef89")
 		(property "Reference" "#PWR06"
-			(at 39.37 59.69 0)
+			(at 33.02 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2008,7 +2132,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 39.37 68.326 90)
+			(at 33.02 61.976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2016,7 +2140,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 63.5 0)
+			(at 33.02 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2025,7 +2149,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 63.5 0)
+			(at 33.02 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2034,7 +2158,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 39.37 63.5 0)
+			(at 33.02 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2056,16 +2180,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 59.69 52.07 180)
+		(at 57.15 45.72 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "62765428-86b1-4ce8-811b-648ab1ed0afe")
 		(property "Reference" "C1"
-			(at 63.5 50.7999 0)
+			(at 60.198 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2074,7 +2197,7 @@
 			)
 		)
 		(property "Value" "1 uF"
-			(at 63.5 53.3399 0)
+			(at 64.77 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2083,7 +2206,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 58.7248 48.26 0)
+			(at 56.1848 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2092,7 +2215,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
-			(at 59.69 52.07 0)
+			(at 57.15 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2101,25 +2224,7 @@
 			)
 		)
 		(property "Description" "1 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 59.69 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Digikey Electronics"
-			(at 59.69 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" "311-1446-1-ND"
-			(at 59.69 52.07 0)
+			(at 57.15 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2128,7 +2233,7 @@
 			)
 		)
 		(property "Manufacterer" "YAGEO"
-			(at 59.69 52.07 0)
+			(at 57.15 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2137,16 +2242,23 @@
 			)
 		)
 		(property "Tolerance" "10%"
-			(at 59.69 52.07 0)
+			(at 62.484 48.006 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(property "V_max" "16V"
-			(at 59.69 52.07 0)
+			(at 67.564 47.752 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor" "Digikey Electronics"
+			(at 57.15 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2154,8 +2266,26 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C163036"
-			(at 59.69 52.07 0)
+		(property "Distributor#" "311-1446-1-ND"
+			(at 57.15 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "CC0603KRX7R7BB105"
+			(at 57.15 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C106248"
+			(at 57.15 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2180,7 +2310,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 135.89 38.1 0)
+		(at 129.54 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2188,7 +2318,7 @@
 		(dnp no)
 		(uuid "754df934-fa9d-4477-87e2-f9bb2d4ea03f")
 		(property "Reference" "#PWR01"
-			(at 135.89 41.91 0)
+			(at 129.54 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,7 +2327,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 139.192 36.83 0)
+			(at 132.842 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2205,7 +2335,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 38.1 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2214,7 +2344,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 38.1 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2223,7 +2353,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 135.89 38.1 0)
+			(at 129.54 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2245,7 +2375,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 135.89 46.99 180)
+		(at 129.54 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2253,7 +2383,7 @@
 		(dnp no)
 		(uuid "8dbdd306-dcea-4487-a3ab-05366df30a5a")
 		(property "Reference" "R1"
-			(at 140.462 45.212 0)
+			(at 134.366 38.354 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2262,7 +2392,7 @@
 			)
 		)
 		(property "Value" "750R"
-			(at 143.002 47.498 0)
+			(at 136.652 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2271,7 +2401,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 137.668 46.99 90)
+			(at 131.318 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2280,7 +2410,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 135.89 46.99 0)
+			(at 129.54 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2288,35 +2418,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 135.89 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Digikey Electronics"
-			(at 135.89 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" "311-750HRCT-ND"
-			(at 135.89 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" "YAGEO"
-			(at 135.89 46.99 0)
+		(property "Description" "750 Ohms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
+			(at 129.54 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2325,7 +2428,42 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 135.89 46.99 0)
+			(at 138.938 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Distributor" "Digikey Electronics"
+			(at 129.54 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "311-750HRCT-ND"
+			(at 129.54 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer" "YAGEO"
+			(at 129.54 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "RC0603FR-07750RL"
+			(at 129.54 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2334,12 +2472,20 @@
 			)
 		)
 		(property "LCSC Part #" "C114635"
-			(at 135.89 46.99 0)
+			(at 129.54 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Power" "0.1W"
+			(at 134.112 42.926 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -2358,8 +2504,137 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 36.83 36.83 90)
+		(lib_id "Connector:TestPoint")
+		(at 34.29 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "a50760b4-e328-4801-92a0-53189062db4f")
+		(property "Reference" "TP2"
+			(at 29.464 75.438 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 32.004 75.438 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "NULL"
+			(at 39.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Supplier#" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "NULL"
+			(at 34.29 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6e17a418-0c53-4cde-bdba-1b92d95b4287")
+		)
+		(instances
+			(project "magnetic-limit-switch"
+				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "magnetic-limit-switch:S3B-PH-SM4-TB")
+		(at 30.48 30.48 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2367,32 +2642,23 @@
 		(dnp no)
 		(uuid "a589b5cf-7c53-4fff-8347-39bd4cc516f2")
 		(property "Reference" "J1"
-			(at 34.036 34.036 90)
+			(at 30.48 25.908 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "JST-S3B-XH"
-			(at 39.116 32.004 90)
+		(property "Value" "S3B-PH-SM4-TB"
+			(at 30.48 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_XH_S3B-XH-A-1_1x03_P2.50mm_Horizontal"
-			(at 36.83 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
-			(at 36.83 36.83 0)
+		(property "Footprint" "magnetic-limit-switch:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal"
+			(at 30.48 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2400,8 +2666,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Connector Header Through Hole, Right Angle 3 position 0.098\" (2.50mm)"
-			(at 36.83 36.83 0)
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
+			(at 30.48 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2409,8 +2675,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" "Digikey Electronics"
-			(at 36.83 36.83 0)
+		(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.079\" (2.00mm)"
+			(at 30.48 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2418,8 +2684,17 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier#" "455-S3B-XH-A-ND"
-			(at 36.83 36.83 0)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 30.48 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "S3B-PH-SM4-TB"
+			(at 30.48 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2703,7 @@
 			)
 		)
 		(property "Manufacterer" "JST Sales America Inc."
-			(at 36.83 36.83 0)
+			(at 30.48 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2436,8 +2711,26 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C163036"
-			(at 36.83 36.83 0)
+		(property "Manufacterer#" "S3B-PH-SM4-TB"
+			(at 30.48 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "NULL"
+			(at 30.48 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field-1" "S3B-PH-SM4-TB"
+			(at 30.48 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2464,101 +2757,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 48.26 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b28c21fa-1e17-4f1b-8b17-55dec42a253f")
-		(property "Reference" "TP3"
-			(at 43.434 81.788 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 45.974 81.788 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
-			(at 53.34 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 53.34 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 48.26 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" ""
-			(at 48.26 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" ""
-			(at 48.26 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" ""
-			(at 48.26 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "53e1d3d3-c947-4896-8274-a48499c9d35b")
-		)
-		(instances
-			(project "IP68-limit-switch"
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 36.83 91.44 0)
+		(at 30.48 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2566,7 +2766,7 @@
 		(dnp no)
 		(uuid "b2aeabdf-aa2a-44c3-a03e-c0ce7667eb79")
 		(property "Reference" "#PWR02"
-			(at 36.83 97.79 0)
+			(at 30.48 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2575,7 +2775,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 96.266 90)
+			(at 30.48 89.916 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2583,7 +2783,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 91.44 0)
+			(at 30.48 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2592,7 +2792,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 91.44 0)
+			(at 30.48 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2601,7 +2801,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 91.44 0)
+			(at 30.48 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2623,7 +2823,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 135.89 57.15 90)
+		(at 129.54 50.8 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2631,7 +2831,7 @@
 		(dnp no)
 		(uuid "c5400e0b-7c7d-410f-a08c-bab4c4257402")
 		(property "Reference" "D1"
-			(at 141.478 56.388 90)
+			(at 135.128 50.038 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2640,7 +2840,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 142.494 58.42 90)
+			(at 136.144 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2649,7 +2849,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 135.89 57.15 0)
+			(at 129.54 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2658,7 +2858,7 @@
 			)
 		)
 		(property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2005-086/LTST-C193KFKT-5A.PDF"
-			(at 135.89 57.15 0)
+			(at 129.54 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2667,34 +2867,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 135.89 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "Digikey Electronics"
-			(at 135.89 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" "160-1829-1-ND"
-			(at 135.89 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" "Lite-On Inc."
-			(at 135.89 57.15 0)
+			(at 129.54 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2703,7 +2876,7 @@
 			)
 		)
 		(property "V_f" "2 V"
-			(at 145.034 58.42 90)
+			(at 138.684 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2711,7 +2884,7 @@
 			)
 		)
 		(property "I_f" "4 mA"
-			(at 145.796 56.388 90)
+			(at 139.446 50.038 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2719,7 +2892,7 @@
 			)
 		)
 		(property "Color" "Orange"
-			(at 135.89 57.15 90)
+			(at 129.54 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2728,7 +2901,43 @@
 			)
 		)
 		(property "Luminous Intensity" "45.0"
-			(at 135.89 57.15 90)
+			(at 129.54 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics"
+			(at 129.54 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "160-1829-1-ND"
+			(at 129.54 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer" "Lite-On Inc."
+			(at 129.54 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "LTST-C193KFKT-5A"
+			(at 129.54 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2737,7 +2946,7 @@
 			)
 		)
 		(property "LCSC Part #" "C284922"
-			(at 135.89 57.15 90)
+			(at 129.54 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2762,7 +2971,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 76.2 67.31 0)
+		(at 73.66 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2770,7 +2979,7 @@
 		(dnp no)
 		(uuid "dbaff3b6-6d1e-43f4-9b01-818ae11a7887")
 		(property "Reference" "#PWR04"
-			(at 76.2 73.66 0)
+			(at 73.66 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2779,7 +2988,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 79.756 69.342 0)
+			(at 77.216 62.992 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2787,7 +2996,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 67.31 0)
+			(at 73.66 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2796,7 +3005,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 67.31 0)
+			(at 73.66 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2805,7 +3014,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 76.2 67.31 0)
+			(at 73.66 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2827,7 +3036,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 40.64 91.44 180)
+		(at 34.29 85.09 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2835,7 +3044,7 @@
 		(dnp no)
 		(uuid "e27ad55b-8168-44ba-9d6f-7cbba9b294d3")
 		(property "Reference" "#PWR07"
-			(at 40.64 87.63 0)
+			(at 34.29 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2844,7 +3053,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 40.64 96.266 90)
+			(at 34.29 89.916 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2852,7 +3061,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.64 91.44 0)
+			(at 34.29 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2861,7 +3070,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 40.64 91.44 0)
+			(at 34.29 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2870,7 +3079,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 40.64 91.44 0)
+			(at 34.29 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
