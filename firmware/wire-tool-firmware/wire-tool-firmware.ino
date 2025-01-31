@@ -20,6 +20,15 @@ const int STATUS_LED                  = 25;   //Status LED on Pico
 const int TOP_MOTOR_ACS723            = 26;   //Analog output of current sensor for top tool motor
 const int BOTTOM_MOTOR_ACS723         = 27;   //Analog output of current sensor for bottom tool motor
 
+// Safety Limits
+const float MAX_VELOCITY = 50.0;            // Maximum allowed velocity in mm/s
+const float MIN_VELOCITY = -50.0;           // Minimum allowed velocity in mm/s
+const float MAX_CURRENT = 2000.0;           // Maximum allowed current in mA
+const float MIN_CURRENT = -2000.0;          // Minimum allowed current in mA
+const float MAX_VELOCITY_ERROR = 20.0;      // Maximum allowed velocity error in mm/s
+const float MAX_CURRENT_ERROR = 500.0;      // Maximum allowed current error in mA
+const int ERROR_CHECK_INTERVAL = 100;       // Check errors every 100ms
+
 // AS5600 Encoder Constants
 const uint8_t AS5600_ADDR             = 0x36; //I2C address of AS5600 magnetic encoder
 const uint8_t REG_RAW_ANGLE_H         = 0x0C; //High byte register for raw angle
@@ -84,8 +93,9 @@ struct Telemetry {
 } telemetryData;
 
 // Timer Structures
-repeating_timer positionTimer;              //10ms timer for velocity sampling
-repeating_timer telemetryCollectionTimer;   //10ms timer for data collection
+repeating_timer positionTimer;              // 10ms timer for velocity sampling
+repeating_timer telemetryCollectionTimer;   // 10ms timer for data collection
+repeating_timer safetyCheckTimer;           // Timer for safety checks
 
 //Read raw angle from AS5600 encoder
 uint16_t readRawAngle() {
@@ -225,97 +235,218 @@ void triggerFatalError(String message) {
 
 //Process serial commands
 void processCommand(String command) {
-    Serial.print("Received command: '");
-    Serial.print(command);
-    Serial.println("'");
+   Serial.print("Received command: '");
+   Serial.print(command);
+   Serial.println("'");
 
-    if (command.startsWith(COMMAND_LOAD_WIRE)) {
-        // TODO: Implement wire loading sequence
-        Serial.println("Loading wire...");
-        wireIsLoaded = true;
+   if (command.startsWith(COMMAND_LOAD_WIRE)) {
+       if(!fatalErrorActive) {
+           // TODO: Implement wire loading sequence
+           Serial.println("Loading wire...");
+           wireIsLoaded = true;
+       } else {
+           Serial.println("ERROR: Cannot load wire while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_UNLOAD_WIRE)) {
+       if(!fatalErrorActive) {
+           // TODO: Implement wire unloading sequence
+           Serial.println("Unloading wire...");
+           wireIsLoaded = false;
+       } else {
+           Serial.println("ERROR: Cannot unload wire while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_SET_WIRE_VELOCITY)) {
+       String parameter = command.substring(COMMAND_SET_WIRE_VELOCITY.length() + 1);
+       parameter.trim();
+       float velocity = parameter.toFloat();
+       
+       if(!fatalErrorActive) {
+           if(velocity <= MAX_VELOCITY && velocity >= MIN_VELOCITY) {
+               targetVelocity = velocity;
+               Serial.print("Setting wire velocity to: ");
+               Serial.println(velocity, 2);
+           } else {
+               Serial.println("ERROR: Velocity setpoint out of range");
+           }
+       } else {
+           Serial.println("ERROR: Cannot set velocity while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_SET_WIRE_TENSION)) {
+       String parameter = command.substring(COMMAND_SET_WIRE_TENSION.length() + 1);
+       parameter.trim();
+       float tension = parameter.toFloat();
+       
+       if(!fatalErrorActive) {
+           if(tension <= MAX_CURRENT && tension >= MIN_CURRENT) {
+               targetCurrent = tension;
+               Serial.print("Setting wire tension to: ");
+               Serial.println(tension, 2);
+           } else {
+               Serial.println("ERROR: Tension setpoint out of range");
+           }
+       } else {
+           Serial.println("ERROR: Cannot set tension while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_CALIBRATE_WIRE_TENSION)) {
+       if(!fatalErrorActive) {
+           // TODO: Implement tension calibration sequence
+           Serial.println("Starting wire tension calibration...");
+       } else {
+           Serial.println("ERROR: Cannot calibrate while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_SET_KP)) {
+       if(!fatalErrorActive) {
+           String parameter = command.substring(COMMAND_SET_KP.length() + 1);
+           parameter.trim();
+           float newKp = parameter.toFloat();
+           if(newKp >= 0) {
+               Kp = newKp;
+               Serial.print("Setting Kp to: ");
+               Serial.println(Kp);
+           } else {
+               Serial.println("ERROR: Kp must be non-negative");
+           }
+       } else {
+           Serial.println("ERROR: Cannot set PID parameters while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_SET_KI)) {
+       if(!fatalErrorActive) {
+           String parameter = command.substring(COMMAND_SET_KI.length() + 1);
+           parameter.trim();
+           float newKi = parameter.toFloat();
+           if(newKi >= 0) {
+               Ki = newKi;
+               Serial.print("Setting Ki to: ");
+               Serial.println(Ki);
+           } else {
+               Serial.println("ERROR: Ki must be non-negative");
+           }
+       } else {
+           Serial.println("ERROR: Cannot set PID parameters while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_SET_KD)) {
+       if(!fatalErrorActive) {
+           String parameter = command.substring(COMMAND_SET_KD.length() + 1);
+           parameter.trim();
+           float newKd = parameter.toFloat();
+           if(newKd >= 0) {
+               Kd = newKd;
+               Serial.print("Setting Kd to: ");
+               Serial.println(Kd);
+           } else {
+               Serial.println("ERROR: Kd must be non-negative");
+           }
+       } else {
+           Serial.println("ERROR: Cannot set PID parameters while in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_GET_PID)) {
+       Serial.print("Kp=");
+       Serial.print(Kp);
+       Serial.print(" Ki=");
+       Serial.print(Ki);
+       Serial.print(" Kd=");
+       Serial.println(Kd);
+   }
+   else if (command.startsWith(COMMAND_TEST_ERROR)) {
+       String parameter = command.substring(COMMAND_TEST_ERROR.length() + 1);
+       parameter.trim();
+       if (parameter.length() > 0) {
+           triggerFatalError(parameter); // Use custom error message
+       } else {
+           triggerFatalError("Test error triggered"); // Default message
+       }
+   }
+   else if (command.startsWith(COMMAND_RESET)) {
+       if (fatalErrorActive) {
+           Serial.println("Resetting device from error state...");
+           fatalErrorActive = false;
+           errorMessage = "";
+           targetVelocity = 0;
+           targetCurrent = 0;
+           digitalWrite(STATUS_LED, HIGH);
+           // TODO: Implement any additional reset procedures
+       } else {
+           Serial.println("Device is not in error state");
+       }
+   }
+   else if (command.startsWith(COMMAND_GET_TELEMETRY)) {
+       outputTelemetry();
+   }
+   else {
+       Serial.print("Unknown command: '");
+       Serial.print(command);
+       Serial.println("'");
+   }
+}
+
+// Safety check function
+bool checkSafetyLimits() {
+    // Check if values are within allowed ranges
+    if(telemetryData.targetVelocity > MAX_VELOCITY || telemetryData.targetVelocity < MIN_VELOCITY) {
+        char errorMsg[50];
+        snprintf(errorMsg, sizeof(errorMsg), "Target velocity out of range: %.2f mm/s", telemetryData.targetVelocity);
+        triggerFatalError(errorMsg);
+        return false;
     }
-    else if (command.startsWith(COMMAND_UNLOAD_WIRE)) {
-        // TODO: Implement wire unloading sequence
-        Serial.println("Unloading wire...");
-        wireIsLoaded = false;
+    
+    if(telemetryData.targetCurrent > MAX_CURRENT || telemetryData.targetCurrent < MIN_CURRENT) {
+        char errorMsg[50];
+        snprintf(errorMsg, sizeof(errorMsg), "Target current out of range: %.2f mA", telemetryData.targetCurrent);
+        triggerFatalError(errorMsg);
+        return false;
     }
-    else if (command.startsWith(COMMAND_SET_WIRE_VELOCITY)) {
-        String parameter = command.substring(COMMAND_SET_WIRE_VELOCITY.length() + 1);
-        parameter.trim();
-        float velocity = parameter.toFloat();
-        targetVelocity = velocity;
-        Serial.print("Setting wire velocity to: ");
-        Serial.println(velocity, 2);
+    
+    // Check for excessive errors
+    float velocityError = abs(telemetryData.velocityError);  // Use pre-calculated error from telemetry
+    if(velocityError > MAX_VELOCITY_ERROR && telemetryData.targetVelocity != 0) {
+        char errorMsg[50];
+        snprintf(errorMsg, sizeof(errorMsg), "Velocity error too high: %.2f mm/s", velocityError);
+        triggerFatalError(errorMsg);
+        return false;
     }
-    else if (command.startsWith(COMMAND_SET_WIRE_TENSION)) {
-        String parameter = command.substring(COMMAND_SET_WIRE_TENSION.length() + 1);
-        parameter.trim();
-        float tension = parameter.toFloat();
-        targetCurrent = tension;  // Convert tension to current setpoint
-        Serial.print("Setting wire tension to: ");
-        Serial.println(tension, 2);
+    
+    float currentError = abs(telemetryData.currentError);    // Use pre-calculated error from telemetry
+    if(currentError > MAX_CURRENT_ERROR && telemetryData.targetCurrent != 0) {
+        char errorMsg[50];
+        snprintf(errorMsg, sizeof(errorMsg), "Current error too high: %.2f mA", currentError);
+        triggerFatalError(errorMsg);
+        return false;
     }
-    else if (command.startsWith(COMMAND_CALIBRATE_WIRE_TENSION)) {
-        // TODO: Implement tension calibration sequence
-        Serial.println("Starting wire tension calibration...");
+    
+    return true;
+}
+
+// Safety check callback
+bool safetyCheckCallback(struct repeating_timer *t) {
+    if(!fatalErrorActive) {
+        return checkSafetyLimits();
     }
-    else if (command.startsWith(COMMAND_SET_KP)) {
-        String parameter = command.substring(COMMAND_SET_KP.length() + 1);
-        parameter.trim();
-        Kp = parameter.toFloat();
-        Serial.print("Setting Kp to: ");
-        Serial.println(Kp);
-    }
-    else if (command.startsWith(COMMAND_SET_KI)) {
-        String parameter = command.substring(COMMAND_SET_KI.length() + 1);
-        parameter.trim();
-        Ki = parameter.toFloat();
-        Serial.print("Setting Ki to: ");
-        Serial.println(Ki);
-    }
-    else if (command.startsWith(COMMAND_SET_KD)) {
-        String parameter = command.substring(COMMAND_SET_KD.length() + 1);
-        parameter.trim();
-        Kd = parameter.toFloat();
-        Serial.print("Setting Kd to: ");
-        Serial.println(Kd);
-    }
-    else if (command.startsWith(COMMAND_GET_PID)) {
-        Serial.print("Kp=");
-        Serial.print(Kp);
-        Serial.print(" Ki=");
-        Serial.print(Ki);
-        Serial.print(" Kd=");
-        Serial.println(Kd);
-    }
-    else if (command.startsWith(COMMAND_TEST_ERROR)) {
-        String parameter = command.substring(COMMAND_TEST_ERROR.length() + 1);
-        parameter.trim();
-        if (parameter.length() > 0) {
-            triggerFatalError(parameter);  // Use custom error message
-        } else {
-            triggerFatalError("Test error triggered");  // Default message
+    return true;
+}
+
+// Command validation function
+bool validateCommand(String command, float value) {
+    if(command == COMMAND_SET_WIRE_VELOCITY) {
+        if(value > MAX_VELOCITY || value < MIN_VELOCITY) {
+            Serial.println("ERROR: Velocity setpoint out of range");
+            return false;
         }
     }
-    else if (command.startsWith(COMMAND_RESET)) {
-        if (fatalErrorActive) {
-            Serial.println("Resetting device from error state...");
-            fatalErrorActive = false;
-            errorMessage = "";
-            digitalWrite(STATUS_LED, HIGH);
-            // TODO: Implement any additional reset procedures
-        } else {
-            Serial.println("Device is not in error state");
+    else if(command == COMMAND_SET_WIRE_TENSION) {
+        if(value > MAX_CURRENT || value < MIN_CURRENT) {
+            Serial.println("ERROR: Current setpoint out of range");
+            return false;
         }
     }
-    else if (command.startsWith(COMMAND_GET_TELEMETRY)) {
-        outputTelemetry();
-    }
-    else {
-        Serial.print("Unknown command: '");
-        Serial.print(command);
-        Serial.println("'");
-    }
+    return true;
 }
 
 void setup() {
@@ -346,6 +477,7 @@ void setup() {
     //Start timers
     add_repeating_timer_ms(10, positionSampleCallback, NULL, &positionTimer);
     add_repeating_timer_ms(10, getTelemetryCallback, NULL, &telemetryCollectionTimer);
+    add_repeating_timer_ms(ERROR_CHECK_INTERVAL, safetyCheckCallback, NULL, &safetyCheckTimer);
 
     //Signal ready
     digitalWrite(STATUS_LED, HIGH);
