@@ -13,27 +13,33 @@
 #include <Wire.h>
 
 // Pin Definitions
-const int I2C_SDA                     = 4;    // I2C Data for AS5600 encoder
-const int I2C_SCL                     = 5;    // I2C Clock for AS5600 encoder
-const int TOP_MOTOR_DRV8871_IN1       = 19;   // Motor driver IN1 for top tool motor
-const int TOP_MOTOR_DRV8871_IN2       = 18;   // Motor driver IN2 for top tool motor
-const int BOTTOM_MOTOR_DRV8871_IN1    = 17;   // Motor driver IN1 for bottom tool motor
-const int BOTTOM_MOTOR_DRV8871_IN2    = 16;   // Motor driver IN2 for bottom tool motor
-const int STATUS_LED                  = 25;   // Status LED on Pico
-const int TOP_MOTOR_ACS723            = 26;   // Analog output of current sensor for top tool motor
-const int BOTTOM_MOTOR_ACS723         = 27;   // Analog output of current sensor for bottom tool motor
+const int I2C_SDA                             = 4;                                                    // I2C Data for AS5600 encoder
+const int I2C_SCL                             = 5;                                                    // I2C Clock for AS5600 encoder
+const int TOP_MOTOR_DRV8871_IN1               = 19;                                                   // Motor driver IN1 for top tool motor
+const int TOP_MOTOR_DRV8871_IN2               = 18;                                                   // Motor driver IN2 for top tool motor
+const int BOTTOM_MOTOR_DRV8871_IN1            = 17;                                                   // Motor driver IN1 for bottom tool motor
+const int BOTTOM_MOTOR_DRV8871_IN2            = 16;                                                   // Motor driver IN2 for bottom tool motor
+const int STATUS_LED                          = 25;                                                   // Status LED on Pico
+const int TOP_MOTOR_ACS723                    = 26;                                                   // Analog output of current sensor for top tool motor
+const int BOTTOM_MOTOR_ACS723                 = 27;                                                   // Analog output of current sensor for bottom tool motor
 
 // Safety Limits
-const float MAX_VELOCITY = 50.0;             // Maximum allowed velocity in mm/s
-const float MIN_VELOCITY = -50.0;            // Minimum allowed velocity in mm/s
-const float MAX_CURRENT = 2000.0;            // Maximum allowed current in mA
-const float MIN_CURRENT = -2000.0;           // Minimum allowed current in mA
-const float MAX_VELOCITY_ERROR = 20.0;       // Maximum allowed velocity error in mm/s
-const float MAX_CURRENT_ERROR = 500.0;       // Maximum allowed current error in mA
-const int ERROR_CHECK_INTERVAL = 100;        // Check errors every 
+const float MOTOR_VOLTAGE                     = 9;                                                    // Votage applied to motors from driver (volts DC)
+const float MAX_TOP_MOTOR_POWER               = 9;                                                    // Maximum safe power for top motor (watts)
+const float MAX_BOTTOM_MOTOR_POWER            = 9;                                                    // Maximum safe power for bottom motor (watts)
+const float MAX_VELOCITY                      = 50.0;                                                 // Maximum allowed velocity in mm/s
+const float MIN_VELOCITY                      = -50.0;                                                // Minimum allowed velocity in mm/s
+const float MAX_CURRENT                       = 2.0;                                                  // Maximum allowed current in A
+const float MIN_CURRENT                       = -2.0;                                                 // Minimum allowed current in A
+const float MAX_VELOCITY_ERROR                = 20.0;                                                 // Maximum allowed velocity error in mm/s
+const float MAX_CURRENT_ERROR                 = 500.0;                                                // Maximum allowed current error in mA
+const int ERROR_CHECK_INTERVAL                = 100;                                                  // Check errors every 
 
 // Command String Definitions
+const String COMMAND_SET_TOP_MOTOR_PWM        = "WIRETOOL: SET_TOP_MOTOR_PWM";
+const String COMMAND_SET_BOTTOM_MOTOR_PWM     = "WIRETOOL: SET_BOTTOM_MOTOR_PWM";
 const String COMMAND_LOAD_WIRE                = "WIRETOOL: LOAD_WIRE";
+const String COMMAND_EXIT_WIRE_LOADING        = "WIRETOOL: EXIT_WIRE_LOADING";
 const String COMMAND_UNLOAD_WIRE              = "WIRETOOL: UNLOAD_WIRE";
 const String COMMAND_CALIBRATE_WIRE_TENSION   = "WIRETOOL: CALIBRATE_WIRE_TENSION";
 const String COMMAND_SET_WIRE_VELOCITY        = "WIRETOOL: SET_WIRE_VELOCITY";
@@ -46,21 +52,27 @@ const String COMMAND_TEST_ERROR               = "WIRETOOL: TEST_ERROR";
 const String COMMAND_RESET                    = "WIRETOOL: RESET";
 const String COMMAND_GET_TELEMETRY            = "WIRETOOL: GET_TELEMETRY";
 
+// Current sensor calibration
+const int CALIBRATION_SAMPLES = 100;  // Number of samples to average for calibration
+float topVoltageOffset = 0.0;         // Zero-current voltage offset for top motor
+float bottomVoltageOffset = 0.0;      // Zero-current voltage offset for bottom motor
+const float CURRENT_SENSOR_SENSITIVITY = 0.400;  // V/Amp
+
 // AS5600 Encoder Constants
-const uint8_t AS5600_ADDR             = 0x36; // I2C address of AS5600 magnetic encoder
-const uint8_t REG_RAW_ANGLE_H         = 0x0C; // High byte register for raw angle
-const uint8_t REG_RAW_ANGLE_L         = 0x0D; // Low byte register for raw angle
-const float WHEEL_DIAMETER            = 30.0; // Diameter of measurement wheel in mm
-const float MM_PER_REVOLUTION         = PI * WHEEL_DIAMETER; // Linear distance per revolution in mm
-const int SAMPLE_SIZE                 = 50;   // Number of samples in moving average window
+const uint8_t AS5600_ADDR             = 0x36;                                                         // I2C address of AS5600 magnetic encoder
+const uint8_t REG_RAW_ANGLE_H         = 0x0C;                                                         // High byte register for raw angle
+const uint8_t REG_RAW_ANGLE_L         = 0x0D;                                                         // Low byte register for raw angle
+const float WHEEL_DIAMETER            = 30.0;                                                         // Diameter of measurement wheel in mm
+const float MM_PER_REVOLUTION         = PI * WHEEL_DIAMETER;                                          // Linear distance per revolution in mm
+const int SAMPLE_SIZE                 = 50;                                                           // Number of samples in moving average window
 
 // Motor Control Constants
-// PWM limits scaled for 24V operation (motor rated for 9V)
-const int MIN_PWM = 2000;                       // Minimum PWM value (~5% of MAX_PWM)
-const int MAX_PWM = 4000;                       // Maximum PWM value 
+const int MIN_TOP_MOTOR_PWM = 0;                                                                      // Minimum PWM duty cycle value for top motor
+const int MAX_TOP_MOTOR_PWM = 4095 * (MAX_TOP_MOTOR_POWER / MOTOR_VOLTAGE);                           // Maximum PWM duty cycle value for top motor, calculated at max power for motor
+const int MIN_BOTTOM_MOTOR_PWM = 0;                                                                   // Minumum PWM duty cycle value for bottom motor
+const int MAX_BOTTOM_MOTOR_PWM = 4095 * (MAX_BOTTOM_MOTOR_POWER / MOTOR_VOLTAGE);                     // Maximum PWM duty cycle value for bottom motor, calculated at max power for motor
 int topMotorPWM = 0;     // Current PWM value for top motor
 int bottomMotorPWM = 0;  // Current PWM value for bottom motor
-
 
 // PID Control Variables
 float Kp = 400.0;   
@@ -69,14 +81,20 @@ float Kd = 1.0;
 float velocityIntegral = 0;
 float lastVelocityError = 0;
 unsigned long lastVelocityPIDTime = 0;
-const float INTEGRAL_MAX = 1000.0;  
+const float INTEGRAL_MAX = 1000.0;
 
 // Encoder Variables
-volatile uint16_t lastPosition = 0;           // Previous encoder position (0-4095)
-volatile float velocities[SAMPLE_SIZE];       // Circular buffer of velocity measurements
-volatile int velocityIndex = 0;              // Current index in velocity buffer
-volatile uint32_t lastSampleTime = 0;        // Last sample time in microseconds
-volatile float targetVelocity = 0;
+volatile uint16_t lastPosition = 0;                                                                     // Previous encoder position (0-4095)
+volatile float velocities[SAMPLE_SIZE];                                                                 // Circular buffer of velocity measurements
+volatile int velocityIndex = 0;                                                                         // Current index in velocity buffer
+volatile uint32_t lastSampleTime = 0;                                                                   // Last sample time in microseconds
+volatile float targetVelocity = 0;                                                                      // Target velocity for wire
+
+// Wire loading and unloading variables 
+bool wireLoadingMode = false;
+uint16_t loadingModeLastPosition = 0;
+const float LOADING_PWM_SCALE = 500.0;                                                                   // PWM per revolution scaling factor
+const int WIRE_LOADING_BOTTOM_TOOL_PWM = MAX_BOTTOM_MOTOR_PWM;
 
 // State Variables
 String inputBuffer = "";
@@ -96,28 +114,67 @@ struct Telemetry {
     float actualVelocity;
     float velocityError;
     float targetCurrent;
-    float actualCurrent;
+    float actualTopCurrent;     
+    float actualBottomCurrent;  
     float currentError;
     bool wireStatus;
     bool errorStatus;
     String errorMsg;
-    int topPWM;          // Added PWM tracking
-    int bottomPWM;       // Added PWM tracking
+    int topPWM;
+    int bottomPWM;
 } telemetryData;
 
-// Applies PWM to top motor pins for velocity control
-void applyVelocityMotorPWM(int pwmValue) {
-    if(pwmValue > 0) {
+void calibrateCurrentSensors() {
+    float topSum = 0;
+    float bottomSum = 0;
+    
+    Serial.println("Calibrating current sensors...");
+    
+    // Ensure motors are off
+    applyTopMotorPWM(0);
+    applyBottomMotorPWM(0);
+    
+    // Small delay to ensure motors are stopped
+    delay(1000);
+    
+    // Take multiple readings and average them
+    for(int i = 0; i < CALIBRATION_SAMPLES; i++) {
+        topSum += analogRead(TOP_MOTOR_ACS723) * (3.3 / 4096.0);
+        bottomSum += analogRead(BOTTOM_MOTOR_ACS723) * (3.3 / 4096.0);
+        delay(10);  // Short delay between readings
+    }
+    
+    // Calculate average offsets
+    topVoltageOffset = topSum / CALIBRATION_SAMPLES;
+    bottomVoltageOffset = bottomSum / CALIBRATION_SAMPLES;
+    
+    //Serial.print("Top current sensor offset: ");
+    //Serial.print(topCurrentOffset, 3);
+    //Serial.println("V");
+    //Serial.print("Bottom current sensor offset: ");
+    //Serial.print(bottomCurrentOffset, 3);
+    //Serial.println("V");
+  }
+void applyTopMotorPWM(int pwmValue) { // Function to apply PWM value to top motor
+
+    // Constrain PWM value within safe limits
+    int safePWM;
+    
+    if (pwmValue > 0) {
         // Forward direction
-        analogWrite(TOP_MOTOR_DRV8871_IN1, min(pwmValue, MAX_PWM));
+        safePWM = min(pwmValue, MAX_TOP_MOTOR_PWM);
+        safePWM = max(safePWM, MIN_TOP_MOTOR_PWM);
+        analogWrite(TOP_MOTOR_DRV8871_IN1, safePWM);
         analogWrite(TOP_MOTOR_DRV8871_IN2, 0);
-        topMotorPWM = min(pwmValue, MAX_PWM);
+        topMotorPWM = safePWM;
     } 
-    else if(pwmValue < 0) {
+    else if (pwmValue < 0) {
         // Reverse direction
+        safePWM = min(-pwmValue, MAX_TOP_MOTOR_PWM);
+        safePWM = max(safePWM, MIN_TOP_MOTOR_PWM);
         analogWrite(TOP_MOTOR_DRV8871_IN1, 0);
-        analogWrite(TOP_MOTOR_DRV8871_IN2, min(-pwmValue, MAX_PWM));
-        topMotorPWM = -min(-pwmValue, MAX_PWM);
+        analogWrite(TOP_MOTOR_DRV8871_IN2, safePWM);
+        topMotorPWM = -safePWM;
     }
     else {
         // Stop
@@ -125,62 +182,43 @@ void applyVelocityMotorPWM(int pwmValue) {
         analogWrite(TOP_MOTOR_DRV8871_IN2, 0);
         topMotorPWM = 0;
     }
-}
+  }
+void applyBottomMotorPWM(int pwmValue) { // Function to apply PWM value to bottom motor
 
-// Calculates feed-forward PWM value for velocity control
-int calculateVelocityFeedForward(float targetVelocity) {
-    // 30% PWM gives 10 mm/s
-    float pwmValue = (targetVelocity * 3770) / 10.0;
+    // Constrain PWM value within safe limits
+    int safePWM;
     
-    // Ensure minimum PWM if not zero
-    if(targetVelocity != 0) {
-        if(abs(pwmValue) < MIN_PWM) {
-            pwmValue = (pwmValue > 0) ? MIN_PWM : -MIN_PWM;
-        }
+    if (pwmValue > 0) {
+        // Forward direction
+        safePWM = min(pwmValue, MAX_BOTTOM_MOTOR_PWM);
+        safePWM = max(safePWM, MIN_BOTTOM_MOTOR_PWM);
+        analogWrite(BOTTOM_MOTOR_DRV8871_IN1, safePWM);
+        analogWrite(BOTTOM_MOTOR_DRV8871_IN2, 0);
+        bottomMotorPWM = safePWM;
     }
-    
-    return (int)pwmValue;
-}
-
-// Main velocity PID control function
-void updateVelocityPID() {
-    unsigned long currentTime = micros();
-    float deltaTime = (currentTime - lastVelocityPIDTime) / 1000000.0; // Convert to seconds
-    
-    // Skip if time delta too small
-    if(deltaTime < 0.001) return;  
-    
-    // Get current velocity
-    float currentVelocity = calculateAverageVelocity();
-    float velocityError = targetVelocity - currentVelocity;
-    
-    // Calculate PID terms
-    float proportional = Kp * velocityError;
-    
-    velocityIntegral += Ki * velocityError * deltaTime;
-    velocityIntegral = constrain(velocityIntegral, -INTEGRAL_MAX, INTEGRAL_MAX);
-    
-    float derivative = 0;
-    if(deltaTime > 0) {
-        derivative = Kd * (velocityError - lastVelocityError) / deltaTime;
+    else if (pwmValue < 0) {
+        // Reverse direction
+        safePWM = min(-pwmValue, MAX_BOTTOM_MOTOR_PWM);
+        safePWM = max(safePWM, MIN_BOTTOM_MOTOR_PWM);
+        analogWrite(BOTTOM_MOTOR_DRV8871_IN1, 0);
+        analogWrite(BOTTOM_MOTOR_DRV8871_IN2, safePWM);
+        bottomMotorPWM = -safePWM;
     }
-    
-    // Calculate feed-forward term
-    int feedForward = calculateVelocityFeedForward(targetVelocity);
-    
-    // Combine terms
-    int outputPWM = feedForward + (int)(proportional + velocityIntegral + derivative);
-    
-    // Apply output
-    applyVelocityMotorPWM(outputPWM);
-    
-    // Update state variables
-    lastVelocityError = velocityError;
-    lastVelocityPIDTime = currentTime;
-}
+    else {
+        // Stop
+        analogWrite(BOTTOM_MOTOR_DRV8871_IN1, 0);
+        analogWrite(BOTTOM_MOTOR_DRV8871_IN2, 0);
+        bottomMotorPWM = 0;
+    }
+  }
 
-// Read raw angle from AS5600 encoder
-uint16_t readRawAngle() {
+
+
+
+
+
+
+uint16_t readRawAngle() { // Read raw angle from AS5600 encoder
     Wire.beginTransmission(AS5600_ADDR);
     Wire.write(REG_RAW_ANGLE_H);
     Wire.endTransmission(false);
@@ -192,19 +230,17 @@ uint16_t readRawAngle() {
         return (high << 8) | low;
     }
     return 0;
-}
+  }
 
-// Calculate average velocity from samples
-float calculateAverageVelocity() {
+float calculateAverageVelocity() { // Calculate average velocity from samples
     float sum = 0;
     for(int i = 0; i < SAMPLE_SIZE; i++) {
         sum += velocities[i];
     }
     return sum / SAMPLE_SIZE;
-}
+  }
 
-// Handle fatal errors
-void triggerFatalError(String message) {
+void triggerFatalError(String message) { // Handle fatal errors
   fatalErrorActive = true;
   errorMessage = message;
     
@@ -217,10 +253,9 @@ void triggerFatalError(String message) {
   digitalWrite(STATUS_LED, LOW);
   Serial.print("FATAL ERROR: ");
   Serial.println(message);
-}
+  }
 
-// Check safety limits
-bool checkSafetyLimits() {
+bool checkSafetyLimits() { // Check safety limits
     // Check if values are within allowed ranges
     if(telemetryData.targetVelocity > MAX_VELOCITY || telemetryData.targetVelocity < MIN_VELOCITY) {
         char errorMsg[50];
@@ -254,29 +289,45 @@ bool checkSafetyLimits() {
     }
     
     return true;
-}
+  }
 
-// Collect telemetry data
 bool getTelemetryCallback(struct repeating_timer *t) {
-    telemetryData.targetVelocity = targetVelocity;
-    telemetryData.actualVelocity = calculateAverageVelocity();
-    telemetryData.velocityError = targetVelocity - telemetryData.actualVelocity;
+   // Velocity telemetry
+   telemetryData.targetVelocity = targetVelocity;
+   telemetryData.actualVelocity = calculateAverageVelocity();
+   telemetryData.velocityError = targetVelocity - telemetryData.actualVelocity;
 
-    telemetryData.targetCurrent = targetCurrent;
-    telemetryData.actualCurrent = analogRead(BOTTOM_MOTOR_ACS723) * (3.3 / 4096.0);
-    telemetryData.currentError = targetCurrent - telemetryData.actualCurrent;
+   // Current telemetry
+   telemetryData.targetCurrent = targetCurrent;
+   
+   // Read raw voltage from current sensors (0-3.3V based on 12-bit ADC)
+   float topVoltage = analogRead(TOP_MOTOR_ACS723) * (3.3 / 4096.0);
+   float bottomVoltage = analogRead(BOTTOM_MOTOR_ACS723) * (3.3 / 4096.0);
+   
+   // Convert to mA from volts
+   telemetryData.actualTopCurrent = ((topVoltage - topVoltageOffset) / CURRENT_SENSOR_SENSITIVITY) * 1000;
+   telemetryData.actualBottomCurrent = ((bottomVoltage - bottomVoltageOffset) / CURRENT_SENSOR_SENSITIVITY) * 1000;
+   telemetryData.currentError = targetCurrent - telemetryData.actualBottomCurrent;
 
-    telemetryData.wireStatus = wireIsLoaded;
-    telemetryData.errorStatus = fatalErrorActive;
-    telemetryData.errorMsg = errorMessage;
-    
-    telemetryData.topPWM = topMotorPWM;
-    telemetryData.bottomPWM = bottomMotorPWM;
+   // Status telemetry
+   telemetryData.wireStatus = wireIsLoaded;
+   telemetryData.errorStatus = fatalErrorActive;
+   telemetryData.errorMsg = errorMessage;
+   
+   // Motor PWM telemetry
+   telemetryData.topPWM = topMotorPWM;
+   telemetryData.bottomPWM = bottomMotorPWM;
 
-    return true;
-}
+  //Serial.print("Raw ADC: "); 
+  //Serial.println(analogRead(BOTTOM_MOTOR_ACS723));
+  //Serial.print("Voltage: ");
+  //Serial.println(bottomVoltage, 4);
+  //Serial.print("Offset: ");
+  //Serial.println(bottomVoltageOffset, 4);
 
-// Output telemetry data over serial
+   return true;
+  }
+
 void outputTelemetry() {
     Serial.println("TELEMETRY_BEGIN");
     
@@ -293,8 +344,11 @@ void outputTelemetry() {
     Serial.print("Target Current: ");
     Serial.print(telemetryData.targetCurrent, 2);
     Serial.println(" mA");
-    Serial.print("Actual Current: ");
-    Serial.print(telemetryData.actualCurrent, 2);
+    Serial.print("Top Motor Current: ");       // Add this line
+    Serial.print(telemetryData.actualTopCurrent, 2);  // Add this line
+    Serial.println(" mA");                     // Add this line
+    Serial.print("Bottom Motor Current: ");    // Modified line
+    Serial.print(telemetryData.actualBottomCurrent, 2);
     Serial.println(" mA");
     Serial.print("Current Error: ");
     Serial.print(telemetryData.currentError, 2);
@@ -311,40 +365,49 @@ void outputTelemetry() {
     Serial.println(telemetryData.errorStatus ? telemetryData.errorMsg : "NO ERROR");
     
     Serial.println("TELEMETRY_END");
-}
+  }
 
-// Combined callback for all periodic tasks
-bool mainTimerCallback(struct repeating_timer *t) {
+bool mainTimerCallback(struct repeating_timer *t) { // Combined callback for all periodic tasks
     // Position sampling
     uint32_t currentTime = micros();
     uint16_t currentPosition = readRawAngle();
     
     int16_t deltaPos = currentPosition - lastPosition;
-    if(deltaPos < -2048) deltaPos += 4096;
-    if(deltaPos > 2048) deltaPos -= 4096;
+    if(deltaPos < -2048) deltaPos += 4096;  // Handle rollover in positive direction
+    if(deltaPos > 2048) deltaPos -= 4096;   // Handle rollover in negative direction
+
+    // Add debug prints
+    //Serial.print("Position: ");
+    //Serial.print(currentPosition);
+    //Serial.print(" Delta: ");
+    //Serial.println(deltaPos);
     
-    if (abs(deltaPos) < 2) {
+    
+    if (abs(deltaPos) < 2) {  // Noise threshold
         velocities[velocityIndex] = 0;
         velocityIndex = (velocityIndex + 1) % SAMPLE_SIZE;
         lastPosition = currentPosition;
         lastSampleTime = currentTime;
     } else {
-        float timeElapsed = (currentTime - lastSampleTime) / 1000000.0;
-        if (timeElapsed >= 0.001) {
+        float timeElapsed = (currentTime - lastSampleTime) / 1000000.0;  // Convert to seconds
+        if (timeElapsed >= 0.001) {  // Minimum time threshold
             float rotationFraction = deltaPos / 4096.0;
             float linearDistance = rotationFraction * MM_PER_REVOLUTION;
             velocities[velocityIndex] = linearDistance / timeElapsed;
             velocityIndex = (velocityIndex + 1) % SAMPLE_SIZE;
             lastPosition = currentPosition;
             lastSampleTime = currentTime;
+            
+            // Add debug print
+            //Serial.print("Calculated velocity: ");
+            //Serial.println(velocities[velocityIndex]);
         }
     }
 
     // Telemetry collection
     getTelemetryCallback(t);
-
-    // Velocity PID update
-    updateVelocityPID();
+    // Will run if device is in wire loading mode
+    updateLoadingMode();
 
     // Safety check every ERROR_CHECK_INTERVAL ms
     safetyCheckCounter++;
@@ -356,23 +419,55 @@ bool mainTimerCallback(struct repeating_timer *t) {
     }
 
     return true;
-}
+  }
 
-// Process serial commands
-void processCommand(String command) {
+void updateLoadingMode() { // Function to handle wire loading mode
+    if (!wireLoadingMode) return;
+    
+    //enable bottom motor to catch wire
+    applyBottomMotorPWM(WIRE_LOADING_BOTTOM_TOOL_PWM);
+
+    uint16_t currentPosition = readRawAngle();
+    int16_t deltaPos = currentPosition - loadingModeLastPosition;
+    
+    // Handle rollover
+    if(deltaPos < -2048) deltaPos += 4096;
+    if(deltaPos > 2048) deltaPos -= 4096;
+    
+    // Calculate motor PWM based on encoder movement
+    if (abs(deltaPos) > 2) {  // Noise threshold
+        int pwmValue = (int)(deltaPos * LOADING_PWM_SCALE);
+        applyTopMotorPWM(pwmValue);
+        Serial.println(pwmValue);
+        loadingModeLastPosition = currentPosition;
+    } else {
+        applyTopMotorPWM(0);  // Stop if no significant movement
+    }
+  }
+void processCommand(String command) { // Process serial commands
     Serial.print("Received command: '");
     Serial.print(command);
     Serial.println("'");
 
     if (command.startsWith(COMMAND_LOAD_WIRE)) {
-        if(!fatalErrorActive) {
-            // TODO: Implement wire loading sequence
-            Serial.println("Loading wire...");
-            wireIsLoaded = true;
+      if(!fatalErrorActive) {
+        wireLoadingMode = true;
+        loadingModeLastPosition = readRawAngle();
+        Serial.println("Entering wire loading mode - rotate encoder wheel to feed wire");
+      } else {
+        Serial.println("ERROR: Cannot load wire while in error state");
+      }
+      }
+      else if (command.startsWith(COMMAND_EXIT_WIRE_LOADING)) {
+        if(wireLoadingMode) {
+        wireLoadingMode = false;
+        applyTopMotorPWM(0);  // Stop top motor
+        applyBottomMotorPWM(0); // Stop bottom motor
+        Serial.println("Exiting wire loading mode");
         } else {
-            Serial.println("ERROR: Cannot load wire while in error state");
+        Serial.println("Not in wire loading mode");
         }
-    }
+    }  
     else if (command.startsWith(COMMAND_UNLOAD_WIRE)) {
         if(!fatalErrorActive) {
             // TODO: Implement wire unloading sequence
@@ -483,7 +578,7 @@ void processCommand(String command) {
     }
     else if (command.startsWith(COMMAND_RESET)) {
       Serial.println("Executing reset command...");
-    
+  
       // Stop all motors
       analogWrite(TOP_MOTOR_DRV8871_IN1, 0);
       analogWrite(TOP_MOTOR_DRV8871_IN2, 0);
@@ -513,59 +608,99 @@ void processCommand(String command) {
     
       // Reset safety counter
       safetyCheckCounter = 0;
+
+      // Recalibrate current sensors
+      calibrateCurrentSensors();
     
       // Turn on status LED
       digitalWrite(STATUS_LED, HIGH);
     
       Serial.println("Reset complete");
-}
+  }
     else if (command.startsWith(COMMAND_GET_TELEMETRY)) {
         outputTelemetry();
     }
+    else if (command.startsWith(COMMAND_SET_TOP_MOTOR_PWM)) {
+      String parameter = command.substring(COMMAND_SET_TOP_MOTOR_PWM.length() + 1);
+      parameter.trim();
+      int pwmValue = parameter.toInt();
+    
+      if(!fatalErrorActive) {
+        applyTopMotorPWM(pwmValue);
+        Serial.print("Setting top motor PWM to: ");
+        Serial.println(pwmValue);
+      } else {
+        Serial.println("ERROR: Cannot set motor PWM while in error state");
+      }
+    }
+    else if (command.startsWith(COMMAND_SET_BOTTOM_MOTOR_PWM)) {
+      String parameter = command.substring(COMMAND_SET_BOTTOM_MOTOR_PWM.length() + 1);
+      parameter.trim();
+      int pwmValue = parameter.toInt();
+    
+      if(!fatalErrorActive) {
+        applyBottomMotorPWM(pwmValue);
+        Serial.print("Setting bottom motor PWM to: ");
+        Serial.println(pwmValue);
+      } else {
+        Serial.println("ERROR: Cannot set motor PWM while in error state");
+      }
+  }
     else {
         Serial.print("Unknown command: '");
         Serial.print(command);
         Serial.println("'");
     }
-}
-
+  }
 void setup() {
-   // Configure pins
-   pinMode(TOP_MOTOR_DRV8871_IN1, OUTPUT);
-   pinMode(TOP_MOTOR_DRV8871_IN2, OUTPUT);
-   pinMode(BOTTOM_MOTOR_DRV8871_IN1, OUTPUT);
-   pinMode(BOTTOM_MOTOR_DRV8871_IN2, OUTPUT);
-   pinMode(STATUS_LED, OUTPUT);
-   pinMode(TOP_MOTOR_ACS723, INPUT);
-   pinMode(BOTTOM_MOTOR_ACS723, INPUT);
+    // Configure pins
+    pinMode(TOP_MOTOR_DRV8871_IN1, OUTPUT);
+    pinMode(TOP_MOTOR_DRV8871_IN2, OUTPUT);
+    pinMode(BOTTOM_MOTOR_DRV8871_IN1, OUTPUT);
+    pinMode(BOTTOM_MOTOR_DRV8871_IN2, OUTPUT);
+    pinMode(STATUS_LED, OUTPUT);
+    pinMode(TOP_MOTOR_ACS723, INPUT);
+    pinMode(BOTTOM_MOTOR_ACS723, INPUT);
 
-   // Configure PWM and ADC
-   analogWriteFreq(10000);
-   analogWriteResolution(12);
-   analogReadResolution(12);
+    // Configure PWM and ADC
+    analogWriteFreq(20000);
+    analogWriteResolution(12);
+    analogReadResolution(12);
 
-   // Initialize communications
-   Serial.begin(115200);
-   Wire.setSDA(I2C_SDA);
-   Wire.setSCL(I2C_SCL);
-   Wire.begin();
+    // Initialize communications
+    Serial.begin(115200);
+    Wire.setSDA(I2C_SDA);
+    Wire.setSCL(I2C_SCL);
+    Wire.begin();
 
-   // Initialize position tracking
-   lastPosition = readRawAngle();
-   lastSampleTime = micros();
+    delay(1000); 
+    // Test encoder communication
+    Wire.beginTransmission(AS5600_ADDR);
+    if (Wire.endTransmission() == 0) {
+        Serial.println("AS5600 encoder found!");
+    } else {
+        Serial.println("ERROR: AS5600 encoder not found!");
+        fatalErrorActive = true;
+    }
+    // Calibrate current sensors
+    calibrateCurrentSensors();
+
+    // Initialize position tracking
+    lastPosition = readRawAngle();
+    lastSampleTime = micros();
    
-   // Initialize velocity buffer
-   for(int i = 0; i < SAMPLE_SIZE; i++) {
-       velocities[i] = 0;
-   }
+    // Initialize velocity buffer
+    for(int i = 0; i < SAMPLE_SIZE; i++) {
+      velocities[i] = 0;
+    }
 
-   // Start main timer
-   add_repeating_timer_ms(10, mainTimerCallback, NULL, &mainTimer);
+    // Start main timer
+    add_repeating_timer_ms(10, mainTimerCallback, NULL, &mainTimer);
 
-   // Signal ready
-   digitalWrite(STATUS_LED, HIGH);
+    // Signal ready
+    digitalWrite(STATUS_LED, HIGH);
    
-   Serial.println("Wire Tool Firmware - Initialization Complete");
+    Serial.println("Wire Tool Firmware - Initialization Complete");
 }
 
 void loop() {
