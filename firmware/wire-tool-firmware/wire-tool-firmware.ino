@@ -6,8 +6,6 @@
  * Dependencies: Wire.h (built-in)
  * Hardware: RP2040, AS5600, DRV8871, ACS723
  * 
- * This implementation adds PID velocity control for the top motor
- * and consolidates timer callbacks for improved efficiency.
  */
 
 #include <Wire.h>
@@ -57,6 +55,12 @@ const int CALIBRATION_SAMPLES = 100;  // Number of samples to average for calibr
 float topVoltageOffset = 0.0;         // Zero-current voltage offset for top motor
 float bottomVoltageOffset = 0.0;      // Zero-current voltage offset for bottom motor
 const float CURRENT_SENSOR_SENSITIVITY = 0.400;  // V/Amp
+
+// Current sensing constants and variables
+const int CURRENT_AVERAGE_SAMPLES = 10;  // Number of samples for moving average
+float topCurrentReadings[CURRENT_AVERAGE_SAMPLES] = {0};    // Array for top motor current readings
+float bottomCurrentReadings[CURRENT_AVERAGE_SAMPLES] = {0}; // Array for bottom motor current readings
+int currentReadingIndex = 0;  // Index for circular buffer
 
 // AS5600 Encoder Constants
 const uint8_t AS5600_ADDR             = 0x36;                                                         // I2C address of AS5600 magnetic encoder
@@ -124,6 +128,29 @@ struct Telemetry {
     int bottomPWM;
 } telemetryData;
 
+float readMotorCurrent(int sensorPin, float voltageOffset) {
+    // Read raw voltage from current sensor (0-3.3V based on 12-bit ADC)
+    float voltage = analogRead(sensorPin) * (3.3 / 4096.0);
+    
+    // Convert to mA using sensitivity and offset
+    return abs(((voltage - voltageOffset) / CURRENT_SENSOR_SENSITIVITY) * 1000.0);
+  }
+
+float calculateAverageCurrent(float readings[], int numSamples) {
+    float sum = 0;
+    for(int i = 0; i < numSamples; i++) {
+        sum += readings[i];
+    }
+    return sum / numSamples;
+  }
+void updateCurrentReadings() {
+    // Read new current values
+    topCurrentReadings[currentReadingIndex] = readMotorCurrent(TOP_MOTOR_ACS723, topVoltageOffset);
+    bottomCurrentReadings[currentReadingIndex] = readMotorCurrent(BOTTOM_MOTOR_ACS723, bottomVoltageOffset);
+    
+    // Update circular buffer index
+    currentReadingIndex = (currentReadingIndex + 1) % CURRENT_AVERAGE_SAMPLES;
+  }
 void calibrateCurrentSensors() {
     float topSum = 0;
     float bottomSum = 0;
@@ -149,10 +176,10 @@ void calibrateCurrentSensors() {
     bottomVoltageOffset = bottomSum / CALIBRATION_SAMPLES;
     
     //Serial.print("Top current sensor offset: ");
-    //Serial.print(topCurrentOffset, 3);
+    //Serial.print(topVoltageOffset, 3);
     //Serial.println("V");
     //Serial.print("Bottom current sensor offset: ");
-    //Serial.print(bottomCurrentOffset, 3);
+    //Serial.print(bottomVoltageOffset, 3);
     //Serial.println("V");
   }
 void applyTopMotorPWM(int pwmValue) { // Function to apply PWM value to top motor
@@ -303,11 +330,12 @@ bool getTelemetryCallback(struct repeating_timer *t) {
    // Read raw voltage from current sensors (0-3.3V based on 12-bit ADC)
    float topVoltage = analogRead(TOP_MOTOR_ACS723) * (3.3 / 4096.0);
    float bottomVoltage = analogRead(BOTTOM_MOTOR_ACS723) * (3.3 / 4096.0);
-   
-   // Convert to mA from volts
-   telemetryData.actualTopCurrent = ((topVoltage - topVoltageOffset) / CURRENT_SENSOR_SENSITIVITY) * 1000;
-   telemetryData.actualBottomCurrent = ((bottomVoltage - bottomVoltageOffset) / CURRENT_SENSOR_SENSITIVITY) * 1000;
-   telemetryData.currentError = targetCurrent - telemetryData.actualBottomCurrent;
+
+
+  // Get motor 
+  telemetryData.actualTopCurrent = calculateAverageCurrent(topCurrentReadings, CURRENT_AVERAGE_SAMPLES);
+  telemetryData.actualBottomCurrent = calculateAverageCurrent(bottomCurrentReadings, CURRENT_AVERAGE_SAMPLES);
+  telemetryData.currentError = abs(targetCurrent - telemetryData.actualBottomCurrent);
 
    // Status telemetry
    telemetryData.wireStatus = wireIsLoaded;
@@ -403,7 +431,8 @@ bool mainTimerCallback(struct repeating_timer *t) { // Combined callback for all
             //Serial.println(velocities[velocityIndex]);
         }
     }
-
+    // Update current readings
+    updateCurrentReadings();
     // Telemetry collection
     getTelemetryCallback(t);
     // Will run if device is in wire loading mode
@@ -420,13 +449,26 @@ bool mainTimerCallback(struct repeating_timer *t) { // Combined callback for all
 
     return true;
   }
-
-void updateLoadingMode() { // Function to handle wire loading mode
+void updateLoadingMode() {
     if (!wireLoadingMode) return;
+    
+    // Get the averaged bottom motor current
+    float bottomCurrent = calculateAverageCurrent(bottomCurrentReadings, CURRENT_AVERAGE_SAMPLES);
+    
+    Serial.println(bottomCurrent);
+
+    if (bottomCurrent > 200.0) {
+        wireLoadingMode = false;
+        wireIsLoaded = true;  // Wire is now loaded
+        applyTopMotorPWM(0);  // Stop top motor
+        applyBottomMotorPWM(0); // Stop bottom motor
+        Serial.println("Wire detected - exiting loading mode");
+        return;
+    }
     
     //enable bottom motor to catch wire
     applyBottomMotorPWM(WIRE_LOADING_BOTTOM_TOOL_PWM);
-
+    
     uint16_t currentPosition = readRawAngle();
     int16_t deltaPos = currentPosition - loadingModeLastPosition;
     
@@ -438,12 +480,13 @@ void updateLoadingMode() { // Function to handle wire loading mode
     if (abs(deltaPos) > 2) {  // Noise threshold
         int pwmValue = (int)(deltaPos * LOADING_PWM_SCALE);
         applyTopMotorPWM(pwmValue);
-        Serial.println(pwmValue);
         loadingModeLastPosition = currentPosition;
     } else {
         applyTopMotorPWM(0);  // Stop if no significant movement
     }
   }
+
+
 void processCommand(String command) { // Process serial commands
     Serial.print("Received command: '");
     Serial.print(command);
@@ -682,6 +725,7 @@ void setup() {
         Serial.println("ERROR: AS5600 encoder not found!");
         fatalErrorActive = true;
     }
+    delay(1000);
     // Calibrate current sensors
     calibrateCurrentSensors();
 
@@ -702,7 +746,6 @@ void setup() {
    
     Serial.println("Wire Tool Firmware - Initialization Complete");
 }
-
 void loop() {
    // Process serial commands
    while (Serial.available()) {
