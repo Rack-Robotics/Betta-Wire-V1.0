@@ -618,12 +618,6 @@
         },
         {
           "group_by": false,
-          "label": "Thermal",
-          "name": "Thermal",
-          "show": true
-        },
-        {
-          "group_by": false,
           "label": "Tolerance",
           "name": "Tolerance",
           "show": true
@@ -645,13 +639,31 @@
           "label": "LCSC Part #",
           "name": "LCSC#",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Max Current",
+          "name": "Max Current",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Dielectric",
+          "name": "Dielectric",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field-1",
+          "name": "Field-1",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "LCSC#"
+      "sort_field": "Max Current"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -722,6 +734,10 @@
     [
       "0298a268-9a0b-4113-bec3-5dd5ab780c58",
       "Root"
+    ],
+    [
+      "e1900297-455c-422d-aa78-68bfcbbb8ba0",
+      "power"
     ],
     [
       "d3b80096-5c11-4987-aa35-9d6609e08afc",
