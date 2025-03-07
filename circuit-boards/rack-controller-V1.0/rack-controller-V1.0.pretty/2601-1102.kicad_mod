@@ -1,7 +1,7 @@
 (footprint "2601-1102"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "2601-1102 ")
 	(property "Reference" "REF**"
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at -1.8 -2.5 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "bec5cff0-3de9-4c90-834b-672fbbed7b25")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -65,17 +53,6 @@
 		)
 	)
 	(attr through_hole)
-	(fp_circle
-		(center -1.8 -4.4)
-		(end -1.419 -4.4)
-		(stroke
-			(width 0.508)
-			(type solid)
-		)
-		(fill none)
-		(layer "B.SilkS")
-		(uuid "49c7b5b2-1aad-4a71-ba3b-57a829542431")
-	)
 	(fp_line
 		(start -5 2.534001)
 		(end -5 -3.349998)
@@ -213,9 +190,20 @@
 			(width 0.508)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "2c5d8387-1adf-4a83-8cf1-b8f2c75adaaf")
+	)
+	(fp_circle
+		(center -1.8 -4.4)
+		(end -1.419 -4.4)
+		(stroke
+			(width 0.508)
+			(type solid)
+		)
+		(fill no)
+		(layer "B.SilkS")
+		(uuid "49c7b5b2-1aad-4a71-ba3b-57a829542431")
 	)
 	(fp_line
 		(start -5.254 -6.903999)
@@ -404,7 +392,7 @@
 			(width 0.508)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "6cca2d59-6352-4950-88c2-48c89b72939e")
 	)
@@ -451,5 +439,17 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "0b6bcae2-4764-4cd7-ba21-a13ed30b661d")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3D-models/2601-1102.stp"
+		(offset
+			(xyz -2.9 2.5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -90)
+		)
 	)
 )
