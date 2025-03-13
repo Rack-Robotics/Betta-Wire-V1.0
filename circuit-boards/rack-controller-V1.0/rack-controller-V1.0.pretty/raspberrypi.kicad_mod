@@ -1,7 +1,7 @@
 (footprint "raspberrypi"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(descr "RaspberryPi 2")
 	(tags "CONN")
@@ -24,18 +24,6 @@
 			(font
 				(size 2 2)
 				(thickness 0.25)
-			)
-		)
-	)
-	(property "Footprint" "rack-controller:raspberrypi"
-		(at 29 0 180)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "969ba76e-af88-4c50-adfa-96d1a1aa9a42")
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.15)
 			)
 		)
 	)
@@ -158,50 +146,6 @@
 		)
 		(layer "Dwgs.User")
 		(uuid "37fef537-ed6d-4f85-b611-2845d58cfd4e")
-	)
-	(fp_circle
-		(center 0 0)
-		(end 1.75 0)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill none)
-		(layer "Edge.Cuts")
-		(uuid "a817a44a-f9f5-48d3-abd4-327be2e08ae9")
-	)
-	(fp_circle
-		(center 0 49)
-		(end 1.75 49)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill none)
-		(layer "Edge.Cuts")
-		(uuid "f526a7ca-af64-4c0a-a508-28951e8bb8ce")
-	)
-	(fp_circle
-		(center 58 0)
-		(end 59.75 0)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill none)
-		(layer "Edge.Cuts")
-		(uuid "7a3d5e46-d8f1-4b17-a2a6-2d16e73e21e8")
-	)
-	(fp_circle
-		(center 58 49)
-		(end 59.75 49)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill none)
-		(layer "Edge.Cuts")
-		(uuid "9434e84d-e4af-40d5-930b-4ebf467ed42b")
 	)
 	(fp_line
 		(start 3.6 -2.54)
@@ -563,6 +507,7 @@
 		(remove_unused_layers no)
 		(uuid "2ab1b73e-a149-416d-ba50-ebe0fb01cfa4")
 	)
+	(embedded_fonts no)
 	(model "${KIPRJMOD}/3D-models/ESQ-120-23-T-D.step"
 		(offset
 			(xyz 29 0 -7)

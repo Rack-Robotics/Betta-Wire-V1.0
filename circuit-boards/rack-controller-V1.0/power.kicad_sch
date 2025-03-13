@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "b6ce3c7b-1b59-47e9-849f-f7e4c1d86523")
 	(paper "A4")
 	(title_block
@@ -12,7 +12,9 @@
 	)
 	(lib_symbols
 		(symbol "Device:C_Polarized"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -168,11 +170,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -242,10 +249,10 @@
 			(symbol "C_Small_0_1"
 				(polyline
 					(pts
-						(xy -1.524 -0.508) (xy 1.524 -0.508)
+						(xy -1.524 0.508) (xy 1.524 0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -254,10 +261,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.508) (xy 1.524 0.508)
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3048)
+						(width 0.3302)
 						(type default)
 					)
 					(fill
@@ -303,11 +310,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -405,10 +417,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -417,10 +429,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -466,9 +478,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:FerriteBead_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -541,7 +556,7 @@
 			(symbol "FerriteBead_Small_0_1"
 				(polyline
 					(pts
-						(xy 0 -1.27) (xy 0 -0.7874)
+						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
 					)
 					(stroke
 						(width 0)
@@ -565,7 +580,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
+						(xy 0 -1.27) (xy 0 -0.7874)
 					)
 					(stroke
 						(width 0)
@@ -614,11 +629,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:L"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -685,32 +705,8 @@
 			)
 			(symbol "L_0_1"
 				(arc
-					(start 0 -2.54)
-					(mid 0.6323 -1.905)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 0.635)
+					(start 0 2.54)
+					(mid 0.6323 1.905)
 					(end 0 1.27)
 					(stroke
 						(width 0)
@@ -722,8 +718,32 @@
 				)
 				(arc
 					(start 0 1.27)
-					(mid 0.6323 1.905)
-					(end 0 2.54)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
 					(stroke
 						(width 0)
 						(type default)
@@ -771,11 +791,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.254) hide)
+				(offset 0.254)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -893,12 +918,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3.3V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -970,7 +1000,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -982,7 +1012,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1013,12 +1043,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+48V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1090,7 +1125,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1102,7 +1137,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1133,12 +1168,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1210,7 +1250,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1222,7 +1262,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1253,12 +1293,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1349,9 +1394,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "rack-controller:0679H9120-05"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -1535,6 +1583,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "rack-controller:2601-1102"
 			(pin_names
@@ -1653,18 +1702,6 @@
 			(symbol "2601-1102_1_1"
 				(polyline
 					(pts
-						(xy 0 -12.7) (xy 0 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0 0) (xy 11.43 0)
 					)
 					(stroke
@@ -1677,115 +1714,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -10.16) (xy 3.81 -11.0067)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -10.16) (xy 3.81 -9.3133)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -10.16) (xy 7.62 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -7.62) (xy 3.81 -8.4667)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -7.62) (xy 3.81 -6.7733)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -7.62) (xy 7.62 -7.62)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -5.08) (xy 3.81 -5.9267)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -5.08) (xy 3.81 -4.2333)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -5.08) (xy 7.62 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 3.81 -3.3867)
+						(xy 0 -12.7) (xy 0 0)
 					)
 					(stroke
 						(width 0.127)
@@ -1809,6 +1738,18 @@
 				)
 				(polyline
 					(pts
+						(xy 2.54 -2.54) (xy 3.81 -3.3867)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy 2.54 -2.54) (xy 7.62 -2.54)
 					)
 					(stroke
@@ -1821,7 +1762,103 @@
 				)
 				(polyline
 					(pts
-						(xy 5.08 -7.62) (xy 5.08 -10.16)
+						(xy 2.54 -5.08) (xy 3.81 -4.2333)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -5.08) (xy 3.81 -5.9267)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -5.08) (xy 7.62 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -7.62) (xy 3.81 -6.7733)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -7.62) (xy 3.81 -8.4667)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -7.62) (xy 7.62 -7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -10.16) (xy 3.81 -9.3133)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -10.16) (xy 3.81 -11.0067)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -10.16) (xy 7.62 -10.16)
 					)
 					(stroke
 						(width 0.127)
@@ -1843,43 +1880,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 11.43 -12.7) (xy 0 -12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 11.43 0) (xy 11.43 -12.7)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(circle
-					(center 5.08 -10.16)
-					(radius 0.127)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 5.08 -7.62)
+					(center 5.08 -2.54)
 					(radius 0.127)
 					(stroke
 						(width 0.508)
@@ -1900,11 +1902,58 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 5.08 -7.62) (xy 5.08 -10.16)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(circle
-					(center 5.08 -2.54)
+					(center 5.08 -7.62)
 					(radius 0.127)
 					(stroke
 						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 5.08 -10.16)
+					(radius 0.127)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 0) (xy 11.43 -12.7)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 11.43 -12.7) (xy 0 -12.7)
+					)
+					(stroke
+						(width 0.127)
 						(type default)
 					)
 					(fill
@@ -1987,18 +2036,6 @@
 			(symbol "2601-1102_1_2"
 				(polyline
 					(pts
-						(xy 5.08 -10.16) (xy 12.7 -10.16)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 5.08 2.54) (xy 5.08 -10.16)
 					)
 					(stroke
@@ -2011,7 +2048,7 @@
 				)
 				(polyline
 					(pts
-						(xy 7.62 -5.08) (xy 7.62 -7.62)
+						(xy 5.08 -10.16) (xy 12.7 -10.16)
 					)
 					(stroke
 						(width 0.127)
@@ -2033,9 +2070,31 @@
 						(type none)
 					)
 				)
+				(circle
+					(center 7.62 0)
+					(radius 0.127)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 7.62 -2.54)
+					(radius 0.127)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
-						(xy 10.16 -7.62) (xy 5.08 -7.62)
+						(xy 7.62 -5.08) (xy 7.62 -7.62)
 					)
 					(stroke
 						(width 0.127)
@@ -2045,96 +2104,22 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 10.16 -7.62) (xy 8.89 -8.4667)
-					)
+				(circle
+					(center 7.62 -5.08)
+					(radius 0.127)
 					(stroke
-						(width 0.127)
+						(width 0.508)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 10.16 -7.62) (xy 8.89 -6.7733)
-					)
+				(circle
+					(center 7.62 -7.62)
+					(radius 0.127)
 					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 5.08 -5.08)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 8.89 -5.9267)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 8.89 -4.2333)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -3.3867)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -1.6933)
-					)
-					(stroke
-						(width 0.127)
+						(width 0.508)
 						(type default)
 					)
 					(fill
@@ -2144,18 +2129,6 @@
 				(polyline
 					(pts
 						(xy 10.16 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 -0.8467)
 					)
 					(stroke
 						(width 0.127)
@@ -2179,7 +2152,115 @@
 				)
 				(polyline
 					(pts
-						(xy 12.7 -10.16) (xy 12.7 2.54)
+						(xy 10.16 0) (xy 8.89 -0.8467)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 8.89 -1.6933)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -2.54) (xy 8.89 -3.3867)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -5.08) (xy 5.08 -5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -5.08) (xy 8.89 -4.2333)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -5.08) (xy 8.89 -5.9267)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -7.62) (xy 5.08 -7.62)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -7.62) (xy 8.89 -6.7733)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.16 -7.62) (xy 8.89 -8.4667)
 					)
 					(stroke
 						(width 0.127)
@@ -2201,44 +2282,12 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 7.62 -7.62)
-					(radius 0.127)
+				(polyline
+					(pts
+						(xy 12.7 -10.16) (xy 12.7 2.54)
+					)
 					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 7.62 -5.08)
-					(radius 0.127)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 7.62 -2.54)
-					(radius 0.127)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 7.62 0)
-					(radius 0.127)
-					(stroke
-						(width 0.508)
+						(width 0.127)
 						(type default)
 					)
 					(fill
@@ -2318,6 +2367,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "rack-controller:LV14360PDDAR"
 			(pin_names
@@ -2392,18 +2442,6 @@
 			(symbol "LV14360PDDAR_0_1"
 				(polyline
 					(pts
-						(xy -13.97 -16.51) (xy 11.43 -16.51)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -13.97 13.97) (xy -13.97 -16.51)
 					)
 					(stroke
@@ -2416,7 +2454,7 @@
 				)
 				(polyline
 					(pts
-						(xy 11.43 -16.51) (xy 11.43 13.97)
+						(xy -13.97 -16.51) (xy 11.43 -16.51)
 					)
 					(stroke
 						(width 0.2032)
@@ -2438,22 +2476,16 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
-					(at 16.51 8.89 180)
-					(length 5.08)
-					(name "BOOT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+				(polyline
+					(pts
+						(xy 11.43 -16.51) (xy 11.43 13.97)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(pin power_in line
@@ -2510,24 +2542,6 @@
 						)
 					)
 				)
-				(pin input line
-					(at 16.51 -6.35 180)
-					(length 5.08)
-					(name "FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin output line
 					(at -19.05 -11.43 0)
 					(length 5.08)
@@ -2539,6 +2553,60 @@
 						)
 					)
 					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 16.51 8.89 180)
+					(length 5.08)
+					(name "BOOT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 16.51 1.27 180)
+					(length 5.08)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 16.51 -6.35 180)
+					(length 5.08)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2565,24 +2633,6 @@
 					)
 				)
 				(pin power_in line
-					(at 16.51 1.27 180)
-					(length 5.08)
-					(name "SW"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at 16.51 -13.97 180)
 					(length 5.08)
 					(name "PAD"
@@ -2601,7 +2651,84 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 12.7 127)
+		(end 50.8 184.15)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 4b56f95b-3fcb-44be-903b-f9c45fe7ab5b)
+	)
+	(rectangle
+		(start 12.7 12.7)
+		(end 190.5 57.15)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 6349c54c-b5d5-4557-a928-3628349bcfe2)
+	)
+	(rectangle
+		(start 12.7 63.5)
+		(end 254 120.65)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid c64e4001-3c25-4d20-8364-36df0dd5dab5)
+	)
+	(text_box "Power supply for Raspberry Pi4"
+		(exclude_from_sim no)
+		(at 13.335 113.665 0)
+		(size 63.5 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "73f9585a-d63e-4c83-88ff-4870a9271164")
+	)
+	(text_box "Bulk capacitance should be greater than 100 uF per TMC2209 driver"
+		(exclude_from_sim no)
+		(at 13.335 50.165 0)
+		(size 63.5 6.35)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c4df9f7d-3223-4cde-b897-43e5f4f4acdc")
 	)
 	(junction
 		(at 69.85 38.1)
@@ -2628,12 +2755,6 @@
 		(uuid "3ba98449-d235-47d9-9864-fe5a7340a846")
 	)
 	(junction
-		(at 63.5 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "46e33677-3344-4d2d-8e3e-3a64604a451f")
-	)
-	(junction
 		(at 38.1 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2656,12 +2777,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "728879a4-2796-49b3-bdb6-f40178b7fda7")
-	)
-	(junction
-		(at 25.4 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7561de06-da45-41b3-ad63-8336fe166bb1")
 	)
 	(junction
 		(at 50.8 38.1)
@@ -2815,16 +2930,6 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 146.05) (xy 63.5 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12cd07a9-02ee-4913-99ca-892eea9e9bc4")
-	)
-	(wire
-		(pts
 			(xy 101.6 95.25) (xy 120.65 95.25)
 		)
 		(stroke
@@ -2955,26 +3060,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 146.05) (xy 63.5 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "442ebc6f-b77c-46b7-8605-642cc5373b71")
-	)
-	(wire
-		(pts
-			(xy 63.5 154.94) (xy 63.5 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44f85cf0-bf56-406c-a6ee-b74508665214")
-	)
-	(wire
-		(pts
 			(xy 215.9 90.17) (xy 234.95 90.17)
 		)
 		(stroke
@@ -3005,16 +3090,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 134.62) (xy 25.4 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4bcb64e7-d60f-4912-8808-ae704e06835f")
-	)
-	(wire
-		(pts
 			(xy 114.3 38.1) (xy 133.35 38.1)
 		)
 		(stroke
@@ -3035,7 +3110,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 146.05) (xy 25.4 149.86)
+			(xy 25.4 134.62) (xy 25.4 149.86)
 		)
 		(stroke
 			(width 0)
@@ -3325,16 +3400,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 146.05) (xy 41.91 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9784dfd-2db7-4d59-a7ca-8617cc0e120b")
-	)
-	(wire
-		(pts
 			(xy 114.3 25.4) (xy 114.3 27.94)
 		)
 		(stroke
@@ -3412,16 +3477,6 @@
 			(type default)
 		)
 		(uuid "c1c5e33b-c1e9-478e-b0da-63bc89fe2530")
-	)
-	(wire
-		(pts
-			(xy 63.5 134.62) (xy 63.5 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7efc1e1-afd8-4b37-8ade-35641ee48fff")
 	)
 	(wire
 		(pts
@@ -3613,99 +3668,6 @@
 		)
 		(uuid "fb76bf2b-bbeb-4d63-ab61-95c32776ec67")
 	)
-	(rectangle
-		(start 12.7 127)
-		(end 88.9 184.15)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 4b56f95b-3fcb-44be-903b-f9c45fe7ab5b)
-	)
-	(rectangle
-		(start 12.7 12.7)
-		(end 190.5 57.15)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 6349c54c-b5d5-4557-a928-3628349bcfe2)
-	)
-	(rectangle
-		(start 12.7 63.5)
-		(end 254 120.65)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid c64e4001-3c25-4d20-8364-36df0dd5dab5)
-	)
-	(text_box "Filter for 3.3V net"
-		(exclude_from_sim no)
-		(at 13.335 177.165 0)
-		(size 63.5 6.35)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "2351b836-5e8a-4afc-bd34-2d4d1ff68c66")
-	)
-	(text_box "Power supply for Raspberry Pi4"
-		(exclude_from_sim no)
-		(at 13.335 113.665 0)
-		(size 63.5 6.35)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "73f9585a-d63e-4c83-88ff-4870a9271164")
-	)
-	(text_box "Bulk capacitance should be greater than 100 uF per TMC2209 driver"
-		(exclude_from_sim no)
-		(at 13.335 50.165 0)
-		(size 63.5 6.35)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "c4df9f7d-3223-4cde-b897-43e5f4f4acdc")
-	)
 	(symbol
 		(lib_id "power:+5V")
 		(at 247.65 83.82 0)
@@ -3716,7 +3678,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00a72360-b4bb-4a24-b15f-54326d24b4ef")
-		(property "Reference" "#PWR085"
+		(property "Reference" "#PWR075"
 			(at 247.65 87.63 0)
 			(effects
 				(font
@@ -3766,7 +3728,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR085")
+					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -3902,7 +3864,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "01f67407-3a86-47d9-9a92-b68189902d14")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR068"
 			(at 101.6 113.03 0)
 			(effects
 				(font
@@ -3952,7 +3914,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR078")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -3968,7 +3930,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05458b4f-b4e7-41c5-a581-d5c956b74133")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR065"
 			(at 38.1 99.06 0)
 			(effects
 				(font
@@ -4018,7 +3980,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR073")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -4184,7 +4146,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f801576-a609-440f-90f8-29e55617e532")
-		(property "Reference" "C13"
+		(property "Reference" "C12"
 			(at 72.644 29.464 0)
 			(effects
 				(font
@@ -4303,144 +4265,6 @@
 		)
 		(pin "2"
 			(uuid "36ea40f8-d874-467c-954f-19287eb8ad7c")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 63.5 152.4 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "16ac521f-468f-483a-bbb8-0e4b75033c80")
-		(property "Reference" "C12"
-			(at 66.04 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10 uF"
-			(at 66.04 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6358/CL31A106MBHNNNE.pdf"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10 µF ±20% 50V Ceramic Capacitor X5R 1206 (3216 Metric)"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "CL31A106MBHNNNE"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "1276-6736-1-ND"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Role" "C_OUT"
-			(at 73.6204 149.8665 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC#" "C96600"
-			(at 63.5 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "20%"
-			(at 74.3824 152.4065 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Max Voltage" "50V"
-			(at 68.0324 155.2005 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "594a5eb1-11bc-4597-9a4b-0bdb696d4178")
-		)
-		(pin "2"
-			(uuid "d86a3647-c3be-4839-a2d4-99918eae3b25")
 		)
 		(instances
 			(project "rack-controller-RevAV1.0"
@@ -4599,7 +4423,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fec5df3-f7f0-419f-a889-fb7caacc4304")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR061"
 			(at 25.4 138.43 0)
 			(effects
 				(font
@@ -4649,7 +4473,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR069")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -4664,7 +4488,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2a262580-6ef0-47f6-b2c4-07eee9368d3f")
-		(property "Reference" "C16"
+		(property "Reference" "C15"
 			(at 119.126 31.75 0)
 			(effects
 				(font
@@ -4785,7 +4609,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C16")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -4801,7 +4625,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f1ba71b-9b0c-4c1f-afed-ad3fce3d8e4d")
-		(property "Reference" "#PWR074"
+		(property "Reference" "#PWR066"
 			(at 63.5 100.33 0)
 			(effects
 				(font
@@ -4851,73 +4675,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR074")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 63.5 163.83 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "33cf47d3-cd7d-492c-91fa-9653923cdb82")
-		(property "Reference" "#PWR076"
-			(at 63.5 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 63.5 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 63.5 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 63.5 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 63.5 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "887ba351-9f61-476a-846e-ef67b9b2e3dd")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR076")
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -4933,7 +4691,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38612566-d18d-4a27-aaf2-24b06c1bb391")
-		(property "Reference" "#PWR077"
+		(property "Reference" "#PWR067"
 			(at 88.9 100.33 0)
 			(effects
 				(font
@@ -4983,7 +4741,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR077")
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -4998,7 +4756,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "480d4a55-07d7-4dba-9e13-f80879707bb5")
-		(property "Reference" "D2"
+		(property "Reference" "D1"
 			(at 164.084 92.202 0)
 			(effects
 				(font
@@ -5128,7 +4886,7 @@
 		(instances
 			(project ""
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "D2")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -5143,7 +4901,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4f2a9a52-7ef5-4e59-af8a-33eb9458e271")
-		(property "Reference" "C17"
+		(property "Reference" "C16"
 			(at 138.176 31.75 0)
 			(effects
 				(font
@@ -5264,7 +5022,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C17")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -5279,7 +5037,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "53649970-4185-4679-a043-011a838bb2a5")
-		(property "Reference" "C21"
+		(property "Reference" "C20"
 			(at 237.744 92.964 0)
 			(effects
 				(font
@@ -5402,7 +5160,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C21")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -5417,7 +5175,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "58c78d9a-74b5-4040-a136-520788e70117")
-		(property "Reference" "J16"
+		(property "Reference" "J15"
 			(at 20.32 17.78 0)
 			(effects
 				(font
@@ -5521,7 +5279,7 @@
 		(instances
 			(project ""
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "J16")
+					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -5536,7 +5294,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6dcf1043-b528-4389-8854-0c41a66ff7cb")
-		(property "Reference" "C14"
+		(property "Reference" "C13"
 			(at 91.694 86.614 0)
 			(effects
 				(font
@@ -5659,7 +5417,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C14")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -5675,7 +5433,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6fbe6d7b-2b0d-49e2-a6da-14b7b2cea02f")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR062"
 			(at 25.4 170.18 0)
 			(effects
 				(font
@@ -5725,7 +5483,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR070")
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -5740,7 +5498,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "770fbd79-6d51-4280-b146-ce1d80963a6b")
-		(property "Reference" "#PWR072"
+		(property "Reference" "#PWR064"
 			(at 38.1 74.93 0)
 			(effects
 				(font
@@ -5836,7 +5594,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR072")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -5851,7 +5609,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "82985d8c-f9a6-4d28-9005-5bdbe3c253b0")
-		(property "Reference" "C19"
+		(property "Reference" "C18"
 			(at 163.83 83.82 0)
 			(effects
 				(font
@@ -5974,7 +5732,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C19")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -5989,7 +5747,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "87b34c24-6fa5-4d8c-a298-7ef676465c47")
-		(property "Reference" "C18"
+		(property "Reference" "C17"
 			(at 157.226 31.75 0)
 			(effects
 				(font
@@ -6110,7 +5868,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C18")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -6255,72 +6013,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 63.5 134.62 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "90cbcd59-24ca-455a-92a0-e5d1cd49f370")
-		(property "Reference" "#PWR075"
-			(at 63.5 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 63.5 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 63.5 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 63.5 134.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "caf6afde-1776-48c1-9263-8b5df45baf82")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR075")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 203.2 101.6 0)
 		(unit 1)
@@ -6329,7 +6021,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "941b3480-cb0c-4b77-99bf-c801d428bfb2")
-		(property "Reference" "R20"
+		(property "Reference" "R19"
 			(at 204.47 99.568 0)
 			(effects
 				(font
@@ -6452,7 +6144,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "R20")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -6605,7 +6297,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a8dccfaa-07e4-488b-a942-49abe4286c0e")
-		(property "Reference" "C20"
+		(property "Reference" "C19"
 			(at 218.694 92.964 0)
 			(effects
 				(font
@@ -6728,153 +6420,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:FerriteBead_Small")
-		(at 44.45 146.05 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "af829488-468b-4628-bab4-39f852932264")
-		(property "Reference" "L2"
-			(at 37.084 137.668 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BBUP00100505330Y00"
-			(at 47.244 142.24 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
-			(at 44.45 144.272 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796740059166/ENFA0018.pdf"
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10 Ohms @ 100 MHz 1 Ferrite Bead 0402 (1005 Metric) 1.74A 15mOhm"
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Current" "3A Max"
-			(at 39.624 139.954 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DCR" "22 mOhm"
-			(at 62.738 142.494 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Role" "L_FILTER"
-			(at 44.45 137.668 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "BLM15AX100SN1D"
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "490-5437-1-ND"
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Max Voltage" ""
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC#" "C668299"
-			(at 44.45 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f206eab0-5952-458f-963a-91412fa60b65")
-		)
-		(pin "1"
-			(uuid "11f0f7de-ff23-4d57-9408-97bbafc17257")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "L2")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -6890,7 +6436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf7f7faf-faa9-4aa0-9319-d2e46fcb03b9")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR063"
 			(at 38.1 49.53 0)
 			(effects
 				(font
@@ -6940,7 +6486,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR071")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -6955,7 +6501,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c000497b-58b4-4991-b6a1-0642b1f3ac4f")
-		(property "Reference" "R19"
+		(property "Reference" "R18"
 			(at 206.502 91.948 0)
 			(effects
 				(font
@@ -7078,7 +6624,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "R19")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -7093,7 +6639,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c9c6ee5c-23a1-48ef-8dd1-118d44c0d5ad")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR069"
 			(at 152.4 24.13 0)
 			(effects
 				(font
@@ -7189,7 +6735,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR079")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -7204,7 +6750,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cbe4c4de-7116-4b2e-9b05-fe9c648505db")
-		(property "Reference" "#PWR082"
+		(property "Reference" "#PWR072"
 			(at 203.2 113.03 0)
 			(effects
 				(font
@@ -7254,7 +6800,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR082")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -7269,7 +6815,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d98126ae-b4b0-44f8-8c7f-2459f8b367c5")
-		(property "Reference" "R18"
+		(property "Reference" "R17"
 			(at 104.14 100.3299 0)
 			(effects
 				(font
@@ -7383,7 +6929,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "R18")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -7398,7 +6944,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e61d472b-1012-4c1e-a8b8-7b6fca553fc6")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR071"
 			(at 184.15 95.25 0)
 			(effects
 				(font
@@ -7448,7 +6994,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR081")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -7747,7 +7293,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eecafb0e-e283-4cdc-915d-040bf3fbe529")
-		(property "Reference" "L3"
+		(property "Reference" "L2"
 			(at 188.976 85.598 90)
 			(effects
 				(font
@@ -7860,7 +7406,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "L3")
+					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -7875,7 +7421,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef83815b-e632-440f-961e-68b4cef98948")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR070"
 			(at 165.1 113.03 0)
 			(effects
 				(font
@@ -7925,7 +7471,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR080")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -7940,7 +7486,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f67b1d8b-0603-45fa-bf2b-75e22ab034dc")
-		(property "Reference" "#PWR084"
+		(property "Reference" "#PWR074"
 			(at 234.95 113.03 0)
 			(effects
 				(font
@@ -7990,7 +7536,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR084")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -8005,7 +7551,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f6a50fc3-92f2-4d0d-a34f-6cfb3680fea8")
-		(property "Reference" "C15"
+		(property "Reference" "C14"
 			(at 100.076 31.75 0)
 			(effects
 				(font
@@ -8126,7 +7672,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "C15")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -8141,7 +7687,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f9e486c9-666f-422a-bf38-bd3a4579bb8e")
-		(property "Reference" "#PWR083"
+		(property "Reference" "#PWR073"
 			(at 215.9 113.03 0)
 			(effects
 				(font
@@ -8191,7 +7737,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58/e1900297-455c-422d-aa78-68bfcbbb8ba0"
-					(reference "#PWR083")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
