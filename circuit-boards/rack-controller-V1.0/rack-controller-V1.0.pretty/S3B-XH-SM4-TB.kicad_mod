@@ -1,7 +1,7 @@
 (footprint "S3B-XH-SM4-TB"
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(layer "F.Cu")
 	(tags "S3B-XH-SM4-TB ")
 	(property "Reference" "REF**"
@@ -24,18 +24,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 180)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "18588562-c0aa-4692-8a20-12b9f0ec0da8")
-		(effects
-			(font
-				(size 1.27 1.27)
 				(thickness 0.15)
 			)
 		)
@@ -65,17 +53,6 @@
 		)
 	)
 	(attr smd)
-	(fp_circle
-		(center -4.6 -5.2)
-		(end -4.981 -5.2)
-		(stroke
-			(width 0.508)
-			(type solid)
-		)
-		(fill none)
-		(layer "B.SilkS")
-		(uuid "1b6d623c-f310-42a9-8db0-2cd60aec9a29")
-	)
 	(fp_line
 		(start -6.3754 -4.1275)
 		(end -6.3754 -0.048041)
@@ -153,7 +130,7 @@
 			(width 0.508)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "db69b4e6-0b68-4ea2-8f75-3bc17353695e")
 	)
@@ -244,7 +221,7 @@
 			(width 0.508)
 			(type solid)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Fab")
 		(uuid "d1c4156d-202c-44a1-aaea-d1347c42e361")
 	)
@@ -263,33 +240,34 @@
 	(pad "1" smd rect
 		(at -2.5 -4.549501 180)
 		(size 1.2954 4.4958)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "9b158e50-971a-4b11-abef-22d28dfdb422")
 	)
 	(pad "2" smd rect
 		(at 0 -4.549501 180)
 		(size 1.2954 4.4958)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "3944af86-aceb-4f0b-ac27-4745c90b2ff3")
 	)
 	(pad "3" smd rect
 		(at 2.5 -4.549501 180)
 		(size 1.2954 4.4958)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "2b88e20c-108e-4f75-a645-685cf168b7d5")
 	)
 	(pad "MP" smd rect
 		(at -5.700001 2.240499 180)
 		(size 1.8034 3.9116)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "d0dca9bd-8d44-4915-9bfb-6fb1da338b23")
 	)
 	(pad "MP" smd rect
 		(at 5.700001 2.240499 180)
 		(size 1.8034 3.9116)
-		(layers "F.Cu" "F.Paste" "F.Mask")
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "a65275c1-cf97-4cc6-ac3a-b34982907f6d")
 	)
+	(embedded_fonts no)
 	(model "${KIPRJMOD}/3D-models/S3B-XH-SM4-TB.STEP"
 		(offset
 			(xyz 0 -2 0)

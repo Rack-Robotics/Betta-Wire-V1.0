@@ -6,8 +6,8 @@
 	(paper "User" 420 420)
 	(title_block
 		(title "Rack Controller")
-		(date "[25.02.12]")
-		(rev "RevB")
+		(date "[25.03.13]")
+		(rev "C")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols
@@ -3028,26 +3028,6 @@
 		)
 		(uuid "faf3b417-d1ad-4ee5-b748-ba824e677c7c")
 	)
-	(text_box "Raspberry Pi4\n- For LinuxCNC or Klipper\n- UART, I2C, & SPI Preserved"
-		(exclude_from_sim no)
-		(at 222.25 375.92 0)
-		(size 76.835 31.115)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "29bacf65-ea59-44b9-b77b-b3cd14d679ed")
-	)
 	(text_box "LIMIT SWITCHES / GPIO\n- Max current limited by 1K resistor \n- Low-Pass Filter (72 Hz)\n- 100K Pulldown resistor"
 		(exclude_from_sim no)
 		(at 311.15 106.68 0)
@@ -5090,7 +5070,7 @@
 		)
 		(uuid "59f832fd-e73b-4c73-b24c-bde3d81ffb84")
 	)
-	(label "SW-01"
+	(label "SW-00"
 		(at 351.79 132.08 0)
 		(effects
 			(font
@@ -5110,7 +5090,7 @@
 		)
 		(uuid "5e7f81e8-c052-406d-bec6-a7ffcd83d74c")
 	)
-	(label "SW-06"
+	(label "SW-05"
 		(at 351.79 265.43 0)
 		(effects
 			(font
@@ -5140,7 +5120,7 @@
 		)
 		(uuid "65ef8576-7afe-4ca5-beef-196308383834")
 	)
-	(label "SW-03"
+	(label "SW-02"
 		(at 351.79 182.88 0)
 		(effects
 			(font
@@ -5310,7 +5290,7 @@
 		)
 		(uuid "c6b23d9f-8178-477e-a587-126e917216ec")
 	)
-	(label "SW-04"
+	(label "SW-03"
 		(at 351.79 208.28 0)
 		(effects
 			(font
@@ -5330,7 +5310,7 @@
 		)
 		(uuid "d1fdd81c-8baf-4d9c-8559-a0c613091a58")
 	)
-	(label "SW-05"
+	(label "SW-04"
 		(at 351.79 240.03 0)
 		(effects
 			(font
@@ -5400,7 +5380,7 @@
 		)
 		(uuid "e4f39f98-4661-435b-b501-35e91986ae17")
 	)
-	(label "SW-02"
+	(label "SW-01"
 		(at 351.79 157.48 0)
 		(effects
 			(font
@@ -5528,7 +5508,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 214.63 69.85 0)
 			(effects
 				(font
@@ -5845,7 +5825,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 265.43 0)
 			(effects
 				(font
@@ -5976,7 +5956,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 203.2 0)
 			(effects
 				(font
@@ -6194,7 +6174,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 215.9 0)
 			(effects
 				(font
@@ -6332,7 +6312,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 240.03 0)
 			(effects
 				(font
@@ -6650,13 +6630,12 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 95.25 394.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6850,7 +6829,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 132.08 0)
 			(effects
 				(font
@@ -6988,7 +6967,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 208.28 0)
 			(effects
 				(font
@@ -7318,7 +7297,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 234.95 0)
 			(effects
 				(font
@@ -7645,13 +7624,12 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 82.55 394.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7780,7 +7758,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 182.88 0)
 			(effects
 				(font
@@ -7927,7 +7905,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 298.45 0)
 			(effects
 				(font
@@ -8717,7 +8695,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 152.4 0)
 			(effects
 				(font
@@ -9176,13 +9154,12 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 107.95 393.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9499,7 +9476,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 177.8 0)
 			(effects
 				(font
@@ -9627,7 +9604,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C492421"
+		(property "LCSC Part #" "C492421"
 			(at 214.63 116.84 0)
 			(effects
 				(font
@@ -9849,7 +9826,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 165.1 0)
 			(effects
 				(font
@@ -10029,7 +10006,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "MOTOR-04"
+		(property "Role" "MOTOR-03"
 			(at 400.558 85.09 0)
 			(effects
 				(font
@@ -10046,7 +10023,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161861"
+		(property "LCSC Part #" "C161861"
 			(at 386.08 85.09 0)
 			(effects
 				(font
@@ -10193,7 +10170,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C114662"
+		(property "LCSC Part #" "C114662"
 			(at 355.6 330.2 0)
 			(effects
 				(font
@@ -10372,7 +10349,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" ""
+		(property "Role" "MOTOR-00"
 			(at 400.558 27.94 0)
 			(effects
 				(font
@@ -10389,7 +10366,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161861"
+		(property "LCSC Part #" "C161861"
 			(at 386.08 27.94 0)
 			(effects
 				(font
@@ -10936,7 +10913,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 190.5 0)
 			(effects
 				(font
@@ -11083,7 +11060,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 273.05 0)
 			(effects
 				(font
@@ -11287,7 +11264,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 157.48 0)
 			(effects
 				(font
@@ -11418,7 +11395,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 285.75 0)
 			(effects
 				(font
@@ -11562,7 +11539,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 190.5 0)
 			(effects
 				(font
@@ -11700,7 +11677,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 298.45 0)
 			(effects
 				(font
@@ -11838,7 +11815,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 139.7 0)
 			(effects
 				(font
@@ -11976,7 +11953,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 215.9 0)
 			(effects
 				(font
@@ -12221,7 +12198,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "MOTOR-03"
+		(property "Role" "MOTOR-02"
 			(at 400.558 66.04 0)
 			(effects
 				(font
@@ -12238,7 +12215,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161861"
+		(property "LCSC Part #" "C161861"
 			(at 386.08 66.04 0)
 			(effects
 				(font
@@ -12461,7 +12438,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 139.7 0)
 			(effects
 				(font
@@ -12798,7 +12775,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161861"
+		(property "LCSC Part #" "C161861"
 			(at 386.08 339.09 0)
 			(effects
 				(font
@@ -12938,7 +12915,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 127 0)
 			(effects
 				(font
@@ -13222,7 +13199,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 165.1 0)
 			(effects
 				(font
@@ -13491,7 +13468,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 273.05 0)
 			(effects
 				(font
@@ -13892,7 +13869,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 346.71 290.83 0)
 			(effects
 				(font
@@ -14071,7 +14048,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "MOTOR-02"
+		(property "Role" "MOTOR-01"
 			(at 400.558 46.99 0)
 			(effects
 				(font
@@ -14088,7 +14065,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161861"
+		(property "LCSC Part #" "C161861"
 			(at 386.08 46.99 0)
 			(effects
 				(font
@@ -14235,7 +14212,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 361.95 247.65 0)
 			(effects
 				(font
@@ -14512,7 +14489,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106853"
+		(property "LCSC Part #" "C106853"
 			(at 368.3 247.65 0)
 			(effects
 				(font
@@ -14710,7 +14687,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C161860"
+		(property "LCSC Part #" "C161860"
 			(at 386.08 260.35 0)
 			(effects
 				(font
@@ -14919,7 +14896,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C114662"
+		(property "LCSC Part #" "C114662"
 			(at 336.55 330.2 0)
 			(effects
 				(font
@@ -15042,7 +15019,7 @@
 				(justify left top)
 			)
 		)
-		(pin "M01_STEP" input
+		(pin "M00_STEP" input
 			(at 317.5 60.96 180)
 			(uuid "965821a7-9d46-44eb-aa6e-b486553d3297")
 			(effects
@@ -15052,7 +15029,7 @@
 				(justify left)
 			)
 		)
-		(pin "M02_STEP" input
+		(pin "M01_STEP" input
 			(at 317.5 67.31 180)
 			(uuid "9b15498b-eae6-42e1-bd4f-46267db5f0db")
 			(effects
@@ -15062,7 +15039,7 @@
 				(justify left)
 			)
 		)
-		(pin "M01_DIR" input
+		(pin "M00_DIR" input
 			(at 317.5 63.5 180)
 			(uuid "81dc6b89-a4c2-4f06-8116-56852e86b32f")
 			(effects
@@ -15072,7 +15049,7 @@
 				(justify left)
 			)
 		)
-		(pin "M03_STEP" input
+		(pin "M02_STEP" input
 			(at 317.5 73.66 180)
 			(uuid "35b79213-6977-4832-ab5d-18141519dfdb")
 			(effects
@@ -15082,7 +15059,7 @@
 				(justify left)
 			)
 		)
-		(pin "M02_DIR" input
+		(pin "M01_DIR" input
 			(at 317.5 69.85 180)
 			(uuid "7e0c2926-be03-4e52-91de-6d2038212ee0")
 			(effects
@@ -15092,7 +15069,7 @@
 				(justify left)
 			)
 		)
-		(pin "M03_DIR" input
+		(pin "M02_DIR" input
 			(at 317.5 76.2 180)
 			(uuid "907bb5bf-b441-438e-9539-52e7767c4072")
 			(effects
@@ -15102,7 +15079,7 @@
 				(justify left)
 			)
 		)
-		(pin "M04_STEP" input
+		(pin "M03_STEP" input
 			(at 317.5 80.01 180)
 			(uuid "66607db0-ffd9-4e54-abde-d99b6516691b")
 			(effects
@@ -15112,7 +15089,7 @@
 				(justify left)
 			)
 		)
-		(pin "M04_DIR" input
+		(pin "M03_DIR" input
 			(at 317.5 82.55 180)
 			(uuid "104a31e2-e9a8-4c4a-83a3-b654aea9e147")
 			(effects
@@ -15122,7 +15099,7 @@
 				(justify left)
 			)
 		)
-		(pin "M02_A2" input
+		(pin "M01_A2" input
 			(at 361.95 46.99 0)
 			(uuid "90b0cf02-0980-4942-8569-0c579a41b1c1")
 			(effects
@@ -15132,7 +15109,7 @@
 				(justify right)
 			)
 		)
-		(pin "M02_A1" input
+		(pin "M01_A1" input
 			(at 361.95 44.45 0)
 			(uuid "79cd9991-075b-4a29-ae12-9c9cea20ac7c")
 			(effects
@@ -15142,7 +15119,7 @@
 				(justify right)
 			)
 		)
-		(pin "M02_B1" input
+		(pin "M01_B1" input
 			(at 361.95 49.53 0)
 			(uuid "7eff3fb9-6dc5-4950-a566-a22aed396873")
 			(effects
@@ -15152,7 +15129,7 @@
 				(justify right)
 			)
 		)
-		(pin "M02_B2" input
+		(pin "M01_B2" input
 			(at 361.95 52.07 0)
 			(uuid "82f571d5-d398-4fd4-9119-e097ea2a5b93")
 			(effects
@@ -15162,7 +15139,7 @@
 				(justify right)
 			)
 		)
-		(pin "M04_B1" input
+		(pin "M03_B1" input
 			(at 361.95 87.63 0)
 			(uuid "f8e3c50c-4867-49f5-97e5-cc639aa0d8d4")
 			(effects
@@ -15172,7 +15149,7 @@
 				(justify right)
 			)
 		)
-		(pin "M04_A1" input
+		(pin "M03_A1" input
 			(at 361.95 82.55 0)
 			(uuid "ba7c0306-8c68-4367-80f8-d520989aef27")
 			(effects
@@ -15182,7 +15159,7 @@
 				(justify right)
 			)
 		)
-		(pin "M04_A2" input
+		(pin "M03_A2" input
 			(at 361.95 85.09 0)
 			(uuid "1b290ed2-7193-4e9c-b556-d2748bd2387e")
 			(effects
@@ -15192,7 +15169,7 @@
 				(justify right)
 			)
 		)
-		(pin "M04_B2" input
+		(pin "M03_B2" input
 			(at 361.95 90.17 0)
 			(uuid "f7114691-66f0-4d12-a221-95e355134bd9")
 			(effects
@@ -15202,7 +15179,7 @@
 				(justify right)
 			)
 		)
-		(pin "M01_A1" input
+		(pin "M00_A1" input
 			(at 361.95 25.4 0)
 			(uuid "0e889822-310a-4500-8312-f3f53834cbe2")
 			(effects
@@ -15212,7 +15189,7 @@
 				(justify right)
 			)
 		)
-		(pin "M01_A2" input
+		(pin "M00_A2" input
 			(at 361.95 27.94 0)
 			(uuid "c268af41-95d2-4528-a280-b9e50ae09cd8")
 			(effects
@@ -15222,7 +15199,7 @@
 				(justify right)
 			)
 		)
-		(pin "M01_B1" input
+		(pin "M00_B1" input
 			(at 361.95 30.48 0)
 			(uuid "3f311722-1954-405d-abb4-f148d49a9fd7")
 			(effects
@@ -15232,7 +15209,7 @@
 				(justify right)
 			)
 		)
-		(pin "M01_B2" input
+		(pin "M00_B2" input
 			(at 361.95 33.02 0)
 			(uuid "c95fc484-f873-4bfe-9744-0edab8b827ee")
 			(effects
@@ -15242,7 +15219,7 @@
 				(justify right)
 			)
 		)
-		(pin "M03_A1" input
+		(pin "M02_A1" input
 			(at 361.95 63.5 0)
 			(uuid "5303177d-65d9-4c47-82e5-f9d5d5a70ad6")
 			(effects
@@ -15252,7 +15229,7 @@
 				(justify right)
 			)
 		)
-		(pin "M03_B1" input
+		(pin "M02_B1" input
 			(at 361.95 68.58 0)
 			(uuid "20e73aa2-4533-4d13-b61b-2ccc00d6930b")
 			(effects
@@ -15262,7 +15239,7 @@
 				(justify right)
 			)
 		)
-		(pin "M03_A2" input
+		(pin "M02_A2" input
 			(at 361.95 66.04 0)
 			(uuid "dc4757f3-4679-4a31-a46a-974e709fe672")
 			(effects
@@ -15272,7 +15249,7 @@
 				(justify right)
 			)
 		)
-		(pin "M03_B2" input
+		(pin "M02_B2" input
 			(at 361.95 71.12 0)
 			(uuid "a22878fb-3bd6-45ce-9dfd-49cd5b94645c")
 			(effects

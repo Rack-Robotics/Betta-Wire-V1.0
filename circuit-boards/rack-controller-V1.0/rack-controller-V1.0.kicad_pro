@@ -123,7 +123,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.16,
+        "min_clearance": 0.2,
         "min_connection": 0.16,
         "min_copper_edge_clearance": 0.25,
         "min_groove_width": 0.0,
@@ -658,8 +658,8 @@
         {
           "group_by": false,
           "label": "LCSC Part #",
-          "name": "LCSC#",
-          "show": true
+          "name": "LCSC Part #",
+          "show": false
         },
         {
           "group_by": false,
@@ -678,14 +678,20 @@
           "label": "Field-1",
           "name": "Field-1",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Forward Drop",
+          "name": "Forward Drop",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",
-      "sort_asc": true,
-      "sort_field": "Max Current"
+      "sort_asc": false,
+      "sort_field": "LCSC Part #"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -718,11 +724,16 @@
           "name": "Role",
           "url": false,
           "visible": false
+        },
+        {
+          "name": "LCSC Part #",
+          "url": false,
+          "visible": false
         }
       ],
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
-      "intersheets_ref_short": false,
+      "intersheets_ref_short": true,
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,

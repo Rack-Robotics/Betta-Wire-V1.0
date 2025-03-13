@@ -1630,6 +1630,26 @@
 		)
 		(uuid "03a02c3c-ec86-4d1e-82eb-61fe91bfed3a")
 	)
+	(text_box "MS2		MS1		MICROSTEPPING	RESOLUTION (1.8 deg MOTOR w/ 20T GT2 PULLEY)\nGND		GND		8				0.025 		mm/step\n3.3V	3.3V	16				0.0125 		mm/step\nGND		3.3V	32				0.00625 	mm/step\n3.3V	GND		64				0.003125 	mm/step\n"
+		(exclude_from_sim no)
+		(at 114.3 19.05 0)
+		(size 95.25 12.7)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "0e52ebc2-65f5-4021-9152-6329003acc7a")
+	)
 	(junction
 		(at 139.7 63.5)
 		(diameter 0)
@@ -1727,7 +1747,7 @@
 		(uuid "518a8b72-965e-418c-8701-c2346ef5e076")
 	)
 	(junction
-		(at 63.5 63.5)
+		(at 57.15 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5b8f2225-d365-4100-8a05-b34edda82bf2")
@@ -2450,7 +2470,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 63.5) (xy 63.5 63.5)
+			(xy 53.34 25.4) (xy 57.15 25.4)
 		)
 		(stroke
 			(width 0)
@@ -2480,7 +2500,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 72.39) (xy 63.5 74.93)
+			(xy 57.15 34.29) (xy 57.15 36.83)
 		)
 		(stroke
 			(width 0)
@@ -3080,7 +3100,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 63.5) (xy 54.61 63.5)
+			(xy 31.75 25.4) (xy 48.26 25.4)
 		)
 		(stroke
 			(width 0)
@@ -4620,7 +4640,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 63.5) (xy 88.9 63.5)
+			(xy 57.15 25.4) (xy 82.55 25.4)
 		)
 		(stroke
 			(width 0)
@@ -4830,7 +4850,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 63.5) (xy 63.5 67.31)
+			(xy 57.15 25.4) (xy 57.15 29.21)
 		)
 		(stroke
 			(width 0)
@@ -5099,7 +5119,7 @@
 		(uuid "1a5d4a87-82d3-4467-8a94-6507320f9ba9")
 	)
 	(label "MOTOR_EN"
-		(at 88.9 63.5 180)
+		(at 82.55 25.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5138,7 +5158,7 @@
 		)
 		(uuid "ce881c6f-75c6-4e12-9678-a34c4450c5b9")
 	)
-	(hierarchical_label "M04_A1"
+	(hierarchical_label "M03_A1"
 		(shape output)
 		(at 368.3 355.6 0)
 		(effects
@@ -5149,7 +5169,7 @@
 		)
 		(uuid "0461c52b-3def-403d-bd96-99adb6a309f4")
 	)
-	(hierarchical_label "M03_B1"
+	(hierarchical_label "M02_B1"
 		(shape output)
 		(at 368.3 256.54 0)
 		(effects
@@ -5160,7 +5180,7 @@
 		)
 		(uuid "10052c6c-a475-426e-835a-3fa798c3027d")
 	)
-	(hierarchical_label "M03_STEP"
+	(hierarchical_label "M02_STEP"
 		(shape input)
 		(at 107.95 288.29 180)
 		(effects
@@ -5171,7 +5191,7 @@
 		)
 		(uuid "2337e59e-1f47-4e5a-bf92-bda122f39332")
 	)
-	(hierarchical_label "M02_DIR"
+	(hierarchical_label "M01_DIR"
 		(shape input)
 		(at 107.95 203.2 180)
 		(effects
@@ -5182,7 +5202,7 @@
 		)
 		(uuid "29171c1d-6827-4389-ba79-d8d8bebe7c6a")
 	)
-	(hierarchical_label "M04_B2"
+	(hierarchical_label "M03_B2"
 		(shape output)
 		(at 368.3 360.68 0)
 		(effects
@@ -5193,7 +5213,7 @@
 		)
 		(uuid "33bd4474-d333-481c-afb7-302a2f3df171")
 	)
-	(hierarchical_label "M01_A2"
+	(hierarchical_label "M00_A2"
 		(shape output)
 		(at 368.3 71.12 0)
 		(effects
@@ -5204,7 +5224,7 @@
 		)
 		(uuid "3f9b3491-f4a1-41cd-afb8-c22ab4e452ff")
 	)
-	(hierarchical_label "M02_A2"
+	(hierarchical_label "M01_A2"
 		(shape output)
 		(at 368.3 162.56 0)
 		(effects
@@ -5215,7 +5235,7 @@
 		)
 		(uuid "41e49de7-6165-40dd-9e4f-e32cf84bfde9")
 	)
-	(hierarchical_label "M01_B2"
+	(hierarchical_label "M00_B2"
 		(shape output)
 		(at 368.3 78.74 0)
 		(effects
@@ -5226,7 +5246,7 @@
 		)
 		(uuid "45eed77c-dcf5-4bfd-be01-52f3447c703f")
 	)
-	(hierarchical_label "M02_B1"
+	(hierarchical_label "M01_B1"
 		(shape output)
 		(at 368.3 167.64 0)
 		(effects
@@ -5237,7 +5257,7 @@
 		)
 		(uuid "5dbeca89-eab1-4d8f-ba7f-5a3799f7b9c8")
 	)
-	(hierarchical_label "M03_DIR"
+	(hierarchical_label "M02_DIR"
 		(shape input)
 		(at 107.95 292.1 180)
 		(effects
@@ -5248,7 +5268,7 @@
 		)
 		(uuid "699bfb1d-3d5f-4bf0-a868-aa8bfb27e30d")
 	)
-	(hierarchical_label "M04_B1"
+	(hierarchical_label "M03_B1"
 		(shape output)
 		(at 368.3 358.14 0)
 		(effects
@@ -5259,7 +5279,7 @@
 		)
 		(uuid "786f6c0c-5bb6-4fcd-8ded-ec27259bab8f")
 	)
-	(hierarchical_label "M03_A2"
+	(hierarchical_label "M02_A2"
 		(shape output)
 		(at 368.3 251.46 0)
 		(effects
@@ -5270,7 +5290,7 @@
 		)
 		(uuid "80372652-b465-4f85-9aa3-cfc966643817")
 	)
-	(hierarchical_label "M01_DIR"
+	(hierarchical_label "M00_DIR"
 		(shape input)
 		(at 107.95 111.76 180)
 		(effects
@@ -5281,7 +5301,7 @@
 		)
 		(uuid "855ae11d-3628-4755-bc55-7bdd69cab997")
 	)
-	(hierarchical_label "M02_STEP"
+	(hierarchical_label "M01_STEP"
 		(shape input)
 		(at 107.95 199.39 180)
 		(effects
@@ -5292,7 +5312,7 @@
 		)
 		(uuid "87c1f8b7-5253-49a3-959a-ca1feeedc68c")
 	)
-	(hierarchical_label "M01_STEP"
+	(hierarchical_label "M00_STEP"
 		(shape input)
 		(at 107.95 107.95 180)
 		(effects
@@ -5303,7 +5323,7 @@
 		)
 		(uuid "9f7a3d6a-a9c4-459d-af22-3723d57f4c8e")
 	)
-	(hierarchical_label "M04_STEP"
+	(hierarchical_label "M03_STEP"
 		(shape input)
 		(at 107.95 389.89 180)
 		(effects
@@ -5314,7 +5334,7 @@
 		)
 		(uuid "a3ef1a4d-b63c-4f2a-b66a-696ee0a5ab26")
 	)
-	(hierarchical_label "M04_A2"
+	(hierarchical_label "M03_A2"
 		(shape output)
 		(at 368.3 353.06 0)
 		(effects
@@ -5325,7 +5345,7 @@
 		)
 		(uuid "b37d338b-0634-4f93-9fe6-a05088618e80")
 	)
-	(hierarchical_label "M01_A1"
+	(hierarchical_label "M00_A1"
 		(shape output)
 		(at 368.3 73.66 0)
 		(effects
@@ -5336,7 +5356,7 @@
 		)
 		(uuid "b3e16353-2bb3-4961-a2ec-adf23e5aea86")
 	)
-	(hierarchical_label "M03_A1"
+	(hierarchical_label "M02_A1"
 		(shape output)
 		(at 368.3 254 0)
 		(effects
@@ -5347,7 +5367,7 @@
 		)
 		(uuid "bb5f08ad-f06c-4a52-b201-02cdee53d809")
 	)
-	(hierarchical_label "M04_DIR"
+	(hierarchical_label "M03_DIR"
 		(shape input)
 		(at 107.95 393.7 180)
 		(effects
@@ -5358,7 +5378,7 @@
 		)
 		(uuid "c94cc692-e031-4fbe-8f55-9faaf741168b")
 	)
-	(hierarchical_label "M02_B2"
+	(hierarchical_label "M01_B2"
 		(shape output)
 		(at 368.3 170.18 0)
 		(effects
@@ -5369,7 +5389,7 @@
 		)
 		(uuid "d05b6fa8-c918-4858-b7f7-624f03b18d88")
 	)
-	(hierarchical_label "M02_A1"
+	(hierarchical_label "M01_A1"
 		(shape output)
 		(at 368.3 165.1 0)
 		(effects
@@ -5380,7 +5400,7 @@
 		)
 		(uuid "d1bdc81f-b9cf-49f2-a233-2e3ec08526e1")
 	)
-	(hierarchical_label "M01_B1"
+	(hierarchical_label "M00_B1"
 		(shape output)
 		(at 368.3 76.2 0)
 		(effects
@@ -5393,7 +5413,7 @@
 	)
 	(hierarchical_label "MOTOR_ENABLE"
 		(shape input)
-		(at 38.1 63.5 180)
+		(at 31.75 25.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5402,7 +5422,7 @@
 		)
 		(uuid "dd004dbb-b2bd-483d-bac3-5fb71b8c3eea")
 	)
-	(hierarchical_label "M03_B2"
+	(hierarchical_label "M02_B2"
 		(shape output)
 		(at 368.3 259.08 0)
 		(effects
@@ -5527,7 +5547,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 158.75 120.65 0)
 			(effects
 				(font
@@ -5681,7 +5701,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 334.01 387.35 0)
 			(effects
 				(font
@@ -5835,7 +5855,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 283.21 387.35 0)
 			(effects
 				(font
@@ -6171,7 +6191,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 69.85 0)
 			(effects
 				(font
@@ -6309,7 +6329,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 288.29 0)
 			(effects
 				(font
@@ -6422,7 +6442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "DRIVER-04"
+		(property "Role" "DRIVER-03"
 			(at 188.468 338.328 0)
 			(effects
 				(font
@@ -6430,7 +6450,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 165.1 342.9 0)
 			(effects
 				(font
@@ -6607,7 +6627,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 330.2 121.92 0)
 			(effects
 				(font
@@ -7006,7 +7026,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 283.21 374.65 0)
 			(effects
 				(font
@@ -7210,7 +7230,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 57.15 0)
 			(effects
 				(font
@@ -7421,7 +7441,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 275.59 162.56 0)
 			(effects
 				(font
@@ -7874,7 +7894,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 353.06 78.74 0)
 			(effects
 				(font
@@ -8179,7 +8199,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 304.8 213.36 0)
 			(effects
 				(font
@@ -8325,7 +8345,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 326.39 167.64 0)
 			(effects
 				(font
@@ -8527,7 +8547,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 308.61 184.15 0)
 			(effects
 				(font
@@ -8673,7 +8693,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 351.79 170.18 0)
 			(effects
 				(font
@@ -8810,7 +8830,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 359.41 374.65 0)
 			(effects
 				(font
@@ -9021,7 +9041,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 300.99 165.1 0)
 			(effects
 				(font
@@ -9354,7 +9374,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 158.75 402.59 0)
 			(effects
 				(font
@@ -9500,7 +9520,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 326.39 256.54 0)
 			(effects
 				(font
@@ -9637,7 +9657,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 334.01 184.15 0)
 			(effects
 				(font
@@ -9775,7 +9795,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 111.76 0)
 			(effects
 				(font
@@ -9978,7 +9998,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 133.35 120.65 0)
 			(effects
 				(font
@@ -10254,7 +10274,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 276.86 71.12 0)
 			(effects
 				(font
@@ -10515,7 +10535,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 279.4 302.26 0)
 			(effects
 				(font
@@ -10606,7 +10626,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 63.5 74.93 0)
+		(at 57.15 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10614,7 +10634,7 @@
 		(dnp no)
 		(uuid "3c5f6a9b-efe4-485a-9b81-798f75141fbf")
 		(property "Reference" "#PWR076"
-			(at 63.5 81.28 0)
+			(at 57.15 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10623,7 +10643,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 63.5 78.994 0)
+			(at 57.15 40.894 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10631,7 +10651,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 63.5 74.93 0)
+			(at 57.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10640,7 +10660,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 63.5 74.93 0)
+			(at 57.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10649,7 +10669,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 63.5 74.93 0)
+			(at 57.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10848,7 +10868,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 158.75 212.09 0)
 			(effects
 				(font
@@ -11051,7 +11071,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 283.21 184.15 0)
 			(effects
 				(font
@@ -11189,7 +11209,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 133.35 300.99 0)
 			(effects
 				(font
@@ -11328,7 +11348,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 339.09 0)
 			(effects
 				(font
@@ -11466,7 +11486,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 292.1 0)
 			(effects
 				(font
@@ -11605,7 +11625,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 161.29 0)
 			(effects
 				(font
@@ -11759,7 +11779,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 308.61 105.41 0)
 			(effects
 				(font
@@ -11896,7 +11916,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 359.41 273.05 0)
 			(effects
 				(font
@@ -12025,7 +12045,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 330.2 213.36 0)
 			(effects
 				(font
@@ -12163,7 +12183,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 393.7 0)
 			(effects
 				(font
@@ -12299,7 +12319,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C113803"
+		(property "LCSC Part #" "C113803"
 			(at 215.9 345.44 0)
 			(effects
 				(font
@@ -12325,7 +12345,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 63.5 69.85 180)
+		(at 57.15 31.75 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12333,7 +12353,7 @@
 		(dnp no)
 		(uuid "51999aeb-a76d-40be-9c29-47fe33b3c874")
 		(property "Reference" "R21"
-			(at 47.244 69.85 0)
+			(at 40.894 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12341,7 +12361,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 45.212 72.39 0)
+			(at 38.862 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12350,7 +12370,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12359,7 +12379,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12368,7 +12388,7 @@
 			)
 		)
 		(property "Description" "100 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Thin Film"
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12377,7 +12397,7 @@
 			)
 		)
 		(property "Power" "0.1 W"
-			(at 58.674 72.39 0)
+			(at 52.324 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12385,7 +12405,7 @@
 			)
 		)
 		(property "Role" "R_PULLDOWN"
-			(at 49.276 69.85 0)
+			(at 42.926 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12394,7 +12414,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12403,7 +12423,7 @@
 			)
 		)
 		(property "Manufacturer#" "RT0603FRE07100KL"
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12412,7 +12432,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics, Inc."
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12421,7 +12441,7 @@
 			)
 		)
 		(property "Distributor#" "YAG2319CT-ND"
-			(at 63.5 69.85 0)
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12430,15 +12450,15 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 53.34 72.39 0)
+			(at 46.99 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
-			(at 63.5 69.85 0)
+		(property "LCSC Part #" "C728638"
+			(at 57.15 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12761,7 +12781,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 283.21 92.71 0)
 			(effects
 				(font
@@ -12907,7 +12927,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 351.79 259.08 0)
 			(effects
 				(font
@@ -13061,7 +13081,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 308.61 387.35 0)
 			(effects
 				(font
@@ -13281,7 +13301,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 334.01 285.75 0)
 			(effects
 				(font
@@ -13418,7 +13438,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 334.01 273.05 0)
 			(effects
 				(font
@@ -13557,7 +13577,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 351.79 0)
 			(effects
 				(font
@@ -13711,7 +13731,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 283.21 196.85 0)
 			(effects
 				(font
@@ -13840,7 +13860,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 279.4 213.36 0)
 			(effects
 				(font
@@ -13986,7 +14006,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 302.26 73.66 0)
 			(effects
 				(font
@@ -14099,7 +14119,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "DRIVER-02"
+		(property "Role" "DRIVER-01"
 			(at 188.468 147.828 0)
 			(effects
 				(font
@@ -14107,7 +14127,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 165.1 152.4 0)
 			(effects
 				(font
@@ -14309,7 +14329,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 283.21 285.75 0)
 			(effects
 				(font
@@ -14455,7 +14475,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 300.99 355.6 0)
 			(effects
 				(font
@@ -14986,7 +15006,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 389.89 0)
 			(effects
 				(font
@@ -15115,7 +15135,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 355.6 302.26 0)
 			(effects
 				(font
@@ -15327,7 +15347,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 326.39 76.2 0)
 			(effects
 				(font
@@ -15532,7 +15552,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 250.19 0)
 			(effects
 				(font
@@ -15671,7 +15691,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 57.15 0)
 			(effects
 				(font
@@ -15825,7 +15845,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 359.41 387.35 0)
 			(effects
 				(font
@@ -15962,7 +15982,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 359.41 184.15 0)
 			(effects
 				(font
@@ -15988,7 +16008,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 57.15 63.5 90)
+		(at 50.8 25.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15996,7 +16016,7 @@
 		(dnp no)
 		(uuid "84cc5cc0-63cf-4c20-b30b-35f8285554ef")
 		(property "Reference" "R20"
-			(at 43.688 62.23 90)
+			(at 37.338 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16004,7 +16024,7 @@
 			)
 		)
 		(property "Value" "1K"
-			(at 59.69 62.23 90)
+			(at 53.34 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16013,7 +16033,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16022,7 +16042,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16031,7 +16051,7 @@
 			)
 		)
 		(property "Description" "1 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16040,7 +16060,7 @@
 			)
 		)
 		(property "Power" "0.1 W"
-			(at 70.104 62.23 90)
+			(at 63.754 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16048,7 +16068,7 @@
 			)
 		)
 		(property "Role" "R_Pi_LIM"
-			(at 45.974 62.23 90)
+			(at 39.624 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16057,7 +16077,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16066,7 +16086,7 @@
 			)
 		)
 		(property "Manufacturer#" "RC0603FR-071KL"
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16075,7 +16095,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics, Inc."
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16084,7 +16104,7 @@
 			)
 		)
 		(property "Distributor#" "311-1.00KHRCT-ND"
-			(at 57.15 63.5 0)
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16093,15 +16113,15 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 64.77 62.23 90)
+			(at 58.42 24.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
-			(at 57.15 63.5 0)
+		(property "LCSC Part #" "C22548"
+			(at 50.8 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16238,7 +16258,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 158.75 300.99 0)
 			(effects
 				(font
@@ -16377,7 +16397,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 148.59 0)
 			(effects
 				(font
@@ -16859,7 +16879,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 279.4 121.92 0)
 			(effects
 				(font
@@ -16996,7 +17016,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 283.21 273.05 0)
 			(effects
 				(font
@@ -17135,7 +17155,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 161.29 0)
 			(effects
 				(font
@@ -17274,7 +17294,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 237.49 0)
 			(effects
 				(font
@@ -17403,7 +17423,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 304.8 302.26 0)
 			(effects
 				(font
@@ -17663,7 +17683,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 330.2 302.26 0)
 			(effects
 				(font
@@ -17882,7 +17902,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 359.41 196.85 0)
 			(effects
 				(font
@@ -18160,7 +18180,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 300.99 254 0)
 			(effects
 				(font
@@ -18314,7 +18334,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 334.01 196.85 0)
 			(effects
 				(font
@@ -18658,7 +18678,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 275.59 251.46 0)
 			(effects
 				(font
@@ -18917,7 +18937,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 304.8 403.86 0)
 			(effects
 				(font
@@ -19056,7 +19076,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 339.09 0)
 			(effects
 				(font
@@ -19185,7 +19205,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 330.2 403.86 0)
 			(effects
 				(font
@@ -19339,7 +19359,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 283.21 105.41 0)
 			(effects
 				(font
@@ -19485,7 +19505,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 326.39 358.14 0)
 			(effects
 				(font
@@ -19705,7 +19725,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 334.01 105.41 0)
 			(effects
 				(font
@@ -19834,7 +19854,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 355.6 121.92 0)
 			(effects
 				(font
@@ -20103,7 +20123,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 308.61 273.05 0)
 			(effects
 				(font
@@ -20241,7 +20261,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 133.35 402.59 0)
 			(effects
 				(font
@@ -20370,7 +20390,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 279.4 403.86 0)
 			(effects
 				(font
@@ -20509,7 +20529,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 250.19 0)
 			(effects
 				(font
@@ -20663,7 +20683,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 308.61 196.85 0)
 			(effects
 				(font
@@ -20809,7 +20829,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 275.59 353.06 0)
 			(effects
 				(font
@@ -20947,7 +20967,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 203.2 0)
 			(effects
 				(font
@@ -21085,7 +21105,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 133.35 212.09 0)
 			(effects
 				(font
@@ -21224,7 +21244,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 69.85 0)
 			(effects
 				(font
@@ -21362,7 +21382,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 107.95 0)
 			(effects
 				(font
@@ -21516,7 +21536,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 359.41 105.41 0)
 			(effects
 				(font
@@ -21850,7 +21870,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 334.01 92.71 0)
 			(effects
 				(font
@@ -22116,7 +22136,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C113803"
+		(property "LCSC Part #" "C113803"
 			(at 215.9 243.84 0)
 			(effects
 				(font
@@ -22319,7 +22339,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C22548"
+		(property "LCSC Part #" "C22548"
 			(at 127 199.39 0)
 			(effects
 				(font
@@ -22432,7 +22452,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "DRIVER-03"
+		(property "Role" "DRIVER-02"
 			(at 188.468 236.728 0)
 			(effects
 				(font
@@ -22440,7 +22460,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 165.1 241.3 0)
 			(effects
 				(font
@@ -22756,7 +22776,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 308.61 374.65 0)
 			(effects
 				(font
@@ -22910,7 +22930,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 359.41 285.75 0)
 			(effects
 				(font
@@ -23105,7 +23125,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 355.6 403.86 0)
 			(effects
 				(font
@@ -23440,7 +23460,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 308.61 92.71 0)
 			(effects
 				(font
@@ -23586,7 +23606,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 351.79 360.68 0)
 			(effects
 				(font
@@ -23699,7 +23719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Role" "DRIVER-01"
+		(property "Role" "DRIVER-00"
 			(at 188.468 56.388 0)
 			(effects
 				(font
@@ -23707,7 +23727,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "NULL"
+		(property "LCSC Part #" "NULL"
 			(at 165.1 60.96 0)
 			(effects
 				(font
@@ -23956,7 +23976,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C113803"
+		(property "LCSC Part #" "C113803"
 			(at 215.9 154.94 0)
 			(effects
 				(font
@@ -24095,7 +24115,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 237.49 0)
 			(effects
 				(font
@@ -24298,7 +24318,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 359.41 92.71 0)
 			(effects
 				(font
@@ -24452,7 +24472,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C114608"
+		(property "LCSC Part #" "C114608"
 			(at 308.61 285.75 0)
 			(effects
 				(font
@@ -24591,7 +24611,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 127 351.79 0)
 			(effects
 				(font
@@ -24991,7 +25011,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C576700"
+		(property "LCSC Part #" "C576700"
 			(at 334.01 374.65 0)
 			(effects
 				(font
@@ -25192,7 +25212,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C113803"
+		(property "LCSC Part #" "C113803"
 			(at 215.9 63.5 0)
 			(effects
 				(font
@@ -25331,7 +25351,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 139.7 148.59 0)
 			(effects
 				(font
@@ -25460,7 +25480,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 355.6 213.36 0)
 			(effects
 				(font
@@ -25589,7 +25609,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C135003"
+		(property "LCSC Part #" "C135003"
 			(at 304.8 121.92 0)
 			(effects
 				(font

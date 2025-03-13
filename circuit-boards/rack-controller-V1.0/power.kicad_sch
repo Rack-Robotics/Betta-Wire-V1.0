@@ -4092,7 +4092,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C2864599"
+		(property "LCSC Part #" "C2864599"
 			(at 139.7 91.44 0)
 			(effects
 				(font
@@ -4235,15 +4235,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106215"
-			(at 69.85 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "10%"
 			(at 80.9864 31.7565 0)
 			(effects
@@ -4258,6 +4249,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C106215"
+			(at 69.85 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4373,15 +4373,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C96600"
-			(at 38.1 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "20%"
 			(at 48.9824 88.9065 0)
 			(effects
@@ -4396,6 +4387,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C96600"
+			(at 38.1 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4591,7 +4591,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C5246570"
+		(property "LCSC Part #" "C5246570"
 			(at 114.3 31.75 0)
 			(effects
 				(font
@@ -4868,7 +4868,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C5260346"
+		(property "LCSC Part #" "C5260346"
 			(at 171.45 95.25 0)
 			(effects
 				(font
@@ -5004,7 +5004,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C5246570"
+		(property "LCSC Part #" "C5246570"
 			(at 133.35 31.75 0)
 			(effects
 				(font
@@ -5126,15 +5126,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C96123"
-			(at 234.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "20%"
 			(at 246.0864 95.2565 0)
 			(effects
@@ -5149,6 +5140,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C96123"
+			(at 234.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5383,15 +5383,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106215"
-			(at 88.9 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "10%"
 			(at 100.0364 88.9065 0)
 			(effects
@@ -5406,6 +5397,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C106215"
+			(at 88.9 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5698,15 +5698,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C106215"
-			(at 161.29 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "10%"
 			(at 172.1724 86.3665 0)
 			(effects
@@ -5721,6 +5712,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C106215"
+			(at 161.29 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5850,7 +5850,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C5246570"
+		(property "LCSC Part #" "C5246570"
 			(at 152.4 31.75 0)
 			(effects
 				(font
@@ -5972,15 +5972,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C96600"
-			(at 50.8 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "20%"
 			(at 61.6824 31.7565 0)
 			(effects
@@ -5995,6 +5986,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C96600"
+			(at 50.8 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6110,15 +6110,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C185364"
-			(at 203.2 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "1%"
 			(at 212.09 101.854 0)
 			(effects
@@ -6133,6 +6124,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C185364"
+			(at 203.2 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -6248,15 +6248,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C96600"
-			(at 25.4 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "20%"
 			(at 36.2824 152.4065 0)
 			(effects
@@ -6271,6 +6262,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C96600"
+			(at 25.4 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6386,15 +6386,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C96123"
-			(at 215.9 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "20%"
 			(at 227.0364 95.2565 0)
 			(effects
@@ -6409,6 +6400,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C96123"
+			(at 215.9 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6606,7 +6606,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C728638"
+		(property "LCSC Part #" "C728638"
 			(at 203.2 93.98 0)
 			(effects
 				(font
@@ -7122,7 +7122,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC#" "C668299"
+		(property "LCSC Part #" "C668299"
 			(at 38.1 76.2 0)
 			(effects
 				(font
@@ -7244,15 +7244,6 @@
 				)
 			)
 		)
-		(property "LCSC#" "C96600"
-			(at 63.5 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Tolerance" "20%"
 			(at 74.3824 88.9065 0)
 			(effects
@@ -7267,6 +7258,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC Part #" "C96600"
+			(at 63.5 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7386,15 +7386,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "LCSC#" ""
-			(at 190.5 90.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7654,7 +7645,7 @@
 				)
 			)
 		)
-		(property "LCSC#" "C5246570"
+		(property "LCSC Part #" "C5246570"
 			(at 95.25 31.75 0)
 			(effects
 				(font
