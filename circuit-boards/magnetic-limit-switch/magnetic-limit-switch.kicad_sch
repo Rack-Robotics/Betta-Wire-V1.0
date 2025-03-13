@@ -1,120 +1,20 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "9ee94a87-2af8-4146-8192-064bd5cb0cbd")
 	(paper "A4")
 	(title_block
 		(title "magnetic-limit-switch")
-		(date "[25.01.16]")
-		(rev "RevB")
+		(date "[25.03.13]")
+		(rev "C")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols
-		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -187,7 +87,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -199,7 +99,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -248,11 +148,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:LED"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -320,10 +225,22 @@
 			(symbol "LED_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -344,7 +261,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+						(xy -1.27 -1.27) (xy -1.27 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -356,22 +273,10 @@
 				)
 				(polyline
 					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
 					)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -417,9 +322,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -538,6 +446,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Sensor_Magnetic:SM351LT"
 			(exclude_from_sim no)
@@ -636,24 +545,6 @@
 						)
 					)
 				)
-				(pin output line
-					(at 10.16 0 180)
-					(length 2.54)
-					(name "OUTPUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at -5.08 -7.62 90)
 					(length 2.54)
@@ -672,187 +563,10 @@
 						)
 					)
 				)
-			)
-		)
-		(symbol "magnetic-limit-switch:S3B-PH-SM4-TB"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J1"
-				(at 2.794 2.794 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "S3B-PH-SM4-TB"
-				(at 4.826 -2.286 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "magnetic-limit-switch:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.079\" (2.00mm)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor" "Digikey Electronics, Inc."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Distributor#" "S3B-PH-SM4-TB"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacterer#" "S3B-PH-SM4-TB"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Manufacterer" "JST Sales America Inc."
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "LCSC Part #" "NULL"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "S3B-PH-SM4-TB_1_1"
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
+				(pin output line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "OUTPUT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -867,31 +581,18 @@
 						)
 					)
 				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -982,12 +683,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1059,7 +765,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1071,7 +777,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1102,313 +808,265 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
-	)
-	(junction
-		(at 73.66 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "33584515-38e6-466f-8b52-a8f2c4bfa2a7")
-	)
-	(junction
-		(at 73.66 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "74c1b4c9-8a9e-4b64-a23a-9b393cee1d91")
-	)
-	(wire
-		(pts
-			(xy 73.66 36.83) (xy 73.66 38.1)
+		(symbol "rack-controller:S3B-XH-SM4-TB"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J1"
+				(at 2.54 0.0001 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "S3B-XH-SM4-TB"
+				(at 2.54 -2.5399 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "rack-controller:S3B-XH-SM4-TB"
+				(at 0.508 -28.448 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+				(at 0.508 -28.448 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.098\" (2.50mm)"
+				(at 0.508 -25.908 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor#" "455-S3B-XH-SM4-TBCT-ND"
+				(at 0.762 -20.066 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Distributor" "Digikey Electronics, Inc."
+				(at 2.032 -18.288 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "JST Sales America Inc."
+				(at 2.54 -21.844 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Role" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer#" "JST Sales America Inc."
+				(at 1.27 -23.622 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Max Current" "3A"
+				(at -0.508 -31.242 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC#" "C161860"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "S3B-XH-SM4-TB_1_1"
+				(rectangle
+					(start -1.27 1.016)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 90)
+					(length 3.81)
+					(name "Pin_MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0991944e-2117-443d-ad7d-c94ae1c02cfa")
-	)
-	(wire
-		(pts
-			(xy 57.15 41.91) (xy 57.15 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11e14b5e-1cd5-485b-ae14-396b283bbc15")
-	)
-	(wire
-		(pts
-			(xy 129.54 46.99) (xy 129.54 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "269709ca-2279-4355-b6ec-740a496368d4")
-	)
-	(wire
-		(pts
-			(xy 34.29 85.09) (xy 34.29 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2dfa649e-e04b-4f50-a182-d40b5575741c")
-	)
-	(wire
-		(pts
-			(xy 34.29 74.93) (xy 34.29 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31853b69-0ec5-4033-93fc-c708ab4d612d")
-	)
-	(polyline
-		(pts
-			(xy 132.08 60.96) (xy 133.35 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43aa9eca-9b1d-4367-9035-ee83b39f755d")
-	)
-	(wire
-		(pts
-			(xy 129.54 33.02) (xy 129.54 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4567db22-9744-4113-8ef4-bf3407783f87")
-	)
-	(wire
-		(pts
-			(xy 57.15 55.88) (xy 73.66 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "456c9bb9-fc0c-46e5-b10e-e9cdff6e1f38")
-	)
-	(polyline
-		(pts
-			(xy 134.62 62.23) (xy 134.62 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fce2f05-bdf1-4ed8-b122-6345ba3e97b8")
-	)
-	(wire
-		(pts
-			(xy 26.67 74.93) (xy 26.67 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "527f2e17-2a5c-4561-957e-e2a47bdbc27f")
-	)
-	(wire
-		(pts
-			(xy 73.66 55.88) (xy 73.66 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53658653-cb46-4536-8156-131b090be8fe")
-	)
-	(polyline
-		(pts
-			(xy 134.62 60.96) (xy 135.89 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53e18141-063c-46f6-9bac-a3d7b75d9953")
-	)
-	(wire
-		(pts
-			(xy 33.02 35.56) (xy 33.02 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "71d9fb06-b763-47c1-8967-0d20c1f59925")
-	)
-	(wire
-		(pts
-			(xy 41.91 74.93) (xy 41.91 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "80cd8731-212c-4c0e-937b-4c3bd9e419b4")
-	)
-	(wire
-		(pts
-			(xy 129.54 59.69) (xy 129.54 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82b17263-7c5f-43ce-ba51-aab8c58af6e0")
-	)
-	(wire
-		(pts
-			(xy 73.66 33.02) (xy 73.66 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "859d1393-2a4d-4d63-a601-b0132d6b9992")
-	)
-	(wire
-		(pts
-			(xy 30.48 55.88) (xy 30.48 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c9c5a46-4165-4462-8a58-ca30acb39b8b")
-	)
-	(wire
-		(pts
-			(xy 73.66 55.88) (xy 73.66 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "909b8a8a-86b4-4da1-9ac5-057d9781d92e")
-	)
-	(wire
-		(pts
-			(xy 57.15 36.83) (xy 73.66 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a92a575d-0557-4ac9-af85-b0187dc0ea1d")
-	)
-	(wire
-		(pts
-			(xy 29.21 55.88) (xy 30.48 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aafe3649-2ab0-412f-856e-531983383fa1")
-	)
-	(wire
-		(pts
-			(xy 30.48 78.74) (xy 30.48 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abe169ab-27bf-49a8-aa9c-856a5a6a44b7")
-	)
-	(polyline
-		(pts
-			(xy 133.35 62.23) (xy 134.62 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3d1132d-1041-4658-ba58-3d891f5a4963")
-	)
-	(polyline
-		(pts
-			(xy 133.35 60.96) (xy 133.35 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb9598a5-88ae-4993-b393-fbc306c0a1bd")
-	)
-	(wire
-		(pts
-			(xy 57.15 49.53) (xy 57.15 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c49e7892-cdd5-4721-b505-f8f7b19ba130")
-	)
-	(wire
-		(pts
-			(xy 27.94 35.56) (xy 27.94 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c56f0913-94d7-4353-935a-8f7088c60013")
-	)
-	(wire
-		(pts
-			(xy 34.29 78.74) (xy 30.48 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d093d0f8-bdda-4190-8e0e-23fd98fbdcb8")
-	)
-	(wire
-		(pts
-			(xy 34.29 81.28) (xy 41.91 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e47eab1f-0c65-4eb4-b373-db41712eeb8a")
-	)
-	(wire
-		(pts
-			(xy 29.21 57.15) (xy 29.21 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f3211391-07b1-4708-a570-df3a5a43ceb0")
-	)
-	(wire
-		(pts
-			(xy 88.9 45.72) (xy 90.17 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f52760fb-1077-44e4-b611-8e19df98e8a3")
 	)
 	(rectangle
 		(start 19.05 19.05)
-		(end 44.45 95.25)
+		(end 76.2 44.45)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1419,8 +1077,8 @@
 		(uuid 1845a10c-c446-4f51-bec5-5633ca84ae4d)
 	)
 	(rectangle
-		(start 152.4 19.05)
-		(end 215.9 50.8)
+		(start 177.8 133.985)
+		(end 241.3 165.735)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1431,8 +1089,8 @@
 		(uuid 2f6efbac-f432-4b79-9b14-32c7120f7483)
 	)
 	(rectangle
-		(start 114.3 19.05)
-		(end 146.05 95.25)
+		(start 77.47 45.72)
+		(end 109.22 121.92)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1443,8 +1101,8 @@
 		(uuid 5d47f13d-9700-4e85-80f2-b66ad9542548)
 	)
 	(rectangle
-		(start 50.8 19.05)
-		(end 107.95 95.25)
+		(start 19.05 45.72)
+		(end 76.2 121.92)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1456,7 +1114,7 @@
 	)
 	(text "NOTE: 	HALL-EFFECT IS PUSH-PULL TYPE \n		LOGIC IS INVERTED"
 		(exclude_from_sim no)
-		(at 51.308 23.622 0)
+		(at 19.558 50.292 0)
 		(effects
 			(font
 				(size 1.2192 1.2192)
@@ -1464,6 +1122,16 @@
 			(justify left top)
 		)
 		(uuid "3273a959-8e8f-4819-8439-99f21f0d7bc7")
+	)
+	(text "Future Changes to Consider \n- Add resistor across VCC and GND or other EMI suppression features"
+		(exclude_from_sim no)
+		(at 213.36 169.672 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8b0add9e-dcc2-4134-8f86-c1b4f7433a75")
 	)
 	(text "CONNECTOR"
 		(exclude_from_sim no)
@@ -1478,7 +1146,7 @@
 	)
 	(text "HALL-EFFECT SENSOR"
 		(exclude_from_sim no)
-		(at 51.308 20.066 0)
+		(at 19.558 46.736 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1489,7 +1157,7 @@
 	)
 	(text "STATUS LED"
 		(exclude_from_sim no)
-		(at 121.92 20.574 0)
+		(at 85.09 47.244 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1500,7 +1168,7 @@
 	)
 	(text "SPECIFICATIONS\n\nVCC			5		V	TYP\nVCC			5.5		V	MAX\nPOWER		20		mW	MAX\n\nOUTPUT		HIGH-IMPEDANCE\nOUTPUT		5.3		V	MAX\nOUTPUT	   	-0.3	V	MIN\nRESPONSE	10		Hz	MIN"
 		(exclude_from_sim no)
-		(at 153.67 20.955 0)
+		(at 179.07 135.89 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1511,7 +1179,7 @@
 	)
 	(text "I_OUT 5 mA MAX"
 		(exclude_from_sim no)
-		(at 88.9 48.768 0)
+		(at 57.15 75.438 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1520,9 +1188,221 @@
 		)
 		(uuid "fc66a2a2-bc78-432c-a8fa-9cd62f4959b1")
 	)
+	(junction
+		(at 41.91 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33584515-38e6-466f-8b52-a8f2c4bfa2a7")
+	)
+	(junction
+		(at 41.91 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "74c1b4c9-8a9e-4b64-a23a-9b393cee1d91")
+	)
+	(wire
+		(pts
+			(xy 41.91 63.5) (xy 41.91 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0991944e-2117-443d-ad7d-c94ae1c02cfa")
+	)
+	(wire
+		(pts
+			(xy 50.8 35.56) (xy 49.53 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f41a9db-50f4-4517-8807-fd0387dbc552")
+	)
+	(wire
+		(pts
+			(xy 25.4 68.58) (xy 25.4 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11e14b5e-1cd5-485b-ae14-396b283bbc15")
+	)
+	(wire
+		(pts
+			(xy 50.8 38.1) (xy 49.53 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ac08b75-4c8c-4cbb-b10a-46bdd04ad6c2")
+	)
+	(wire
+		(pts
+			(xy 92.71 73.66) (xy 92.71 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "269709ca-2279-4355-b6ec-740a496368d4")
+	)
+	(polyline
+		(pts
+			(xy 95.25 87.63) (xy 96.52 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43aa9eca-9b1d-4367-9035-ee83b39f755d")
+	)
+	(wire
+		(pts
+			(xy 92.71 59.69) (xy 92.71 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4567db22-9744-4113-8ef4-bf3407783f87")
+	)
+	(wire
+		(pts
+			(xy 25.4 82.55) (xy 41.91 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "456c9bb9-fc0c-46e5-b10e-e9cdff6e1f38")
+	)
+	(polyline
+		(pts
+			(xy 97.79 88.9) (xy 97.79 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fce2f05-bdf1-4ed8-b122-6345ba3e97b8")
+	)
+	(wire
+		(pts
+			(xy 41.91 82.55) (xy 41.91 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53658653-cb46-4536-8156-131b090be8fe")
+	)
+	(polyline
+		(pts
+			(xy 97.79 87.63) (xy 99.06 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53e18141-063c-46f6-9bac-a3d7b75d9953")
+	)
+	(wire
+		(pts
+			(xy 92.71 86.36) (xy 92.71 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82b17263-7c5f-43ce-ba51-aab8c58af6e0")
+	)
+	(wire
+		(pts
+			(xy 41.91 59.69) (xy 41.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "859d1393-2a4d-4d63-a601-b0132d6b9992")
+	)
+	(wire
+		(pts
+			(xy 41.91 82.55) (xy 41.91 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "909b8a8a-86b4-4da1-9ac5-057d9781d92e")
+	)
+	(wire
+		(pts
+			(xy 25.4 63.5) (xy 41.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a92a575d-0557-4ac9-af85-b0187dc0ea1d")
+	)
+	(polyline
+		(pts
+			(xy 96.52 88.9) (xy 97.79 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3d1132d-1041-4658-ba58-3d891f5a4963")
+	)
+	(polyline
+		(pts
+			(xy 96.52 87.63) (xy 96.52 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb9598a5-88ae-4993-b393-fbc306c0a1bd")
+	)
+	(wire
+		(pts
+			(xy 25.4 76.2) (xy 25.4 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c49e7892-cdd5-4721-b505-f8f7b19ba130")
+	)
+	(wire
+		(pts
+			(xy 55.88 33.02) (xy 49.53 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dada67af-3ac4-4295-aee2-61515d95c54d")
+	)
+	(wire
+		(pts
+			(xy 57.15 72.39) (xy 58.42 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f52760fb-1077-44e4-b611-8e19df98e8a3")
+	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 90.17 45.72 0)
+		(at 58.42 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1532,7 +1412,7 @@
 		)
 		(uuid "232d1ff0-abe5-4a96-a861-61cf4f0c52f2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.2829 45.72 0)
+			(at 72.5329 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1544,7 +1424,29 @@
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 129.54 59.69 270)
+		(at 55.88 33.02 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4c87695a-c716-4343-bb6d-523f76ab27a8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 69.9929 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SIGNAL_OUT"
+		(shape input)
+		(at 92.71 86.36 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1554,51 +1456,7 @@
 		)
 		(uuid "59bc46a1-fdbb-4a56-9b06-85ac3bc322da")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.54 73.8029 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SIGNAL_OUT"
-		(shape input)
-		(at 26.67 78.74 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a467b98a-0d0d-4457-9e6c-c055e20eb997")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.67 92.8529 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SIGNAL_OUT"
-		(shape input)
-		(at 27.94 39.37 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e4b3ab94-4380-4c2c-a073-73d1ecb5e74c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.94 53.4829 90)
+			(at 92.71 100.4729 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1610,15 +1468,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 29.21 57.15 0)
+		(at 44.45 27.94 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0655a41b-d11b-4a38-b5bd-874457ca76ee")
-		(property "Reference" "#PWR05"
-			(at 29.21 63.5 0)
+		(uuid "0c85dbb5-7fe5-4ab6-9a08-d371d7cc3e1d")
+		(property "Reference" "#PWR08"
+			(at 44.45 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1627,7 +1485,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 29.21 61.976 90)
+			(at 44.45 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1635,7 +1493,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 57.15 0)
+			(at 44.45 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1644,7 +1502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 57.15 0)
+			(at 44.45 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1653,7 +1511,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 29.21 57.15 0)
+			(at 44.45 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1662,46 +1520,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "14fe374a-8b44-4a27-807a-00fa78e54cf2")
+			(uuid "749aad91-2218-414f-8562-5939c1e9fcf9")
 		)
 		(instances
-			(project "IP68-limit-switch"
+			(project "magnetic-limit-switch"
 				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "#PWR05")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 26.67 74.93 0)
+		(lib_id "power:VCC")
+		(at 50.8 38.1 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0ffc46b6-9d5e-423a-9361-aae6b5cbfaed")
-		(property "Reference" "TP1"
-			(at 21.844 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 24.384 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 31.75 74.93 0)
+		(uuid "2c595ce9-98c3-441f-8658-a29577a839b5")
+		(property "Reference" "#PWR09"
+			(at 46.99 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1709,8 +1549,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "NULL"
-			(at 31.75 74.93 0)
+		(property "Value" "VCC"
+			(at 55.626 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1718,8 +1566,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "test point"
-			(at 26.67 74.93 0)
+		(property "Datasheet" ""
+			(at 50.8 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1727,62 +1575,8 @@
 				(hide yes)
 			)
 		)
-		(property "Supplier" "NULL"
-			(at 26.67 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" "NULL"
-			(at 26.67 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" "NULL"
-			(at 26.67 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "NULL"
-			(at 26.67 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "NULL"
-			(at 26.67 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer#" "NULL"
-			(at 26.67 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "NULL"
-			(at 26.67 74.93 0)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 50.8 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1791,12 +1585,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "dd7f750b-3269-49d6-b319-25a242fb4282")
+			(uuid "aba926c6-f61c-42ef-8cda-a031b303ecff")
 		)
 		(instances
-			(project ""
+			(project "magnetic-limit-switch"
 				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "TP1")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -1804,7 +1598,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Magnetic:SM351LT")
-		(at 78.74 45.72 0)
+		(at 46.99 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1812,7 +1606,7 @@
 		(dnp no)
 		(uuid "44abbe48-b25b-47bb-80be-1fa694f472fd")
 		(property "Reference" "U1"
-			(at 77.724 36.322 0)
+			(at 45.974 62.992 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1821,7 +1615,7 @@
 			)
 		)
 		(property "Value" "TMAG5231"
-			(at 88.138 36.322 0)
+			(at 56.388 62.992 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1830,7 +1624,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
-			(at 77.47 45.72 0)
+			(at 45.72 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1839,7 +1633,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tmag5231.pdf"
-			(at 77.47 45.72 0)
+			(at 45.72 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1848,7 +1642,7 @@
 			)
 		)
 		(property "Description" "Digital Switch Omnipolar Switch Push-Pull Hall Effect SOT-23-3"
-			(at 78.74 45.72 0)
+			(at 46.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1857,7 +1651,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics"
-			(at 78.74 45.72 0)
+			(at 46.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1866,7 +1660,7 @@
 			)
 		)
 		(property "Distributor#" "296-TMAG5231A2DQDBZRCT-ND"
-			(at 78.74 45.72 0)
+			(at 46.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1875,7 +1669,7 @@
 			)
 		)
 		(property "Manufacterer" "Texas Instruments"
-			(at 78.74 45.72 0)
+			(at 46.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1884,7 +1678,7 @@
 			)
 		)
 		(property "Manufacterer#" "TMAG5231A2DQDBZR"
-			(at 78.74 45.72 0)
+			(at 46.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1893,7 +1687,7 @@
 			)
 		)
 		(property "LCSC Part #" "NULL"
-			(at 78.74 45.72 0)
+			(at 46.99 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1921,7 +1715,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 73.66 33.02 0)
+		(at 41.91 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1929,7 +1723,7 @@
 		(dnp no)
 		(uuid "4cb336bb-5d82-4c4b-9a06-b748bbb0bf81")
 		(property "Reference" "#PWR03"
-			(at 73.66 36.83 0)
+			(at 41.91 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1938,7 +1732,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 76.962 31.242 0)
+			(at 45.212 57.912 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1946,7 +1740,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 73.66 33.02 0)
+			(at 41.91 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1955,7 +1749,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 33.02 0)
+			(at 41.91 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1964,7 +1758,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 73.66 33.02 0)
+			(at 41.91 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1985,202 +1779,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 41.91 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "50e9ca85-7565-4fff-92dd-361d02885e78")
-		(property "Reference" "TP3"
-			(at 37.084 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 39.624 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 46.99 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "NULL"
-			(at 46.99 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer#" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "NULL"
-			(at 41.91 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f20057c7-cc1f-4419-84f0-7b23c3317baa")
-		)
-		(instances
-			(project "magnetic-limit-switch"
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 33.02 57.15 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "54c871bf-2bd2-4a41-a615-f2ada3e5ef89")
-		(property "Reference" "#PWR06"
-			(at 33.02 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 33.02 61.976 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 33.02 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 33.02 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 33.02 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "67ff3412-09d6-489a-824f-0c0ba568cc4a")
-		)
-		(instances
-			(project "IP68-limit-switch"
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 57.15 45.72 180)
+		(at 25.4 72.39 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2188,7 +1788,7 @@
 		(dnp no)
 		(uuid "62765428-86b1-4ce8-811b-648ab1ed0afe")
 		(property "Reference" "C1"
-			(at 60.198 45.72 0)
+			(at 28.448 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,7 +1797,7 @@
 			)
 		)
 		(property "Value" "1 uF"
-			(at 64.77 45.72 0)
+			(at 33.02 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2206,7 +1806,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 56.1848 41.91 0)
+			(at 24.4348 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2215,7 +1815,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2224,7 +1824,7 @@
 			)
 		)
 		(property "Description" "1 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2233,7 +1833,7 @@
 			)
 		)
 		(property "Manufacterer" "YAGEO"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2242,7 +1842,7 @@
 			)
 		)
 		(property "Tolerance" "10%"
-			(at 62.484 48.006 0)
+			(at 30.734 74.676 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2250,7 +1850,7 @@
 			)
 		)
 		(property "V_max" "16V"
-			(at 67.564 47.752 0)
+			(at 35.814 74.422 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2258,7 +1858,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2267,7 +1867,7 @@
 			)
 		)
 		(property "Distributor#" "311-1446-1-ND"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2276,7 +1876,7 @@
 			)
 		)
 		(property "Manufacterer#" "CC0603KRX7R7BB105"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2285,7 +1885,7 @@
 			)
 		)
 		(property "LCSC Part #" "C106248"
-			(at 57.15 45.72 0)
+			(at 25.4 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2310,7 +1910,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 129.54 33.02 0)
+		(at 92.71 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2318,7 +1918,7 @@
 		(dnp no)
 		(uuid "754df934-fa9d-4477-87e2-f9bb2d4ea03f")
 		(property "Reference" "#PWR01"
-			(at 129.54 36.83 0)
+			(at 92.71 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2327,7 +1927,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 132.842 31.75 0)
+			(at 96.012 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2335,7 +1935,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 33.02 0)
+			(at 92.71 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2344,7 +1944,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 33.02 0)
+			(at 92.71 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2353,7 +1953,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 129.54 33.02 0)
+			(at 92.71 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2375,15 +1975,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 129.54 40.64 180)
+		(at 92.71 67.31 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "8dbdd306-dcea-4487-a3ab-05366df30a5a")
 		(property "Reference" "R1"
-			(at 134.366 38.354 0)
+			(at 97.536 65.024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2392,7 +1992,7 @@
 			)
 		)
 		(property "Value" "750R"
-			(at 136.652 40.64 0)
+			(at 99.822 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2401,7 +2001,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 131.318 40.64 90)
+			(at 94.488 67.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2410,7 +2010,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2419,7 +2019,7 @@
 			)
 		)
 		(property "Description" "750 Ohms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Moisture Resistant Thick Film"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2028,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 138.938 40.64 0)
+			(at 102.108 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2436,7 +2036,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2445,7 +2045,7 @@
 			)
 		)
 		(property "Distributor#" "311-750HRCT-ND"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2454,7 +2054,7 @@
 			)
 		)
 		(property "Manufacterer" "YAGEO"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2463,7 +2063,7 @@
 			)
 		)
 		(property "Manufacterer#" "RC0603FR-07750RL"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2472,7 +2072,7 @@
 			)
 		)
 		(property "LCSC Part #" "C114635"
-			(at 129.54 40.64 0)
+			(at 92.71 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2481,7 +2081,7 @@
 			)
 		)
 		(property "Power" "0.1W"
-			(at 134.112 42.926 0)
+			(at 97.282 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2504,269 +2104,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 34.29 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "a50760b4-e328-4801-92a0-53189062db4f")
-		(property "Reference" "TP2"
-			(at 29.464 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 32.004 75.438 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_1.0x1.0mm"
-			(at 39.37 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "NULL"
-			(at 39.37 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Supplier#" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer#" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "NULL"
-			(at 34.29 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6e17a418-0c53-4cde-bdba-1b92d95b4287")
-		)
-		(instances
-			(project "magnetic-limit-switch"
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "magnetic-limit-switch:S3B-PH-SM4-TB")
-		(at 30.48 30.48 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a589b5cf-7c53-4fff-8347-39bd4cc516f2")
-		(property "Reference" "J1"
-			(at 30.48 25.908 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "S3B-PH-SM4-TB"
-			(at 30.48 27.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "magnetic-limit-switch:JST_PH_S3B-PH-SM4-TB_1x03-1MP_P2.00mm_Horizontal"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/ePH.pdf"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.079\" (2.00mm)"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "S3B-PH-SM4-TB"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer" "JST Sales America Inc."
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacterer#" "S3B-PH-SM4-TB"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "NULL"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field-1" "S3B-PH-SM4-TB"
-			(at 30.48 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d6871659-8a1a-4fce-bf5c-4d8d52f79909")
-		)
-		(pin "1"
-			(uuid "e4b042a7-f88c-4454-9025-10ab6dfb08b9")
-		)
-		(pin "3"
-			(uuid "6d68710a-1fcc-4acb-a8f7-c0cc47b764dd")
-		)
-		(instances
-			(project ""
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 30.48 85.09 0)
+		(at 50.8 35.56 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b2aeabdf-aa2a-44c3-a03e-c0ce7667eb79")
-		(property "Reference" "#PWR02"
-			(at 30.48 91.44 0)
+		(uuid "93048370-9be9-4f2f-b928-6be1e8bd28a5")
+		(property "Reference" "#PWR07"
+			(at 57.15 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2775,7 +2122,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 30.48 89.916 90)
+			(at 55.626 35.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2783,7 +2130,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 85.09 0)
+			(at 50.8 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2792,7 +2139,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 85.09 0)
+			(at 50.8 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2801,7 +2148,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 30.48 85.09 0)
+			(at 50.8 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2810,12 +2157,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ee077250-3c3a-48bd-a378-1f997325b3c6")
+			(uuid "a654810d-0dd9-4bb8-8da9-40364b84681d")
 		)
 		(instances
-			(project "IP68-limit-switch"
+			(project "magnetic-limit-switch"
 				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "#PWR02")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -2823,15 +2170,15 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 129.54 50.8 90)
+		(at 92.71 77.47 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "c5400e0b-7c7d-410f-a08c-bab4c4257402")
 		(property "Reference" "D1"
-			(at 135.128 50.038 90)
+			(at 98.298 76.708 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2840,7 +2187,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 136.144 52.07 90)
+			(at 99.314 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2849,7 +2196,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2858,7 +2205,7 @@
 			)
 		)
 		(property "Datasheet" "https://optoelectronics.liteon.com/upload/download/DS22-2005-086/LTST-C193KFKT-5A.PDF"
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2867,7 +2214,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2876,7 +2223,7 @@
 			)
 		)
 		(property "V_f" "2 V"
-			(at 138.684 52.07 90)
+			(at 101.854 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2884,7 +2231,7 @@
 			)
 		)
 		(property "I_f" "4 mA"
-			(at 139.446 50.038 90)
+			(at 102.616 76.708 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2892,7 +2239,7 @@
 			)
 		)
 		(property "Color" "Orange"
-			(at 129.54 50.8 90)
+			(at 92.71 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2901,7 +2248,7 @@
 			)
 		)
 		(property "Luminous Intensity" "45.0"
-			(at 129.54 50.8 90)
+			(at 92.71 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2910,7 +2257,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics"
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2919,7 +2266,7 @@
 			)
 		)
 		(property "Distributor#" "160-1829-1-ND"
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2928,7 +2275,7 @@
 			)
 		)
 		(property "Manufacterer" "Lite-On Inc."
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2937,7 +2284,7 @@
 			)
 		)
 		(property "Manufacterer#" "LTST-C193KFKT-5A"
-			(at 129.54 50.8 0)
+			(at 92.71 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2946,7 +2293,7 @@
 			)
 		)
 		(property "LCSC Part #" "C284922"
-			(at 129.54 50.8 90)
+			(at 92.71 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2970,8 +2317,145 @@
 		)
 	)
 	(symbol
+		(lib_id "rack-controller:S3B-XH-SM4-TB")
+		(at 44.45 38.1 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d91a2d48-010f-4669-a122-e4ddb2f06c40")
+		(property "Reference" "J7"
+			(at 41.656 36.322 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "S3B-XH-SM4-TB"
+			(at 41.91 34.1631 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "magnetic-limit-switch:JST_XH_S3B-XH-SM4-TB_1x03-1MP_P2.50mm_Horizontal"
+			(at 43.942 9.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+			(at 43.942 9.652 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.098\" (2.50mm)"
+			(at 43.942 12.192 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "455-S3B-XH-SM4-TBCT-ND"
+			(at 43.688 18.034 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 42.418 19.812 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "CONN"
+			(at 28.448 36.322 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Max Current" "3A"
+			(at 44.958 6.858 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C161860"
+			(at 44.45 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer" "JST"
+			(at 44.45 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacterer#" "S3B-XH-SM4-TB"
+			(at 44.45 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "63e9c44c-6434-4e8e-bb47-5b10d8abb862")
+		)
+		(pin "3"
+			(uuid "cbdec4bf-54e5-4801-b1df-d0495962166a")
+		)
+		(pin "1"
+			(uuid "196850c1-1fde-4b85-8eb9-a5c0479339cf")
+		)
+		(pin "MP"
+			(uuid "e83f2fa4-8fbf-4723-ab50-ec0ef15ec899")
+		)
+		(instances
+			(project "magnetic-limit-switch"
+				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 73.66 60.96 0)
+		(at 41.91 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2979,7 +2463,7 @@
 		(dnp no)
 		(uuid "dbaff3b6-6d1e-43f4-9b01-818ae11a7887")
 		(property "Reference" "#PWR04"
-			(at 73.66 67.31 0)
+			(at 41.91 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2988,7 +2472,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 77.216 62.992 0)
+			(at 45.466 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2996,7 +2480,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 73.66 60.96 0)
+			(at 41.91 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3005,7 +2489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 60.96 0)
+			(at 41.91 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3014,7 +2498,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 73.66 60.96 0)
+			(at 41.91 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3034,74 +2518,10 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 34.29 85.09 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e27ad55b-8168-44ba-9d6f-7cbba9b294d3")
-		(property "Reference" "#PWR07"
-			(at 34.29 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 34.29 89.916 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.29 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 34.29 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "140fe482-52a1-4d83-91c0-f447ee49c329")
-		)
-		(instances
-			(project "IP68-limit-switch"
-				(path "/9ee94a87-2af8-4146-8192-064bd5cb0cbd"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(sheet_instances
 		(path "/"
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

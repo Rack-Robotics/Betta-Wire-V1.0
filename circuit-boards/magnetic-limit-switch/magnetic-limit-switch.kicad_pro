@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.25
         }
       },
       "diff_pair_dimensions": [
@@ -69,16 +69,19 @@
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
+        "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
+        "footprint_filters_mismatch": "ignore",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "hole_to_hole": "error",
         "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
@@ -89,9 +92,11 @@
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
+        "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
         "net_conflict": "warning",
+        "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
@@ -106,7 +111,9 @@
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
+        "track_angle": "error",
         "track_dangling": "warning",
+        "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -116,9 +123,10 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.16,
+        "min_clearance": 0.2,
         "min_connection": 0.16,
         "min_copper_edge_clearance": 0.25,
+        "min_groove_width": 0.0,
         "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.45,
         "min_microvia_diameter": 0.2,
@@ -136,10 +144,11 @@
       },
       "teardrop_options": [
         {
-          "td_onpadsmd": true,
+          "td_onpthpad": true,
           "td_onroundshapesonly": false,
+          "td_onsmdpad": true,
           "td_ontrackend": false,
-          "td_onviapad": true
+          "td_onvia": true
         }
       ],
       "teardrop_parameters": [
@@ -234,6 +243,7 @@
       "mfg": "",
       "mpn": ""
     },
+    "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -428,10 +438,15 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "footprint_filter": "ignore",
+      "footprint_link_issues": "warning",
+      "four_way_junction": "ignore",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
+      "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
+      "lib_symbol_mismatch": "warning",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
@@ -444,9 +459,14 @@
       "pin_not_driven": "error",
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
+      "same_local_global_label": "warning",
+      "similar_label_and_power": "warning",
       "similar_labels": "warning",
+      "similar_power": "warning",
       "simulation_model_issue": "ignore",
+      "single_global_label": "ignore",
       "unannotated": "error",
+      "unconnected_wire_endpoint": "warning",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -458,7 +478,7 @@
   },
   "meta": {
     "filename": "magnetic-limit-switch.kicad_pro",
-    "version": 1
+    "version": 3
   },
   "net_settings": {
     "classes": [
@@ -473,6 +493,7 @@
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
         "via_diameter": 0.6,
@@ -481,7 +502,7 @@
       }
     ],
     "meta": {
-      "version": 3
+      "version": 4
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -495,7 +516,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "../IP68-limit-switch.step",
+      "step": "3D-models/magnetic-limit-switch-C.step",
       "svg": "",
       "vrml": ""
     },
@@ -588,19 +609,7 @@
           "group_by": false,
           "label": "Manufacterer",
           "name": "Manufacterer",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Supplier",
-          "name": "Supplier",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Supplier#",
-          "name": "Supplier#",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -630,26 +639,45 @@
           "group_by": false,
           "label": "Distributor#",
           "name": "Distributor#",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Manufacterer#",
           "name": "Manufacterer#",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Distributor",
           "name": "Distributor",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Max Current",
+          "name": "Max Current",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Role",
+          "name": "Role",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Power",
+          "name": "Power",
           "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
+      "include_excluded_from_bom": false,
       "name": "",
-      "sort_asc": false,
-      "sort_field": "Luminous Intensity"
+      "sort_asc": true,
+      "sort_field": "Manufacterer"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -707,6 +735,7 @@
     "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
