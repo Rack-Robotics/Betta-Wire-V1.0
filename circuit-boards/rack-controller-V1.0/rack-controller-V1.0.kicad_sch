@@ -6,8 +6,8 @@
 	(paper "User" 420 420)
 	(title_block
 		(title "Rack Controller")
-		(date "[25.03.13]")
-		(rev "C")
+		(date "[25.04.25]")
+		(rev "D")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols
@@ -3061,6 +3061,18 @@
 		(uuid "0c6e196d-5065-46f7-a747-a2c2cb26edb3")
 	)
 	(junction
+		(at 38.1 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10df3fe2-f145-4a52-bce7-31b278ff5ff6")
+	)
+	(junction
+		(at 38.1 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2342c872-133a-4d81-b520-1116919aaf9e")
+	)
+	(junction
 		(at 254 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3071,12 +3083,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4098175f-efb5-4f01-a4f6-abaf22b8ae39")
-	)
-	(junction
-		(at 355.6 341.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4bacefda-0273-4474-a4d5-4b7d6e749192")
 	)
 	(junction
 		(at 361.95 290.83)
@@ -3125,12 +3131,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a2bcc96d-e1a9-4e31-9af6-aff15f4bfcf7")
-	)
-	(junction
-		(at 336.55 339.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ba0ec09d-efa9-4fdc-b021-43124bd5ba4b")
 	)
 	(junction
 		(at 361.95 182.88)
@@ -3282,16 +3282,6 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 339.09) (xy 381 339.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "105bd84a-7e06-4362-9c05-a7603c605cb6")
-	)
-	(wire
-		(pts
 			(xy 361.95 157.48) (xy 368.3 157.48)
 		)
 		(stroke
@@ -3302,13 +3292,13 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 341.63) (xy 381 341.63)
+			(xy 43.18 129.54) (xy 46.99 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "11e5c950-681d-475c-9028-2b6e158b36d0")
+		(uuid "11de9ace-b828-42c1-af8c-5afe6c745632")
 	)
 	(wire
 		(pts
@@ -3402,7 +3392,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 325.12) (xy 336.55 327.66)
+			(xy 139.7 109.22) (xy 139.7 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3442,16 +3432,6 @@
 	)
 	(wire
 		(pts
-			(xy 313.69 341.63) (xy 355.6 341.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "21608426-75b4-47bc-a067-9f13c7828c81")
-	)
-	(wire
-		(pts
 			(xy 361.95 300.99) (xy 361.95 303.53)
 		)
 		(stroke
@@ -3482,7 +3462,7 @@
 	)
 	(wire
 		(pts
-			(xy 336.55 332.74) (xy 336.55 339.09)
+			(xy 139.7 116.84) (xy 139.7 127)
 		)
 		(stroke
 			(width 0)
@@ -3502,7 +3482,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 332.74) (xy 355.6 341.63)
+			(xy 152.4 116.84) (xy 152.4 129.54)
 		)
 		(stroke
 			(width 0)
@@ -3539,6 +3519,26 @@
 			(type default)
 		)
 		(uuid "35ef9f6b-372c-460a-8763-e78892baf5e5")
+	)
+	(wire
+		(pts
+			(xy 114.3 127) (xy 139.7 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "360e4db2-5d15-4139-a671-382af67a8e85")
+	)
+	(wire
+		(pts
+			(xy 46.99 113.03) (xy 38.1 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37906a71-3aef-4609-91c5-d686113d6695")
 	)
 	(wire
 		(pts
@@ -3612,13 +3612,13 @@
 	)
 	(wire
 		(pts
-			(xy 369.57 336.55) (xy 381 336.55)
+			(xy 43.18 132.08) (xy 63.5 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4635ecc6-aa83-4ffa-a1fe-ad413281dc10")
+		(uuid "450d52db-07c5-4c3f-a36b-f4b26fc8686b")
 	)
 	(wire
 		(pts
@@ -3672,6 +3672,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 137.16) (xy 38.1 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51486c9f-5349-40db-a101-2eb819c4a1c4")
+	)
+	(wire
+		(pts
 			(xy 222.25 46.99) (xy 254 46.99)
 		)
 		(stroke
@@ -3679,16 +3689,6 @@
 			(type default)
 		)
 		(uuid "518e2b37-541c-4db6-b92b-2fa9f7bb25f1")
-	)
-	(wire
-		(pts
-			(xy 369.57 344.17) (xy 381 344.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "51f96a64-ce09-4beb-8b78-f8490d0cbf20")
 	)
 	(wire
 		(pts
@@ -3762,6 +3762,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 138.43) (xy 38.1 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59c9fc57-1e28-40aa-a9a9-f533b8015fd6")
+	)
+	(wire
+		(pts
 			(xy 361.95 182.88) (xy 361.95 187.96)
 		)
 		(stroke
@@ -3812,6 +3822,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 113.03) (xy 38.1 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63b948de-2cde-4c82-be23-6f1925df0234")
+	)
+	(wire
+		(pts
 			(xy 317.5 157.48) (xy 344.17 157.48)
 		)
 		(stroke
@@ -3819,6 +3839,16 @@
 			(type default)
 		)
 		(uuid "647e8027-8cee-4fe4-b02e-186110877461")
+	)
+	(wire
+		(pts
+			(xy 46.99 104.14) (xy 46.99 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64877b74-0665-4689-9afd-3becb0b85872")
 	)
 	(wire
 		(pts
@@ -3909,6 +3939,16 @@
 			(type default)
 		)
 		(uuid "6e4df279-186a-4ae2-b2e3-60458e090249")
+	)
+	(wire
+		(pts
+			(xy 43.18 106.68) (xy 63.5 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f8b984e-4916-4642-acdc-101f7fa907cf")
 	)
 	(wire
 		(pts
@@ -4242,6 +4282,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 129.54) (xy 152.4 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a788cfda-b330-4243-b626-77235e2d9e2f")
+	)
+	(wire
+		(pts
 			(xy 361.95 66.04) (xy 381 66.04)
 		)
 		(stroke
@@ -4259,6 +4309,16 @@
 			(type default)
 		)
 		(uuid "ab7c2287-fe61-4605-9edb-282851e20845")
+	)
+	(wire
+		(pts
+			(xy 43.18 127) (xy 63.5 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad48d380-29c0-4936-b851-9a7c2b92570b")
 	)
 	(wire
 		(pts
@@ -4339,6 +4399,16 @@
 			(type default)
 		)
 		(uuid "bb2309c4-7fb6-4a7b-9ec8-6e22d7936287")
+	)
+	(wire
+		(pts
+			(xy 38.1 111.76) (xy 38.1 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcce052b-7c37-4a9e-9012-d0027198993d")
 	)
 	(wire
 		(pts
@@ -4452,16 +4522,6 @@
 	)
 	(wire
 		(pts
-			(xy 313.69 339.09) (xy 336.55 339.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9038f76-0330-4482-a894-80f46372a778")
-	)
-	(wire
-		(pts
 			(xy 349.25 132.08) (xy 361.95 132.08)
 		)
 		(stroke
@@ -4542,7 +4602,17 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 325.12) (xy 355.6 327.66)
+			(xy 46.99 129.54) (xy 46.99 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db030075-c82e-4bc7-a63e-a57f1d2d6381")
+	)
+	(wire
+		(pts
+			(xy 152.4 109.22) (xy 152.4 111.76)
 		)
 		(stroke
 			(width 0)
@@ -4702,6 +4772,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.18 101.6) (xy 63.5 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee6f8165-ee6e-4ba3-8a23-a2d45cae345b")
+	)
+	(wire
+		(pts
 			(xy 368.3 265.43) (xy 381 265.43)
 		)
 		(stroke
@@ -4742,6 +4822,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 138.43) (xy 38.1 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3fca09c-6ddd-45b5-9d70-1b1b767c48ee")
+	)
+	(wire
+		(pts
 			(xy 279.4 63.5) (xy 317.5 63.5)
 		)
 		(stroke
@@ -4779,6 +4869,16 @@
 			(type default)
 		)
 		(uuid "f7571d88-77a8-49c1-8531-2ed0baa1117d")
+	)
+	(wire
+		(pts
+			(xy 43.18 104.14) (xy 46.99 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f75a4461-e09b-4482-b3e2-5942ed5b99c1")
 	)
 	(wire
 		(pts
@@ -5051,7 +5151,7 @@
 		(uuid "4d5348f3-9ff3-4cac-9882-19ff0db008cf")
 	)
 	(label "GPIO_03 (I2C_01_SCL)"
-		(at 313.69 339.09 0)
+		(at 116.84 127 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5181,7 +5281,7 @@
 		(uuid "7918fdd2-18df-4fbc-8e11-4cef30a80d40")
 	)
 	(label "GPIO_02 (I2C_01_SDA)"
-		(at 313.69 341.63 0)
+		(at 116.84 129.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7461,7 +7561,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 355.6 325.12 0)
+		(at 152.4 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7470,7 +7570,7 @@
 		(fields_autoplaced yes)
 		(uuid "35678099-cbeb-43fe-92c3-52fc651cd884")
 		(property "Reference" "#PWR018"
-			(at 355.6 328.93 0)
+			(at 152.4 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7479,7 +7579,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 355.6 320.04 0)
+			(at 152.4 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7487,7 +7587,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 355.6 325.12 0)
+			(at 152.4 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7496,7 +7596,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 355.6 325.12 0)
+			(at 152.4 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7505,7 +7605,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 355.6 325.12 0)
+			(at 152.4 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7995,6 +8095,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 38.1 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "48173dde-6000-42ac-b00a-f279f79bca44")
+		(property "Reference" "#PWR048"
+			(at 38.1 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 143.256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 38.1 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dab7b651-6274-4c89-bb68-d6a041710c5a")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 369.57 177.8 90)
 		(unit 1)
@@ -8384,71 +8549,6 @@
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
 					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 386.08 349.25 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5599dfdf-727a-4bd6-8673-a4fd9754f22b")
-		(property "Reference" "#PWR060"
-			(at 386.08 355.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 388.62 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 386.08 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 386.08 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 386.08 349.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1aa02b01-bb77-4677-aebc-bd11092a9169")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -8983,6 +9083,144 @@
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
 					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "rack-controller:S3B-XH-SM4-TB")
+		(at 38.1 127 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66f433e5-c842-49aa-b77c-d7e80b267c9d")
+		(property "Reference" "J16"
+			(at 35.306 128.778 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "S3B-XH-SM4-TB"
+			(at 35.56 130.9369 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "rack-controller:S3B-XH-SM4-TB"
+			(at 37.592 155.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+			(at 37.592 155.448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.098\" (2.50mm)"
+			(at 37.592 152.908 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "455-S3B-XH-SM4-TBCT-ND"
+			(at 37.338 147.066 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 36.068 145.288 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST Sales America Inc."
+			(at 35.56 148.844 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "BDC-01"
+			(at 22.098 128.778 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer#" "JST Sales America Inc."
+			(at 36.83 150.622 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Max Current" "3A"
+			(at 38.608 158.242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C161860"
+			(at 38.1 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e77e66d2-c3ec-4e8c-8e25-fe38b9025bc0")
+		)
+		(pin "3"
+			(uuid "07863805-5f9e-4ec2-9e62-6e88ce6e6b94")
+		)
+		(pin "1"
+			(uuid "8d5e304d-7593-4a9c-8ce8-27cf628a2269")
+		)
+		(pin "MP"
+			(uuid "3e18ed63-859e-4447-b86d-c1d8ac6024f2")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "J16")
 					(unit 1)
 				)
 			)
@@ -10058,7 +10296,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 355.6 330.2 180)
+		(at 152.4 114.3 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10066,7 +10304,7 @@
 		(dnp no)
 		(uuid "896de790-1af2-4ffa-b9b8-f29c8e76da52")
 		(property "Reference" "R9"
-			(at 343.662 330.2 0)
+			(at 157.734 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10075,7 +10313,7 @@
 			)
 		)
 		(property "Value" "2.2K"
-			(at 344.424 332.232 0)
+			(at 158.496 116.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10084,7 +10322,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10093,7 +10331,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10102,7 +10340,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10111,7 +10349,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10120,7 +10358,7 @@
 			)
 		)
 		(property "Manufacturer#" "RC0603FR-072K2L"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10129,7 +10367,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics, Inc."
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10138,7 +10376,7 @@
 			)
 		)
 		(property "Distributor#" "311-2.20KHRCT-ND"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10147,7 +10385,7 @@
 			)
 		)
 		(property "Role" "R_PULLUP"
-			(at 349.25 330.2 0)
+			(at 163.322 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10155,7 +10393,7 @@
 			)
 		)
 		(property "Power" "1/10W"
-			(at 351.028 332.232 0)
+			(at 165.1 116.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10163,7 +10401,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 346.202 332.232 0)
+			(at 160.274 116.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10171,7 +10409,7 @@
 			)
 		)
 		(property "LCSC Part #" "C114662"
-			(at 355.6 330.2 0)
+			(at 152.4 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10524,137 +10762,6 @@
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
 					(reference "#PWR052")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 369.57 344.17 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "97424178-22b1-44f5-852b-dae2029cee9d")
-		(property "Reference" "#PWR048"
-			(at 363.22 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 364.49 344.17 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 369.57 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 369.57 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 369.57 344.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f60edf2f-f147-4865-8637-534717e82877")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR048")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 369.57 336.55 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "987740fd-098b-4e08-b4e7-1ed96e972084")
-		(property "Reference" "#PWR047"
-			(at 373.38 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 366.522 336.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 369.57 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 369.57 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 369.57 336.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "196fc169-b531-4c9e-a50b-262aa373d1f2")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -11840,6 +11947,144 @@
 		)
 	)
 	(symbol
+		(lib_id "rack-controller:S3B-XH-SM4-TB")
+		(at 38.1 101.6 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b656bb4b-5c19-4276-987e-ad7545196e39")
+		(property "Reference" "J14"
+			(at 35.306 103.378 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "S3B-XH-SM4-TB"
+			(at 35.56 105.5369 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "rack-controller:S3B-XH-SM4-TB"
+			(at 37.592 130.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
+			(at 37.592 130.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Connector Header Surface Mount, Right Angle 3 position 0.098\" (2.50mm)"
+			(at 37.592 127.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "455-S3B-XH-SM4-TBCT-ND"
+			(at 37.338 121.666 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 36.068 119.888 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST Sales America Inc."
+			(at 35.56 123.444 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "BDC-00"
+			(at 22.098 103.378 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer#" "JST Sales America Inc."
+			(at 36.83 125.222 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Max Current" "3A"
+			(at 38.608 132.842 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C161860"
+			(at 38.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "589e7a21-7963-4923-8b84-c0bf50731aef")
+		)
+		(pin "3"
+			(uuid "16554928-690b-430d-9ea2-580e2b0850bd")
+		)
+		(pin "1"
+			(uuid "47839d6a-15fa-474f-adda-f147d7aef6b1")
+		)
+		(pin "MP"
+			(uuid "530d3dfc-9352-4c4b-bb6b-6071c676a00a")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 361.95 215.9 180)
 		(unit 1)
@@ -12316,6 +12561,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 38.1 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8049e0a-cdf7-4659-893a-cf58fe002c0f")
+		(property "Reference" "#PWR047"
+			(at 38.1 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 38.1 117.856 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 38.1 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 38.1 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b56cb1a7-a8b1-4cd0-b353-12eabc91138b")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 368.3 139.7 0)
 		(unit 1)
@@ -12654,155 +12964,6 @@
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "rack-controller:S4B-XH-SM4-TB")
-		(at 386.08 339.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d73445cb-0fb9-4343-9891-8013d8eddd38")
-		(property "Reference" "J14"
-			(at 388.62 339.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "S4B-XH-SM4-TB"
-			(at 388.62 341.6299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "rack-controller:JST_XH_S4B-XH-SM4-TB_1x04-1MP_P2.50mm_Horizontal_custom"
-			(at 386.08 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eXH.pdf"
-			(at 386.08 341.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Connector Header Surface Mount, Right Angle 4 position 0.098\" (2.50mm)"
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "JST Sales America Inc."
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "S4B-XH-SM4-TB"
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "455-2262-1-ND"
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Role" "I2C"
-			(at 400.558 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Max Current" "3A"
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field-1" "S4B-XH-SM4-TB"
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C161861"
-			(at 386.08 339.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "54325a65-2a16-4326-987c-ea1b99fd02ca")
-		)
-		(pin "MP"
-			(uuid "79ab0118-fb57-462b-96e9-9e49c1d79ba6")
-		)
-		(pin "4"
-			(uuid "efb65d63-b435-4be8-b4b8-358d57e2e361")
-		)
-		(pin "1"
-			(uuid "48dd3938-3238-4a17-913c-2bd49692652b")
-		)
-		(pin "2"
-			(uuid "b4511449-88ce-48f6-b2b5-d39b1db8a202")
-		)
-		(instances
-			(project "rack-controller-RevAV1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -13691,7 +13852,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 336.55 325.12 0)
+		(at 139.7 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13700,7 +13861,7 @@
 		(fields_autoplaced yes)
 		(uuid "f17266eb-624d-4996-8cef-9339756870de")
 		(property "Reference" "#PWR017"
-			(at 336.55 328.93 0)
+			(at 139.7 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13709,7 +13870,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 336.55 320.04 0)
+			(at 139.7 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13717,7 +13878,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 336.55 325.12 0)
+			(at 139.7 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13726,7 +13887,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 336.55 325.12 0)
+			(at 139.7 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13735,7 +13896,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 336.55 325.12 0)
+			(at 139.7 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14784,7 +14945,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 336.55 330.2 180)
+		(at 139.7 114.3 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14792,7 +14953,7 @@
 		(dnp no)
 		(uuid "ff3384a7-841a-495b-806b-26704a1c1722")
 		(property "Reference" "R1"
-			(at 324.612 330.2 0)
+			(at 127.762 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14801,7 +14962,7 @@
 			)
 		)
 		(property "Value" "2.2K"
-			(at 325.374 332.232 0)
+			(at 128.524 116.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14810,7 +14971,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14819,7 +14980,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14828,7 +14989,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14837,7 +14998,7 @@
 			)
 		)
 		(property "Manufacturer" "YAGEO"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14846,7 +15007,7 @@
 			)
 		)
 		(property "Manufacturer#" "RC0603FR-072K2L"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14855,7 +15016,7 @@
 			)
 		)
 		(property "Distributor" "Digikey Electronics, Inc."
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14864,7 +15025,7 @@
 			)
 		)
 		(property "Distributor#" "311-2.20KHRCT-ND"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14873,7 +15034,7 @@
 			)
 		)
 		(property "Role" "R_PULLUP"
-			(at 330.2 330.2 0)
+			(at 133.35 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14881,7 +15042,7 @@
 			)
 		)
 		(property "Power" "1/10W"
-			(at 331.978 332.232 0)
+			(at 135.128 116.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14889,7 +15050,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 327.152 332.232 0)
+			(at 130.302 116.332 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14897,7 +15058,7 @@
 			)
 		)
 		(property "LCSC Part #" "C114662"
-			(at 336.55 330.2 0)
+			(at 139.7 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14986,6 +15147,108 @@
 		)
 	)
 	(sheet
+		(at 63.5 88.9)
+		(size 50.8 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "06964615-3bed-49ed-98eb-1fb445cbcd8e")
+		(property "Sheetname" "BDC_motor_drivers"
+			(at 63.5 88.1884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BDC_motor_drivers.kicad_sch"
+			(at 63.5 140.2846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BDC_00_(+)" input
+			(at 63.5 101.6 180)
+			(uuid "4e7ff668-7942-4180-9340-52facd130c36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BDC_00_(-)" input
+			(at 63.5 106.68 180)
+			(uuid "8323561d-286f-4957-92d0-1028cea97cef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BDC_01_(+)" input
+			(at 63.5 127 180)
+			(uuid "ea869665-0068-4f9c-a634-8735e782aafc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BDC_01_(-)" input
+			(at 63.5 132.08 180)
+			(uuid "68d3fcfb-ebd4-4bf4-9423-7836d60afed3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SCL" input
+			(at 114.3 127 0)
+			(uuid "2c84cc1f-7fb0-4738-b48c-e3cc4526ee57")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C_SDA" input
+			(at 114.3 129.54 0)
+			(uuid "66f4c6c9-1dce-4bbe-b43a-0092d05b1a63")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 317.5 19.05)
 		(size 44.45 78.74)
 		(exclude_from_sim no)
@@ -15001,7 +15264,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "d3b80096-5c11-4987-aa35-9d6609e08afc")
-		(property "Sheetname" "motor_drivers"
+		(property "Sheetname" "stepper_motor_drivers"
 			(at 317.5 18.3384 0)
 			(effects
 				(font
@@ -15278,7 +15541,7 @@
 		)
 	)
 	(sheet
-		(at 19.05 19.685)
+		(at 25.4 25.4)
 		(size 88.9 50.8)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15294,7 +15557,7 @@
 		)
 		(uuid "e1900297-455c-422d-aa78-68bfcbbb8ba0")
 		(property "Sheetname" "power"
-			(at 19.05 18.9734 0)
+			(at 25.4 24.6884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15303,7 +15566,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 19.05 71.0696 0)
+			(at 25.4 76.7846 0)
 			(effects
 				(font
 					(size 1.27 1.27)

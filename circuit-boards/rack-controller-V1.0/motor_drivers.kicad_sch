@@ -5,9 +5,9 @@
 	(uuid "9e4a17fa-e070-4547-baaf-89414b1f70cf")
 	(paper "User" 400 512)
 	(title_block
-		(title "Motor Drivers")
-		(date "[25.02.12]")
-		(rev "RevB")
+		(title "Stepper Motor Drivers")
+		(date "[25.04.25]")
+		(rev "D")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols

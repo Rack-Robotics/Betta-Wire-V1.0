@@ -775,7 +775,11 @@
     ],
     [
       "d3b80096-5c11-4987-aa35-9d6609e08afc",
-      "motor_drivers"
+      "stepper_motor_drivers"
+    ],
+    [
+      "06964615-3bed-49ed-98eb-1fb445cbcd8e",
+      "BDC_motor_drivers"
     ]
   ],
   "text_variables": {}
