@@ -8,6 +8,8 @@ Betta-Wire V1.0 is an affordable, open-source wire EDM machine designed for enth
 - **Powercore Compatible**: Compatible with Powercore V2.0 EDM power supply.
 - **4-Axis Motion**: Top and bottom EDM tools are capable of indepedent motion for X, Y, U, & V motion. 
 - **Compact Build Area**: 100mm x 200mm, suitable for moderate-scale projects.
+- **Hole Popping**: Cut starter holes for enclosed profiles using 1mm diameter hole popping electrodes.
+- **Assisted Threading**: Easy controls for beginning threading and for detecting successful threading.
 - **Material Compatibility**: Capable of cutting aluminum, steel, titanium, and other electrically conductive materials.
 
 ## Revisions 
