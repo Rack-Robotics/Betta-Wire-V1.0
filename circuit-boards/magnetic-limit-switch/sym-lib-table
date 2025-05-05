@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "magnetic-limit-switch")(type "KiCad")(uri "${KIPRJMOD}/magnetic-limit-switch.kicad_sym")(options "")(descr ""))
+)
