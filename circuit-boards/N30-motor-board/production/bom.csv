@@ -1,0 +1,7 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C2",0603,2,0.1 uF,C113803
+J1,SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm,1,MOTOR+,
+J2,SolderWire-0.25sqmm_1x01_D0.65mm_OD1.7mm,1,MOTOR-,
+"M1, M2",N30_MOTOR_TH,2,BDC_N30_MOTOR_01,
+R1,0603,1,10K,C98220
+"TP2, TP3, TP4, TP5",TestPoint_Pad_2.0x2.0mm,4,TestPoint,
