@@ -2586,10 +2586,9 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "fb74941d-40ed-428d-b1d4-3e77055fd22c")
 		(property "Reference" "M2"
-			(at 81.28 35.5599 0)
+			(at 80.01 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2598,7 +2597,7 @@
 			)
 		)
 		(property "Value" "BDC_N30_MOTOR_01"
-			(at 81.28 38.0999 0)
+			(at 80.01 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
