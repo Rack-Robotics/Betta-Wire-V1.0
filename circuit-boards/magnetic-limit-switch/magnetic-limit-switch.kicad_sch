@@ -1077,18 +1077,6 @@
 		(uuid 1845a10c-c446-4f51-bec5-5633ca84ae4d)
 	)
 	(rectangle
-		(start 177.8 133.985)
-		(end 241.3 165.735)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 2f6efbac-f432-4b79-9b14-32c7120f7483)
-	)
-	(rectangle
 		(start 77.47 45.72)
 		(end 109.22 121.92)
 		(stroke
@@ -1156,9 +1144,9 @@
 		)
 		(uuid "c99baf44-0638-487a-bff2-a4831d5053a1")
 	)
-	(text "SPECIFICATIONS\n\nVCC			5		V	TYP\nVCC			5.5		V	MAX\nPOWER		20		mW	MAX\n\nOUTPUT		HIGH-IMPEDANCE\nOUTPUT		5.3		V	MAX\nOUTPUT	   	-0.3	V	MIN\nRESPONSE	10		Hz	MIN"
+	(text "SPECIFICATIONS\nVCC			3.3		V	TYP\nVCC			5.5		V	MAX\nPOWER		20		mW	MAX\nRESPONSE	10		Hz	Max"
 		(exclude_from_sim no)
-		(at 179.07 135.89 0)
+		(at 238.252 167.894 0)
 		(effects
 			(font
 				(size 1.6256 1.6256)
@@ -1272,6 +1260,16 @@
 	)
 	(polyline
 		(pts
+			(xy 61.595 69.85) (xy 62.865 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49519d37-87e8-44d7-94ac-eeca3863bfa4")
+	)
+	(polyline
+		(pts
 			(xy 97.79 88.9) (xy 97.79 87.63)
 		)
 		(stroke
@@ -1370,6 +1368,26 @@
 		)
 		(uuid "c49e7892-cdd5-4721-b505-f8f7b19ba130")
 	)
+	(polyline
+		(pts
+			(xy 60.325 68.58) (xy 61.595 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cabbe125-7bb6-44af-886d-4b3a7cb81568")
+	)
+	(polyline
+		(pts
+			(xy 62.865 69.85) (xy 62.865 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccc1b3c0-9ba1-4835-9f93-d77729a1ad47")
+	)
 	(wire
 		(pts
 			(xy 55.88 33.02) (xy 49.53 33.02)
@@ -1380,6 +1398,16 @@
 		)
 		(uuid "dada67af-3ac4-4295-aee2-61515d95c54d")
 	)
+	(polyline
+		(pts
+			(xy 61.595 68.58) (xy 61.595 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2bc8a8e-94d6-4d4c-b31c-f81afc4158b9")
+	)
 	(wire
 		(pts
 			(xy 57.15 72.39) (xy 58.42 72.39)
@@ -1389,6 +1417,16 @@
 			(type default)
 		)
 		(uuid "f52760fb-1077-44e4-b611-8e19df98e8a3")
+	)
+	(polyline
+		(pts
+			(xy 62.865 68.58) (xy 64.135 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feed46ae-d3db-4418-9028-6d90b1f37f66")
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
