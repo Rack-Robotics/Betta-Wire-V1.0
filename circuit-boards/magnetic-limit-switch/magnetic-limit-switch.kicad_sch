@@ -1123,16 +1123,6 @@
 		)
 		(uuid "3273a959-8e8f-4819-8439-99f21f0d7bc7")
 	)
-	(text "Future Changes to Consider \n- Add resistor across VCC and GND or other EMI suppression features"
-		(exclude_from_sim no)
-		(at 213.36 169.672 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "8b0add9e-dcc2-4134-8f86-c1b4f7433a75")
-	)
 	(text "CONNECTOR"
 		(exclude_from_sim no)
 		(at 19.812 20.066 0)
