@@ -6,8 +6,8 @@
 	(paper "User" 420 420)
 	(title_block
 		(title "Rack Controller")
-		(date "[25.04.25]")
-		(rev "D")
+		(date "2025-07-28")
+		(rev "E")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols
@@ -1395,6 +1395,157 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:FerriteBead_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "FB"
+				(at 1.905 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "FerriteBead_Small"
+				(at 1.905 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Ferrite bead, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "L ferrite bead inductor filter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "FerriteBead_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.889) (xy 0 1.2954)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -0.7874)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FerriteBead_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -2739,18 +2890,6 @@
 		(uuid "10df3fe2-f145-4a52-bce7-31b278ff5ff6")
 	)
 	(junction
-		(at 63.5 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1317a425-9284-4ddd-8cb2-bd8baa7eeddb")
-	)
-	(junction
-		(at 63.5 107.95)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1addaf0b-8f1c-4e7c-9732-26d937e75676")
-	)
-	(junction
 		(at 361.95 336.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2761,12 +2900,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "20f5eff9-1ada-4fc4-b167-744f6bc902b3")
-	)
-	(junction
-		(at 69.85 107.95)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "212a634e-5b4c-479d-b897-22cbf2cb591d")
 	)
 	(junction
 		(at 38.1 138.43)
@@ -2805,12 +2938,6 @@
 		(uuid "57f18c8b-331e-4905-9eab-d15d00ef3ad9")
 	)
 	(junction
-		(at 63.5 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "68b25ad8-adef-422b-9d45-77cb6b7c2b74")
-	)
-	(junction
 		(at 368.3 359.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2841,12 +2968,6 @@
 		(uuid "8df56edb-4964-4206-8c1e-47547c5393f6")
 	)
 	(junction
-		(at 69.85 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "91462636-fb93-442c-a909-881fd6c63ac8")
-	)
-	(junction
 		(at 368.3 236.22)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2865,22 +2986,10 @@
 		(uuid "ad6b380f-dda8-442c-964d-fd79871d0817")
 	)
 	(junction
-		(at 69.85 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b3685a4c-cd9c-4dbd-83d4-3a28ef292481")
-	)
-	(junction
 		(at 361.95 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d024bfa4-866c-4678-9b12-9e298f508e56")
-	)
-	(junction
-		(at 69.85 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e2fb23ac-8bc6-441b-98a1-6f6ad839fddd")
 	)
 	(junction
 		(at 368.3 261.62)
@@ -2893,12 +3002,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e55e4dfb-7a6b-4d3c-877c-5d7be1a7df0a")
-	)
-	(junction
-		(at 63.5 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb4f5d9a-58a0-4dfc-b84b-ab083e7032bb")
 	)
 	(junction
 		(at 361.95 311.15)
@@ -2972,13 +3075,23 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 127) (xy 43.18 127)
+			(xy 43.18 127) (xy 69.85 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0624cb28-603d-4396-92bd-4655aaeabb1c")
+	)
+	(wire
+		(pts
+			(xy 74.93 132.08) (xy 82.55 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0757214f-a2b0-4b69-b044-92a25659e0dd")
 	)
 	(wire
 		(pts
@@ -3222,6 +3335,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 101.6) (xy 82.55 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e7c8614-1dc0-488c-88cf-d5a9e0a050b8")
+	)
+	(wire
+		(pts
 			(xy 361.95 182.88) (xy 368.3 182.88)
 		)
 		(stroke
@@ -3252,13 +3375,13 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 125.73) (xy 69.85 127)
+			(xy 74.93 127) (xy 82.55 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "23bf4f8a-c7b6-4352-9483-f2c1f73d47d9")
+		(uuid "23130a68-3bce-44a0-b635-bc913b40f23c")
 	)
 	(wire
 		(pts
@@ -3309,26 +3432,6 @@
 			(type default)
 		)
 		(uuid "2d56d012-12ec-4f93-9010-8403a8304abf")
-	)
-	(wire
-		(pts
-			(xy 69.85 100.33) (xy 82.55 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "309af158-c830-46b2-945e-11359c69d8be")
-	)
-	(wire
-		(pts
-			(xy 63.5 125.73) (xy 63.5 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30b43c42-4e5a-406b-a45a-faac31ad5548")
 	)
 	(wire
 		(pts
@@ -3402,6 +3505,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 106.68) (xy 82.55 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38db640e-e55d-4823-9289-dad7cf6ef0a3")
+	)
+	(wire
+		(pts
 			(xy 361.95 208.28) (xy 368.3 208.28)
 		)
 		(stroke
@@ -3409,16 +3522,6 @@
 			(type default)
 		)
 		(uuid "39470ded-7ad6-4492-8251-bcf0eb81604b")
-	)
-	(wire
-		(pts
-			(xy 69.85 100.33) (xy 69.85 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "395aa240-404d-4a44-84a3-2816920b5bd3")
 	)
 	(wire
 		(pts
@@ -3482,16 +3585,6 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 132.08) (xy 69.85 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4146db84-6c39-4bef-a2a4-e7f59bbef4fe")
-	)
-	(wire
-		(pts
 			(xy 361.95 359.41) (xy 368.3 359.41)
 		)
 		(stroke
@@ -3519,16 +3612,6 @@
 			(type default)
 		)
 		(uuid "4849c97f-d3b1-41d2-89cc-273b59ac729a")
-	)
-	(wire
-		(pts
-			(xy 63.5 100.33) (xy 63.5 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "48fa6d3c-fa61-4e64-8137-546a2c323aa3")
 	)
 	(wire
 		(pts
@@ -3572,23 +3655,13 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 101.6) (xy 43.18 101.6)
+			(xy 43.18 101.6) (xy 69.85 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4c33045e-63ce-40ad-917c-009ad572b4da")
-	)
-	(wire
-		(pts
-			(xy 69.85 107.95) (xy 82.55 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cc46d68-6f26-40b4-9271-22d5c1121071")
 	)
 	(wire
 		(pts
@@ -3692,16 +3765,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 100.33) (xy 63.5 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "563a1911-b684-41d1-8471-891d30ab3582")
-	)
-	(wire
-		(pts
 			(xy 369.57 129.54) (xy 381 129.54)
 		)
 		(stroke
@@ -3709,16 +3772,6 @@
 			(type default)
 		)
 		(uuid "58ed41ee-1380-4588-b9e8-a695a4da78f3")
-	)
-	(wire
-		(pts
-			(xy 50.8 133.35) (xy 50.8 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "59962eb8-8d7a-4264-9e87-3d194ccc0776")
 	)
 	(wire
 		(pts
@@ -3902,16 +3955,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 133.35) (xy 63.5 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66065fa3-e7fc-4a1f-a405-99f0862181de")
-	)
-	(wire
-		(pts
 			(xy 368.3 167.64) (xy 368.3 170.18)
 		)
 		(stroke
@@ -3929,16 +3972,6 @@
 			(type default)
 		)
 		(uuid "67fa3273-a057-4408-84d9-517e94a0b882")
-	)
-	(wire
-		(pts
-			(xy 63.5 107.95) (xy 69.85 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68bd46e1-2abb-46cf-b028-37b025188a15")
 	)
 	(wire
 		(pts
@@ -4002,36 +4035,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 100.33) (xy 50.8 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7320e53d-ae85-41df-8f4e-0bd6fa38f6db")
-	)
-	(wire
-		(pts
-			(xy 63.5 125.73) (xy 69.85 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "739c37b0-8e60-4f1e-8a0e-fe94840671a4")
-	)
-	(wire
-		(pts
-			(xy 50.8 107.95) (xy 63.5 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "73a555b8-ce90-4530-9fb2-acc0987e828c")
-	)
-	(wire
-		(pts
 			(xy 361.95 208.28) (xy 361.95 213.36)
 		)
 		(stroke
@@ -4082,26 +4085,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 125.73) (xy 50.8 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d6a9cf0-637f-4716-ab09-25071c6fba40")
-	)
-	(wire
-		(pts
-			(xy 69.85 125.73) (xy 82.55 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fb58866-915d-42c3-a8fa-25033c4768d5")
-	)
-	(wire
-		(pts
 			(xy 279.4 67.31) (xy 317.5 67.31)
 		)
 		(stroke
@@ -4149,16 +4132,6 @@
 			(type default)
 		)
 		(uuid "867dd0d5-059a-4276-a0dc-931ee9fdc930")
-	)
-	(wire
-		(pts
-			(xy 63.5 133.35) (xy 69.85 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "884485c4-dd1b-4889-aa04-90c5ef1de791")
 	)
 	(wire
 		(pts
@@ -4502,16 +4475,6 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 100.33) (xy 69.85 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b31c4a51-4a43-4b9b-b604-3bc3c34d4e95")
-	)
-	(wire
-		(pts
 			(xy 361.95 285.75) (xy 368.3 285.75)
 		)
 		(stroke
@@ -4632,16 +4595,6 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 132.08) (xy 63.5 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3d92766-00fc-4e41-8bd0-3bc6633e209f")
-	)
-	(wire
-		(pts
 			(xy 368.3 285.75) (xy 368.3 290.83)
 		)
 		(stroke
@@ -4722,16 +4675,6 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 133.35) (xy 82.55 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd6448e6-a5bb-4cd7-8b3b-56460e4c73b5")
-	)
-	(wire
-		(pts
 			(xy 222.25 82.55) (xy 252.73 82.55)
 		)
 		(stroke
@@ -4762,7 +4705,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 106.68) (xy 43.18 106.68)
+			(xy 43.18 106.68) (xy 69.85 106.68)
 		)
 		(stroke
 			(width 0)
@@ -4782,7 +4725,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 132.08) (xy 43.18 132.08)
+			(xy 43.18 132.08) (xy 69.85 132.08)
 		)
 		(stroke
 			(width 0)
@@ -4829,16 +4772,6 @@
 			(type default)
 		)
 		(uuid "db030075-c82e-4bc7-a63e-a57f1d2d6381")
-	)
-	(wire
-		(pts
-			(xy 69.85 106.68) (xy 69.85 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dce9bc55-d7d3-4788-96d8-b73515f71642")
 	)
 	(wire
 		(pts
@@ -4972,16 +4905,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 107.95) (xy 50.8 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec0610fe-8c95-43f1-b1cd-6e6458104984")
-	)
-	(wire
-		(pts
 			(xy 279.4 82.55) (xy 317.5 82.55)
 		)
 		(stroke
@@ -4999,16 +4922,6 @@
 			(type default)
 		)
 		(uuid "ed474eee-5886-4e91-bac4-285b975c35cb")
-	)
-	(wire
-		(pts
-			(xy 50.8 125.73) (xy 63.5 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eeeae291-1a69-4a8b-953b-74451392de22")
 	)
 	(wire
 		(pts
@@ -5079,16 +4992,6 @@
 			(type default)
 		)
 		(uuid "f4ba7d13-a626-4796-8b03-bd78699f86c4")
-	)
-	(wire
-		(pts
-			(xy 63.5 106.68) (xy 63.5 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4f129ce-3278-44df-a70b-95a0024f7506")
 	)
 	(wire
 		(pts
@@ -5790,7 +5693,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01d5d60a-6cc8-4e36-b03e-63657c86cac9")
-		(property "Reference" "J1"
+		(property "Reference" "J3"
 			(at 215.9 40.64 0)
 			(effects
 				(font
@@ -5885,6 +5788,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Field-1" ""
+			(at 214.63 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "23"
@@ -6010,7 +5921,7 @@
 		(instances
 			(project ""
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J1")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -6025,7 +5936,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "059b254f-8cd8-423c-8d77-5e1a35084edc")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR064"
 			(at 386.08 176.53 0)
 			(effects
 				(font
@@ -6075,7 +5986,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR054")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -6204,6 +6115,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ac5b520a-c427-4c25-96d7-58668ebd5d71")
 		)
@@ -6228,7 +6147,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0e1e8d4a-5a44-40db-8e7c-746cb4055285")
-		(property "Reference" "J10"
+		(property "Reference" "J11"
 			(at 388.874 204.978 0)
 			(effects
 				(font
@@ -6335,6 +6254,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "7e8bfbf6-1b44-42af-b2c3-141b9fe832ba")
 		)
@@ -6350,7 +6277,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J10")
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -6365,7 +6292,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "13305057-8d55-417b-9f8c-d9d205b2c8df")
-		(property "Reference" "#PWR050"
+		(property "Reference" "#PWR060"
 			(at 386.08 63.5 0)
 			(effects
 				(font
@@ -6415,7 +6342,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR050")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -6553,6 +6480,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2b238718-d9e1-43b5-9022-a1f9263de5a0")
 		)
@@ -6577,7 +6512,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "17a6a574-bbf5-4f67-83bd-00a364a1d446")
-		(property "Reference" "R6"
+		(property "Reference" "R8"
 			(at 345.694 256.286 90)
 			(effects
 				(font
@@ -6691,6 +6626,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "484e807d-8901-4ab1-aa26-590a68b51ef9")
 		)
@@ -6700,7 +6643,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R6")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -6715,7 +6658,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "18e367b3-b97c-4877-abff-06d8243229e2")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR029"
 			(at 368.3 151.13 0)
 			(effects
 				(font
@@ -6765,7 +6708,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR026")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -6780,7 +6723,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1ad8e31c-7369-4592-8fb3-777fad703109")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR040"
 			(at 363.22 129.54 0)
 			(effects
 				(font
@@ -6830,7 +6773,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR034")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -6845,7 +6788,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1c3df927-65b5-4cd8-87b2-7072c5ac7b9a")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR034"
 			(at 368.3 280.67 0)
 			(effects
 				(font
@@ -6895,7 +6838,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR030")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -6910,7 +6853,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1dfcd355-b6c5-408a-8314-09bb8f33bc64")
-		(property "Reference" "#PWR0154"
+		(property "Reference" "#PWR036"
 			(at 368.3 330.2 0)
 			(effects
 				(font
@@ -6960,7 +6903,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0154")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -7073,6 +7016,14 @@
 				)
 			)
 		)
+		(property "Field-1" ""
+			(at 38.1 394.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dbaf288e-5c2c-4caa-9507-dd3d76f5cc56")
 		)
@@ -7094,7 +7045,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2513ce3d-12fa-4e19-a8e0-45ca6e376b5f")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR023"
 			(at 361.95 255.27 0)
 			(effects
 				(font
@@ -7144,7 +7095,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR024")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -7159,7 +7110,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2595f2f0-f969-4255-9ef6-452470f074f8")
-		(property "Reference" "R2"
+		(property "Reference" "R3"
 			(at 345.694 126.746 90)
 			(effects
 				(font
@@ -7273,6 +7224,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a906788b-0d17-49ac-8b74-c16d33b6cdb3")
 		)
@@ -7282,7 +7241,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R2")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -7297,7 +7256,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "266a99bf-755e-4e44-911e-6678fe5a5f26")
-		(property "Reference" "R95"
+		(property "Reference" "R20"
 			(at 345.948 318.77 0)
 			(effects
 				(font
@@ -7411,6 +7370,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 318.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e5d3bf58-e15c-4814-85aa-d684cab03d14")
 		)
@@ -7420,7 +7387,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R95")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -7435,7 +7402,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2a15cabf-bcf0-4fa0-848b-98bb401611e1")
-		(property "Reference" "R5"
+		(property "Reference" "R6"
 			(at 345.694 202.946 90)
 			(effects
 				(font
@@ -7549,6 +7516,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8cc9262e-11e9-4dab-82d0-a0b201a89f36")
 		)
@@ -7558,7 +7533,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R5")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -7573,7 +7548,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2da7d849-efa1-467b-aff2-16f5d50ae241")
-		(property "Reference" "#PWR0191"
+		(property "Reference" "#PWR037"
 			(at 368.3 355.6 0)
 			(effects
 				(font
@@ -7623,7 +7598,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0191")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -7638,7 +7613,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2dadb213-402f-4d8c-9794-a02191897799")
-		(property "Reference" "J18"
+		(property "Reference" "J16"
 			(at 388.874 333.248 0)
 			(effects
 				(font
@@ -7745,6 +7720,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f8ff607a-9b92-48da-acaa-316bbc967ee7")
 		)
@@ -7760,7 +7743,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J18")
+					(reference "J16")
 					(unit 1)
 				)
 			)
@@ -7776,7 +7759,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2dd35fe0-fe3a-4df3-943d-c0f7d8dafdc0")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR014"
 			(at 259.08 62.23 0)
 			(effects
 				(font
@@ -7827,7 +7810,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR012")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -7843,7 +7826,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2dd91727-3238-4db8-9ac3-72e171288967")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR010"
 			(at 176.53 67.31 0)
 			(effects
 				(font
@@ -7894,7 +7877,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR06")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -7909,7 +7892,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2e99c020-2c4b-404b-9684-857f1a9b2fbd")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR035"
 			(at 368.3 304.8 0)
 			(effects
 				(font
@@ -7959,143 +7942,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 69.85 129.54 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2e9ee6e1-3255-4e87-a031-b585ebef3757")
-		(property "Reference" "C45"
-			(at 73.66 126.746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF"
-			(at 74.93 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Voltage" "100V"
-			(at 74.422 130.302 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Role" "C_MOTOR"
-			(at 76.2 128.524 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "CC0603KRX7R0BB104"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "311-1523-1-ND"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "10%"
-			(at 80.01 130.302 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C113803"
-			(at 69.85 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "92b8e4c2-ce09-40d4-a597-ed1a9a8ebb15")
-		)
-		(pin "2"
-			(uuid "db64b859-b8f5-49bd-aeb0-14bae37aee3f")
-		)
-		(instances
-			(project "rack-controller-V1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C45")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -8110,7 +7957,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "31d29001-70fa-4b67-b04f-6e7774ce3b4c")
-		(property "Reference" "R98"
+		(property "Reference" "R12"
 			(at 345.694 354.076 90)
 			(effects
 				(font
@@ -8224,6 +8071,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "37d1a260-eed5-4a9c-ab67-de077e809b3e")
 		)
@@ -8233,7 +8088,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R98")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -8248,7 +8103,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "333df2d2-427f-47e1-a325-1f9ca833658f")
-		(property "Reference" "J11"
+		(property "Reference" "J13"
 			(at 388.874 258.318 0)
 			(effects
 				(font
@@ -8355,6 +8210,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "66d88e6a-5ff2-4b7e-ac6e-9d754b186b61")
 		)
@@ -8370,7 +8233,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J11")
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -8385,7 +8248,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "342000e2-fcb9-4125-a0f2-f051785bf78d")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR063"
 			(at 386.08 151.13 0)
 			(effects
 				(font
@@ -8435,7 +8298,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR053")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -8451,7 +8314,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3526ac39-0bab-43c6-9554-8643892ba2fe")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR09"
 			(at 166.37 57.15 0)
 			(effects
 				(font
@@ -8502,7 +8365,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR05")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -8518,7 +8381,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35678099-cbeb-43fe-92c3-52fc651cd884")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR07"
 			(at 152.4 113.03 0)
 			(effects
 				(font
@@ -8568,7 +8431,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR018")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -8681,6 +8544,14 @@
 				)
 			)
 		)
+		(property "Field-1" ""
+			(at 25.4 394.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "35a50c7e-dc28-4220-8129-30dd1889023b")
 		)
@@ -8702,7 +8573,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3cd5fe23-3dcd-49a5-9a83-0acd09b00f40")
-		(property "Reference" "R4"
+		(property "Reference" "R5"
 			(at 345.694 177.546 90)
 			(effects
 				(font
@@ -8816,6 +8687,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5bad4a28-f52e-406e-9c1e-73e30d521073")
 		)
@@ -8825,7 +8704,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R4")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -8963,6 +8842,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 293.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "626577a8-1b82-4223-a050-f24ff33f406b")
 		)
@@ -8979,6 +8866,160 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 72.39 127 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4099352c-0dc0-4c21-9566-4d941c31cbc0")
+		(property "Reference" "L3"
+			(at 75.692 125.984 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BBUP00100505330Y00"
+			(at 60.452 125.984 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
+			(at 72.39 128.778 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796740059166/ENFA0018.pdf"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10 Ohms @ 100 MHz 1 Ferrite Bead 0402 (1005 Metric) 1.74A 15mOhm"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Current" "3A Max"
+			(at 66.548 128.524 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DCR" "22 mOhm"
+			(at 54.102 130.556 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "L_CMC_A"
+			(at 57.912 128.524 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer#" "BLM15AX100SN1D"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "490-5437-1-ND"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Max Voltage" ""
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C668299"
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field-1" ""
+			(at 72.39 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "cc593b00-f969-464f-ad36-48d002e23555")
+		)
+		(pin "1"
+			(uuid "3e232849-0609-4c3c-ae00-90c417485e25")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "L3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "rack-controller:S3B-XH-SM4-TB")
 		(at 386.08 306.07 0)
 		(unit 1)
@@ -8987,7 +9028,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "40a56c8a-b8d2-43c5-90d4-12324a5810c6")
-		(property "Reference" "J17"
+		(property "Reference" "J15"
 			(at 388.874 307.848 0)
 			(effects
 				(font
@@ -9094,6 +9135,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c6aecdfa-e27d-4f08-9439-da824104f340")
 		)
@@ -9109,7 +9158,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J17")
+					(reference "J15")
 					(unit 1)
 				)
 			)
@@ -9124,7 +9173,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "443cb8db-7f81-47d1-97e9-e1fbe01b5601")
-		(property "Reference" "#PWR0188"
+		(property "Reference" "#PWR054"
 			(at 363.22 308.61 0)
 			(effects
 				(font
@@ -9174,7 +9223,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0188")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -9189,7 +9238,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "46878923-a9b4-4fad-9592-5714cc15e7e6")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR030"
 			(at 368.3 176.53 0)
 			(effects
 				(font
@@ -9239,7 +9288,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR027")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -9254,7 +9303,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "48173dde-6000-42ac-b00a-f279f79bca44")
-		(property "Reference" "#PWR048"
+		(property "Reference" "#PWR03"
 			(at 38.1 146.05 0)
 			(effects
 				(font
@@ -9304,7 +9353,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR048")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -9319,7 +9368,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "48c64ece-7861-4f1f-aebf-f4eb626926b2")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR043"
 			(at 373.38 177.8 0)
 			(effects
 				(font
@@ -9370,7 +9419,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR037")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -9443,6 +9492,160 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 72.39 101.6 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4dfa0179-7098-4f9f-b67c-7c6498add898")
+		(property "Reference" "L1"
+			(at 75.692 100.584 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BBUP00100505330Y00"
+			(at 60.452 100.584 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
+			(at 72.39 103.378 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796740059166/ENFA0018.pdf"
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10 Ohms @ 100 MHz 1 Ferrite Bead 0402 (1005 Metric) 1.74A 15mOhm"
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Current" "3A Max"
+			(at 66.548 103.124 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DCR" "22 mOhm"
+			(at 54.102 105.156 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "L_CMC_A"
+			(at 57.912 103.124 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer#" "BLM15AX100SN1D"
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "490-5437-1-ND"
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Max Voltage" ""
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C668299"
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field-1" ""
+			(at 72.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "675b93f3-e7c3-44df-8eac-f6b6b398691a")
+		)
+		(pin "1"
+			(uuid "f4c36931-90d2-4765-b8ca-360372d6e795")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 369.57 256.54 90)
 		(unit 1)
@@ -9451,7 +9654,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "512160bd-51fe-43f0-81f4-923bc2882f11")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR049"
 			(at 373.38 256.54 0)
 			(effects
 				(font
@@ -9502,143 +9705,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR041")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 69.85 104.14 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "51968124-700b-4560-9357-1184cf255ca2")
-		(property "Reference" "C44"
-			(at 73.914 101.346 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nF"
-			(at 74.93 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Voltage" "100V"
-			(at 74.422 104.902 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Role" "C_MOTOR"
-			(at 76.2 103.124 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "CC0603KRX7R0BB104"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "311-1523-1-ND"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "10%"
-			(at 80.01 104.902 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C113803"
-			(at 69.85 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "840b9de1-61bc-4aa7-85c6-0f84c6a5900b")
-		)
-		(pin "2"
-			(uuid "e1bca35c-e57a-48b3-8e2f-7294d40ae0d0")
-		)
-		(instances
-			(project "rack-controller-V1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C44")
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -9653,7 +9720,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "544c8687-c6a5-4a4d-a2ce-aba31216e4d3")
-		(property "Reference" "#PWR0187"
+		(property "Reference" "#PWR053"
 			(at 373.38 306.07 0)
 			(effects
 				(font
@@ -9704,7 +9771,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0187")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -9719,7 +9786,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "54ae855d-57dd-4cc2-8d9d-f9932da6b8b7")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR031"
 			(at 368.3 201.93 0)
 			(effects
 				(font
@@ -9769,7 +9836,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR028")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -9785,7 +9852,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54b17a64-73cf-4022-95c3-af8a9bfd23e6")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR018"
 			(at 254 43.18 0)
 			(effects
 				(font
@@ -9835,7 +9902,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR016")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -9850,7 +9917,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56348615-5fc4-405e-87e4-29b14f24c899")
-		(property "Reference" "R96"
+		(property "Reference" "R11"
 			(at 345.694 331.216 90)
 			(effects
 				(font
@@ -9964,6 +10031,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 336.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "10ca4305-94c7-42b1-b913-3b0f14372064")
 		)
@@ -9973,7 +10048,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R96")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -9989,7 +10064,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "589409f8-1408-4624-9269-ca03dc776688")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 259.08 69.85 0)
 			(effects
 				(font
@@ -10040,7 +10115,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -10055,7 +10130,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "592450c0-a5a4-4b2b-ace1-9edba6d5d20f")
-		(property "Reference" "#PWR0199"
+		(property "Reference" "#PWR072"
 			(at 386.08 378.46 0)
 			(effects
 				(font
@@ -10105,7 +10180,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0199")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -10120,7 +10195,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "59775750-5b2c-434e-b2a3-3e880de929be")
-		(property "Reference" "C46"
+		(property "Reference" "C9"
 			(at 370.84 342.9062 0)
 			(effects
 				(font
@@ -10243,6 +10318,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 344.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b12c16a6-d1de-41ca-adae-aaf09b4a5f4b")
 		)
@@ -10252,7 +10335,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C46")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -10268,7 +10351,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5cee74ae-62b3-434d-ad2b-67df02fea8b2")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR011"
 			(at 166.37 77.47 0)
 			(effects
 				(font
@@ -10319,7 +10402,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR07")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -10334,7 +10417,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5d3e9f07-ac7a-4dc4-b07e-6cb6a72cf3af")
-		(property "Reference" "J8"
+		(property "Reference" "J9"
 			(at 388.874 154.178 0)
 			(effects
 				(font
@@ -10441,6 +10524,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "add97925-eda3-401f-bc6a-cc533371098a")
 		)
@@ -10456,7 +10547,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J8")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -10471,7 +10562,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5d8a2cf8-bfdf-46dc-a327-d11b2bca998a")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR039"
 			(at 373.38 127 0)
 			(effects
 				(font
@@ -10522,7 +10613,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR033")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -10537,7 +10628,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "60082f52-00c5-4e85-a444-5aa130de9ec1")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR024"
 			(at 361.95 280.67 0)
 			(effects
 				(font
@@ -10587,7 +10678,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR023")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -10603,7 +10694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60553a2e-7fa5-45fc-bdc6-f95cc7a28f8d")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR017"
 			(at 259.08 87.63 0)
 			(effects
 				(font
@@ -10654,7 +10745,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR015")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -10669,7 +10760,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6537836c-b9fb-4b30-bdbf-7ab46a814bba")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR042"
 			(at 363.22 154.94 0)
 			(effects
 				(font
@@ -10719,7 +10810,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR036")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -10735,7 +10826,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "66f433e5-c842-49aa-b77c-d7e80b267c9d")
-		(property "Reference" "J16"
+		(property "Reference" "J2"
 			(at 35.306 128.778 0)
 			(effects
 				(font
@@ -10842,6 +10933,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 38.1 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e77e66d2-c3ec-4e8c-8e25-fe38b9025bc0")
 		)
@@ -10857,7 +10956,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J16")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -10873,7 +10972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68487f6b-806e-43b0-ab87-8f79c7ce883e")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR08"
 			(at 176.53 46.99 0)
 			(effects
 				(font
@@ -10924,7 +11023,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR04")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -10939,7 +11038,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6a610fd3-57b3-40b2-8ce1-482fbb34d6c2")
-		(property "Reference" "#PWR0195"
+		(property "Reference" "#PWR028"
 			(at 361.95 378.46 0)
 			(effects
 				(font
@@ -10989,7 +11088,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0195")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -11102,6 +11201,14 @@
 				)
 			)
 		)
+		(property "Field-1" ""
+			(at 50.8 393.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd468124-da7b-4144-81d3-2e68324b9879")
 		)
@@ -11123,7 +11230,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6c41b6e2-8828-42d6-a0a6-acff8f1efe0b")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR066"
 			(at 386.08 227.33 0)
 			(effects
 				(font
@@ -11173,7 +11280,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR056")
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -11188,7 +11295,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "70cddaaf-adf8-4eab-ae2c-e4cfdeb11c63")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR033"
 			(at 368.3 255.27 0)
 			(effects
 				(font
@@ -11238,7 +11345,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR031")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -11253,7 +11360,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "725b9ae7-0170-4598-aa5f-5206d20ca2b0")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR068"
 			(at 386.08 280.67 0)
 			(effects
 				(font
@@ -11303,7 +11410,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR057")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -11318,7 +11425,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7ab12677-8731-42c0-b87f-cde4e671efc8")
-		(property "Reference" "J9"
+		(property "Reference" "J10"
 			(at 388.874 179.578 0)
 			(effects
 				(font
@@ -11425,6 +11532,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "f64a22ae-36bf-4032-bd35-9539e4fbc46d")
 		)
@@ -11440,7 +11555,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J9")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -11455,7 +11570,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7c3c4619-5769-4537-922d-74ddcca8b8cd")
-		(property "Reference" "#PWR0193"
+		(property "Reference" "#PWR056"
 			(at 363.22 334.01 0)
 			(effects
 				(font
@@ -11505,7 +11620,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0193")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -11520,7 +11635,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7e6f246b-81b1-42f1-bb24-496de25d6142")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR045"
 			(at 373.38 203.2 0)
 			(effects
 				(font
@@ -11571,7 +11686,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR039")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -11586,7 +11701,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7e6f612f-fd1c-484d-bc95-ee2e199848e8")
-		(property "Reference" "R11"
+		(property "Reference" "R14"
 			(at 346.202 165.354 0)
 			(effects
 				(font
@@ -11700,6 +11815,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a6100e8c-6ee2-4310-a54e-3f003a94337e")
 		)
@@ -11709,7 +11832,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R11")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -11724,7 +11847,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "817b4be3-d9a7-4660-a8bb-50d52ddd276e")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR05"
 			(at 50.8 403.86 0)
 			(effects
 				(font
@@ -11775,7 +11898,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR03")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -11790,7 +11913,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "83c7c4c6-af27-4087-8b9b-f9a26d920b4f")
-		(property "Reference" "#PWR0194"
+		(property "Reference" "#PWR071"
 			(at 386.08 355.6 0)
 			(effects
 				(font
@@ -11840,7 +11963,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0194")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -11855,7 +11978,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "83f3b958-b80c-430c-b364-4d96d75b5976")
-		(property "Reference" "J6"
+		(property "Reference" "J7"
 			(at 388.62 85.0899 0)
 			(effects
 				(font
@@ -11962,6 +12085,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "b2034dec-f83e-4404-aaee-284b74a967e6")
 		)
@@ -11980,7 +12111,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J6")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -11995,7 +12126,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "896de790-1af2-4ffa-b9b8-f29c8e76da52")
-		(property "Reference" "R9"
+		(property "Reference" "R2"
 			(at 157.734 114.3 0)
 			(effects
 				(font
@@ -12109,6 +12240,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 152.4 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3672328d-3f18-4da6-b75b-c889ed07fbde")
 		)
@@ -12118,7 +12257,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R9")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -12133,7 +12272,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8984a81e-a3db-4a0b-b44b-fba372048f5e")
-		(property "Reference" "#PWR046"
+		(property "Reference" "#PWR052"
 			(at 363.22 283.21 0)
 			(effects
 				(font
@@ -12183,7 +12322,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR046")
+					(reference "#PWR052")
 					(unit 1)
 				)
 			)
@@ -12198,7 +12337,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8cfec4cf-d40c-4e32-bbf6-57ef460abc3d")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 388.62 27.9399 0)
 			(effects
 				(font
@@ -12305,6 +12444,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "e73f4739-1486-44a5-88f6-91f4673dbb44")
 		)
@@ -12323,7 +12470,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J3")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -12403,7 +12550,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9468a551-8431-4510-8265-dee4d8aad284")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR062"
 			(at 386.08 101.6 0)
 			(effects
 				(font
@@ -12453,7 +12600,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR052")
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -12468,7 +12615,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9a174440-eedf-4959-82a4-be04e3c839dd")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR044"
 			(at 363.22 180.34 0)
 			(effects
 				(font
@@ -12518,7 +12665,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR038")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -12721,6 +12868,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "816a980b-4f49-42a1-a069-fae8c7883355")
 		)
@@ -12745,7 +12900,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "9be7b1fb-9fb9-44b8-bb7d-40153f76f347")
-		(property "Reference" "C6"
+		(property "Reference" "C5"
 			(at 370.84 242.5762 0)
 			(effects
 				(font
@@ -12868,6 +13023,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "ed51d6ac-3501-4a0b-a738-1a083394d709")
 		)
@@ -12877,7 +13040,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C6")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -12892,7 +13055,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d02ca76-cc3a-424d-a616-82cf7ba502d1")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR051"
 			(at 373.38 280.67 0)
 			(effects
 				(font
@@ -12943,7 +13106,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR045")
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
@@ -12958,7 +13121,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9dfe6cd7-04e7-42ff-b814-55fd5b033a8c")
-		(property "Reference" "#PWR0196"
+		(property "Reference" "#PWR038"
 			(at 368.3 378.46 0)
 			(effects
 				(font
@@ -13008,7 +13171,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0196")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -13023,7 +13186,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "9f4b4e29-06d2-4bd8-acaa-9c63648eceda")
-		(property "Reference" "C47"
+		(property "Reference" "C10"
 			(at 370.84 365.7662 0)
 			(effects
 				(font
@@ -13146,6 +13309,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 367.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9e6dc094-1b44-4e3b-ac3d-6e04cdf5e8ee")
 		)
@@ -13155,145 +13326,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C47")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 63.5 129.54 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a2588b7f-44fa-4d73-ada0-f2d456d38e47")
-		(property "Reference" "R94"
-			(at 65.278 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100K"
-			(at 67.564 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Thin Film"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Power" "0.1 W"
-			(at 66.04 138.938 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Role" "R_PULLDOWN"
-			(at 63.246 135.128 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "RT0603FRE07100KL"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "YAG2319CT-ND"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 74.422 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C728638"
-			(at 63.5 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "6c1aa3b2-711e-44cf-afec-50643440e8ba")
-		)
-		(pin "1"
-			(uuid "ccbbe16a-261e-4623-875e-523aff42d914")
-		)
-		(instances
-			(project "rack-controller-V1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R94")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -13308,7 +13341,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a8135174-542e-4756-b144-e0a0753ac757")
-		(property "Reference" "R3"
+		(property "Reference" "R4"
 			(at 345.694 152.146 90)
 			(effects
 				(font
@@ -13422,6 +13455,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "890771e8-0165-4735-843d-a59cc0c53399")
 		)
@@ -13431,7 +13472,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R3")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -13446,7 +13487,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a9ba877a-c651-4ea0-aa34-7ded54a6e6cd")
-		(property "Reference" "J13"
+		(property "Reference" "J14"
 			(at 388.874 282.448 0)
 			(effects
 				(font
@@ -13553,6 +13594,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a37ff07f-a467-4b5f-ad54-9d887fb7cc9f")
 		)
@@ -13568,7 +13617,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J13")
+					(reference "J14")
 					(unit 1)
 				)
 			)
@@ -13583,7 +13632,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "abd1ee7e-d98b-4806-a30f-ab21db2821d3")
-		(property "Reference" "#PWR0190"
+		(property "Reference" "#PWR027"
 			(at 361.95 355.6 0)
 			(effects
 				(font
@@ -13633,7 +13682,162 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0190")
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 72.39 132.08 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae38dbc5-75ea-4489-9ba2-0de785705cbe")
+		(property "Reference" "L4"
+			(at 75.692 133.096 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BBUP00100505330Y00"
+			(at 60.452 133.096 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
+			(at 72.39 130.302 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796740059166/ENFA0018.pdf"
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10 Ohms @ 100 MHz 1 Ferrite Bead 0402 (1005 Metric) 1.74A 15mOhm"
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Current" "3A Max"
+			(at 66.548 130.556 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DCR" "22 mOhm"
+			(at 54.102 128.524 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "L_CMC_A"
+			(at 57.912 130.556 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer#" "BLM15AX100SN1D"
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "490-5437-1-ND"
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Max Voltage" ""
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C668299"
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field-1" ""
+			(at 72.39 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c12c269b-3b5b-4f81-834e-7517ba14f23c")
+		)
+		(pin "1"
+			(uuid "f517c4d6-6646-46f4-a2ec-c6a50ff7f697")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "L4")
 					(unit 1)
 				)
 			)
@@ -13648,7 +13852,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "aea18c50-6b83-4654-bfb3-2eb63b4fbef7")
-		(property "Reference" "R12"
+		(property "Reference" "R15"
 			(at 346.202 190.754 0)
 			(effects
 				(font
@@ -13762,6 +13966,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5f80e9de-8c0e-4468-afef-aa1b320524d3")
 		)
@@ -13771,7 +13983,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R12")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -13786,7 +13998,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "afeafb8f-fed1-4c38-bfa0-0a56eb4de3ab")
-		(property "Reference" "#PWR0198"
+		(property "Reference" "#PWR058"
 			(at 363.22 356.87 0)
 			(effects
 				(font
@@ -13836,7 +14048,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0198")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -13851,7 +14063,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b02203ea-9b31-43ab-8021-593822caabc2")
-		(property "Reference" "R16"
+		(property "Reference" "R19"
 			(at 346.202 293.624 0)
 			(effects
 				(font
@@ -13965,6 +14177,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 293.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "bd3a7229-7237-46f7-85af-9a16699e720e")
 		)
@@ -13974,7 +14194,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R16")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -13989,7 +14209,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3c4bdbc-ce57-46c1-905a-8125f4a6b504")
-		(property "Reference" "R97"
+		(property "Reference" "R21"
 			(at 345.948 344.17 0)
 			(effects
 				(font
@@ -14103,6 +14323,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 344.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b0812c92-6574-4c3d-9365-872fb712cb5a")
 		)
@@ -14112,7 +14340,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R97")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -14127,7 +14355,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3fe6360-b882-4bba-a9b0-f7f3b78eae7e")
-		(property "Reference" "#PWR060"
+		(property "Reference" "#PWR026"
 			(at 361.95 330.2 0)
 			(effects
 				(font
@@ -14177,145 +14405,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR060")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 63.5 104.14 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b51b951f-49d5-46ae-a64b-1b46caf3bacc")
-		(property "Reference" "R93"
-			(at 65.278 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100K"
-			(at 67.564 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Thin Film"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Power" "0.1 W"
-			(at 66.04 113.538 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Role" "R_PULLDOWN"
-			(at 63.246 109.728 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer#" "RT0603FRE07100KL"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor" "Digikey Electronics, Inc."
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Distributor#" "YAG2319CT-ND"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 74.422 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C728638"
-			(at 63.5 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "752dd030-2645-447f-b7a0-28bcefdbc2e2")
-		)
-		(pin "1"
-			(uuid "7b6ba8fe-9da0-4b9b-b2a5-b5e3a5b751cd")
-		)
-		(instances
-			(project "rack-controller-V1.0"
-				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R93")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -14330,7 +14420,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5cb62b3-f0c4-45d4-9811-8e3343ff9035")
-		(property "Reference" "#PWR0189"
+		(property "Reference" "#PWR070"
 			(at 386.08 330.2 0)
 			(effects
 				(font
@@ -14380,7 +14470,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0189")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -14395,7 +14485,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b5ebab7e-7a67-47c1-92e7-730074da37e0")
-		(property "Reference" "R10"
+		(property "Reference" "R13"
 			(at 346.202 139.954 0)
 			(effects
 				(font
@@ -14509,6 +14599,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "603a4ba9-0e4a-4772-be23-bcd30f40b61c")
 		)
@@ -14518,7 +14616,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R10")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -14534,7 +14632,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b656bb4b-5c19-4276-987e-ad7545196e39")
-		(property "Reference" "J14"
+		(property "Reference" "J1"
 			(at 35.306 103.378 0)
 			(effects
 				(font
@@ -14641,6 +14739,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 38.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "589e7a21-7963-4923-8b84-c0bf50731aef")
 		)
@@ -14656,7 +14762,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J14")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -14671,7 +14777,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b84e35f5-def6-48aa-be57-0b9064e47eb1")
-		(property "Reference" "R13"
+		(property "Reference" "R16"
 			(at 346.202 216.154 0)
 			(effects
 				(font
@@ -14785,6 +14891,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cd4a593c-ce1d-44fa-a0de-323e844e630e")
 		)
@@ -14794,7 +14908,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R13")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -14809,7 +14923,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b92ed057-6938-4277-9fb2-382790087ae4")
-		(property "Reference" "J19"
+		(property "Reference" "J17"
 			(at 388.874 356.108 0)
 			(effects
 				(font
@@ -14916,6 +15030,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e7ac7117-da71-41ed-9e39-17a3e3a26e68")
 		)
@@ -14931,7 +15053,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J19")
+					(reference "J17")
 					(unit 1)
 				)
 			)
@@ -14946,7 +15068,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ba48e66e-77eb-4f4f-aefd-087b7497d046")
-		(property "Reference" "#PWR0192"
+		(property "Reference" "#PWR055"
 			(at 373.38 331.47 0)
 			(effects
 				(font
@@ -14997,7 +15119,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0192")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -15012,7 +15134,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "bb5dd799-2f64-4ac3-93e6-e7149c5ea75c")
-		(property "Reference" "C43"
+		(property "Reference" "C8"
 			(at 370.84 317.5062 0)
 			(effects
 				(font
@@ -15135,6 +15257,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 318.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0184a67c-a078-445c-8c2b-bbf5d9903307")
 		)
@@ -15144,7 +15274,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C43")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -15159,7 +15289,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bde490f7-a623-4164-91ac-e480fbbb4636")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR065"
 			(at 386.08 201.93 0)
 			(effects
 				(font
@@ -15209,7 +15339,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR055")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -15224,7 +15354,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "be6e5e17-b2d1-4aeb-b8d8-ad7f9bff1870")
-		(property "Reference" "R99"
+		(property "Reference" "R22"
 			(at 345.948 367.03 0)
 			(effects
 				(font
@@ -15338,6 +15468,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 367.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2270055d-9cfa-4f44-8d8b-acfa4e179d46")
 		)
@@ -15347,7 +15485,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R99")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -15362,7 +15500,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c074971f-baf6-4200-ae71-c7ea425a4ff6")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR041"
 			(at 373.38 152.4 0)
 			(effects
 				(font
@@ -15413,7 +15551,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR035")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -15428,7 +15566,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c17bf79a-a921-4b89-814e-473824d99381")
-		(property "Reference" "#PWR0197"
+		(property "Reference" "#PWR057"
 			(at 373.38 354.33 0)
 			(effects
 				(font
@@ -15479,7 +15617,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR0197")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -15494,7 +15632,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c2c31179-7fc3-45a9-aa5f-6c2f5d286e66")
-		(property "Reference" "J5"
+		(property "Reference" "J6"
 			(at 388.62 66.0399 0)
 			(effects
 				(font
@@ -15601,6 +15739,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "a87e75a2-e5a0-46af-b579-983b0f06c685")
 		)
@@ -15619,7 +15765,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J5")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -15634,7 +15780,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c50546e0-de01-4e60-b701-111bbd10d992")
-		(property "Reference" "R92"
+		(property "Reference" "R10"
 			(at 345.694 305.816 90)
 			(effects
 				(font
@@ -15748,6 +15894,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 311.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "acd8a1a2-113d-4ed1-8f56-395075cf49f2")
 		)
@@ -15757,7 +15911,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R92")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -15773,7 +15927,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c5f748ff-f93e-4b63-a611-cc1c17c4dd00")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR012"
 			(at 166.37 95.25 0)
 			(effects
 				(font
@@ -15824,7 +15978,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR08")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -15839,7 +15993,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c8049e0a-cdf7-4659-893a-cf58fe002c0f")
-		(property "Reference" "#PWR047"
+		(property "Reference" "#PWR02"
 			(at 38.1 120.65 0)
 			(effects
 				(font
@@ -15889,7 +16043,7 @@
 		(instances
 			(project "rack-controller-V1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR047")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -16027,6 +16181,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "df1378ea-d022-4091-ba0e-ee455499dfcb")
 		)
@@ -16051,7 +16213,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cac6c168-7a56-4897-a113-d6ac926bd170")
-		(property "Reference" "#PWR059"
+		(property "Reference" "#PWR069"
 			(at 386.08 304.8 0)
 			(effects
 				(font
@@ -16101,7 +16263,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR059")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -16117,7 +16279,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3c86421-7f98-4425-bba3-8ddc3bb914d5")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR016"
 			(at 259.08 82.55 0)
 			(effects
 				(font
@@ -16168,7 +16330,7 @@
 		(instances
 			(project "rack-controller"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR014")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -16248,7 +16410,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d91a2d48-010f-4669-a122-e4ddb2f06c40")
-		(property "Reference" "J7"
+		(property "Reference" "J8"
 			(at 388.874 128.778 0)
 			(effects
 				(font
@@ -16355,6 +16517,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "63e9c44c-6434-4e8e-bb47-5b10d8abb862")
 		)
@@ -16370,7 +16540,7 @@
 		(instances
 			(project ""
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J7")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -16385,7 +16555,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dafbc8db-8afa-4205-ad01-394987fc6995")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR048"
 			(at 363.22 233.68 0)
 			(effects
 				(font
@@ -16435,7 +16605,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR044")
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -16450,7 +16620,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "db005277-6825-4914-9663-bc48ef6310b2")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR047"
 			(at 373.38 231.14 0)
 			(effects
 				(font
@@ -16501,7 +16671,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR043")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -16639,6 +16809,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "5ad36642-5aad-4601-9a63-a3b03280b89d")
 		)
@@ -16663,7 +16841,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e2073b2a-9dfd-49cb-b20c-c28ffd4d136e")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR050"
 			(at 363.22 259.08 0)
 			(effects
 				(font
@@ -16713,7 +16891,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR042")
+					(reference "#PWR050")
 					(unit 1)
 				)
 			)
@@ -16728,7 +16906,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e27f28cd-d990-4139-8668-37d0bc0087f3")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR04"
 			(at 38.1 405.13 0)
 			(effects
 				(font
@@ -16779,7 +16957,162 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR02")
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:FerriteBead_Small")
+		(at 72.39 106.68 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2a23250-5dc9-4fa1-b1e2-33f09711dfd8")
+		(property "Reference" "L2"
+			(at 75.692 107.696 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BBUP00100505330Y00"
+			(at 60.452 107.696 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric"
+			(at 72.39 104.902 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdata/8796740059166/ENFA0018.pdf"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "10 Ohms @ 100 MHz 1 Ferrite Bead 0402 (1005 Metric) 1.74A 15mOhm"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Current" "3A Max"
+			(at 66.548 105.156 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DCR" "22 mOhm"
+			(at 54.102 103.124 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Role" "L_CMC_A"
+			(at 57.912 105.156 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer#" "BLM15AX100SN1D"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor" "Digikey Electronics, Inc."
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Distributor#" "490-5437-1-ND"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Max Voltage" ""
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C668299"
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field-1" ""
+			(at 72.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "bc927878-6e73-44f3-bcbc-3881f2f9a7fe")
+		)
+		(pin "1"
+			(uuid "3f696dad-b785-4ccd-bad7-2d105bc66036")
+		)
+		(instances
+			(project "rack-controller-V1.0"
+				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
+					(reference "L2")
 					(unit 1)
 				)
 			)
@@ -16794,7 +17127,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e40f2e69-eafd-4168-8c9c-01364fd0e86e")
-		(property "Reference" "R15"
+		(property "Reference" "R17"
 			(at 346.202 244.094 0)
 			(effects
 				(font
@@ -16908,6 +17241,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "92c5aa56-f689-4c14-aacb-74b03de17116")
 		)
@@ -16917,7 +17258,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R15")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -16997,7 +17338,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "edf853b4-b5ce-4a86-8c40-ea7dfe1fa4be")
-		(property "Reference" "#PWR049"
+		(property "Reference" "#PWR059"
 			(at 386.08 44.45 0)
 			(effects
 				(font
@@ -17047,7 +17388,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR049")
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -17063,7 +17404,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f17266eb-624d-4996-8cef-9339756870de")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR06"
 			(at 139.7 113.03 0)
 			(effects
 				(font
@@ -17113,7 +17454,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR017")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -17128,7 +17469,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f1d71c43-9227-4f26-8455-24f9e5c43723")
-		(property "Reference" "R8"
+		(property "Reference" "R9"
 			(at 345.694 280.416 90)
 			(effects
 				(font
@@ -17242,6 +17583,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 346.71 285.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0af434a9-7d82-4629-8c19-030be481a4c3")
 		)
@@ -17251,7 +17600,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R8")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -17266,7 +17615,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f2ca42d4-94ea-47da-a21d-ec3e2b56a405")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR046"
 			(at 363.22 205.74 0)
 			(effects
 				(font
@@ -17316,7 +17665,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR040")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -17331,7 +17680,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f2f3d058-dbb1-481f-9f52-e1e79013d4de")
-		(property "Reference" "J4"
+		(property "Reference" "J5"
 			(at 388.62 46.9899 0)
 			(effects
 				(font
@@ -17438,6 +17787,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "4163d240-97ef-4f62-aee2-5219ff593cd6")
 		)
@@ -17456,7 +17813,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "J4")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -17471,7 +17828,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f6298ed3-7454-4a28-a4cd-c49a1342cad4")
-		(property "Reference" "R14"
+		(property "Reference" "R18"
 			(at 346.202 269.494 0)
 			(effects
 				(font
@@ -17585,6 +17942,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 361.95 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d0bd1268-d461-424b-b939-f4fa9f6ec0c4")
 		)
@@ -17594,7 +17959,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "R14")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -17609,7 +17974,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f66905b3-7312-4d11-9c69-0889c76d6368")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR067"
 			(at 386.08 255.27 0)
 			(effects
 				(font
@@ -17659,7 +18024,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR058")
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -17739,7 +18104,7 @@
 		(on_board yes)
 		(dnp yes)
 		(uuid "fa52ff58-ec29-410d-99d8-aefb14fe2063")
-		(property "Reference" "C5"
+		(property "Reference" "C6"
 			(at 370.84 267.9762 0)
 			(effects
 				(font
@@ -17862,6 +18227,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 368.3 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "489f30a9-8f25-4640-bed7-5a99f257683a")
 		)
@@ -17871,7 +18244,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "C5")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -17887,7 +18260,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fae3882f-91b1-4f29-a708-d5513073df41")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR013"
 			(at 259.08 52.07 0)
 			(effects
 				(font
@@ -17938,7 +18311,7 @@
 		(instances
 			(project ""
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR011")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -18060,6 +18433,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 386.08 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c7469c7c-aa4b-45c9-b839-bc43c95f9834")
 		)
@@ -18090,7 +18471,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "fe6598db-fae0-43c4-af03-704afe3acb8e")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR061"
 			(at 386.08 82.55 0)
 			(effects
 				(font
@@ -18140,7 +18521,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR051")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -18269,6 +18650,14 @@
 				(hide yes)
 			)
 		)
+		(property "Field-1" ""
+			(at 139.7 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d5373d4b-5482-4eb6-a294-704d6e8bef11")
 		)
@@ -18293,7 +18682,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ff5f3a81-609e-4d61-9afc-829df29b9e41")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR032"
 			(at 368.3 227.33 0)
 			(effects
 				(font
@@ -18343,7 +18732,7 @@
 		(instances
 			(project "rack-controller-RevAV1.0"
 				(path "/0298a268-9a0b-4113-bec3-5dd5ab780c58"
-					(reference "#PWR029")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -18384,7 +18773,7 @@
 			)
 		)
 		(pin "BDC_00_(+)" input
-			(at 82.55 107.95 180)
+			(at 82.55 106.68 180)
 			(uuid "4e7ff668-7942-4180-9340-52facd130c36")
 			(effects
 				(font
@@ -18394,7 +18783,7 @@
 			)
 		)
 		(pin "BDC_00_(-)" input
-			(at 82.55 100.33 180)
+			(at 82.55 101.6 180)
 			(uuid "8323561d-286f-4957-92d0-1028cea97cef")
 			(effects
 				(font
@@ -18404,7 +18793,7 @@
 			)
 		)
 		(pin "BDC_01_(+)" input
-			(at 82.55 133.35 180)
+			(at 82.55 132.08 180)
 			(uuid "ea869665-0068-4f9c-a634-8735e782aafc")
 			(effects
 				(font
@@ -18414,7 +18803,7 @@
 			)
 		)
 		(pin "BDC_01_(-)" input
-			(at 82.55 125.73 180)
+			(at 82.55 127 180)
 			(uuid "68d3fcfb-ebd4-4bf4-9423-7836d60afed3")
 			(effects
 				(font

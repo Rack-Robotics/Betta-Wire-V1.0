@@ -518,7 +518,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "3D-models/rack-controller-V1.0.step",
+      "step": "3D-models/rack-controller-V1.0_revE.step",
       "svg": "",
       "vrml": ""
     },
@@ -551,7 +551,7 @@
           "group_by": true,
           "label": "Value",
           "name": "Value",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -659,7 +659,7 @@
           "group_by": false,
           "label": "LCSC Part #",
           "name": "LCSC Part #",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -690,8 +690,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": false,
       "name": "",
-      "sort_asc": false,
-      "sort_field": "LCSC Part #"
+      "sort_asc": true,
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
