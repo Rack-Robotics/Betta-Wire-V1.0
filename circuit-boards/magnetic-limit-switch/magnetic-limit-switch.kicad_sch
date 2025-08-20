@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "magnetic-limit-switch")
-		(date "[25.03.13]")
-		(rev "C")
+		(date "2025-08-20")
+		(rev "D")
 		(company "Rack Robotics, Inc.")
 	)
 	(lib_symbols
@@ -1066,7 +1066,7 @@
 	)
 	(rectangle
 		(start 19.05 19.05)
-		(end 76.2 44.45)
+		(end 109.22 44.45)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1368,6 +1368,16 @@
 		)
 		(uuid "c49e7892-cdd5-4721-b505-f8f7b19ba130")
 	)
+	(wire
+		(pts
+			(xy 49.53 33.02) (xy 52.07 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4eb8e4a-34ba-44ab-a858-d4d3db4514d1")
+	)
 	(polyline
 		(pts
 			(xy 60.325 68.58) (xy 61.595 68.58)
@@ -1387,16 +1397,6 @@
 			(type default)
 		)
 		(uuid "ccc1b3c0-9ba1-4835-9f93-d77729a1ad47")
-	)
-	(wire
-		(pts
-			(xy 55.88 33.02) (xy 49.53 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dada67af-3ac4-4295-aee2-61515d95c54d")
 	)
 	(polyline
 		(pts
@@ -1452,7 +1452,7 @@
 	)
 	(global_label "SIGNAL_OUT"
 		(shape input)
-		(at 55.88 33.02 0)
+		(at 52.07 33.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1462,7 +1462,7 @@
 		)
 		(uuid "4c87695a-c716-4343-bb6d-523f76ab27a8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.9929 33.02 0)
+			(at 66.1829 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1714,7 +1714,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "NULL"
+		(property "LCSC Part #" "C17378950"
 			(at 46.99 72.39 0)
 			(effects
 				(font
