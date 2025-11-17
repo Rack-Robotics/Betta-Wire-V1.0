@@ -518,7 +518,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "3D-models/rack-controller-V1.0_revE.step",
+      "step": "production/rack-controller-V1.0_revF.step",
       "svg": "",
       "vrml": ""
     },
@@ -684,6 +684,42 @@
           "label": "Forward Drop",
           "name": "Forward Drop",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "I_max",
+          "name": "I_max",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "V_f",
+          "name": "V_f",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PWM Frequency",
+          "name": "PWM Frequency",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -770,16 +806,20 @@
       "Root"
     ],
     [
-      "e1900297-455c-422d-aa78-68bfcbbb8ba0",
-      "power"
-    ],
-    [
       "d3b80096-5c11-4987-aa35-9d6609e08afc",
       "stepper_motor_drivers"
     ],
     [
-      "06964615-3bed-49ed-98eb-1fb445cbcd8e",
-      "BDC_motor_drivers"
+      "4172a4c1-8caf-4323-bcab-0853af473ad5",
+      "9V_brushless_motor_drivers"
+    ],
+    [
+      "d3c9cf91-ad6d-4a34-9b29-f24fc709dd6a",
+      "buck_converter_5V"
+    ],
+    [
+      "ceabeb7a-40b6-47f4-8cbd-53d86d0405c2",
+      "load_switches"
     ]
   ],
   "text_variables": {}

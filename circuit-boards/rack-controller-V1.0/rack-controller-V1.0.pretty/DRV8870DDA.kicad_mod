@@ -1,0 +1,380 @@
+(footprint "DRV8870DDA"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "8-pin HTSOP package with 1.27mm pin pitch, compatible with SOIC-8, 3.9x4.9mm body, exposed pad, thermal vias, http://www.ti.com/lit/ds/symlink/drv8870.pdf")
+	(tags "HTSOP 1.27")
+	(property "Reference" "U6"
+		(at 0 -3.5 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3509937d-7351-41b6-9eb7-9885be5f8437")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DRV8870DDA"
+		(at 0 3.5 0)
+		(layer "F.Fab")
+		(uuid "8f1f56fd-aa00-4677-bb8d-1157cbec7f9a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "http://www.ti.com/lit/ds/symlink/drv8870.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae159497-53b1-4683-a20d-dfc8ff869b77")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Brushed DC Motor Driver, PWM Control, 45V, 3.6A, Dynamic current limiting, HTSOP-8"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ded93cc-ec10-4f4b-a262-eb1e618b62bd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a9d50323-647c-406e-8d6d-e673e2e7a258")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer#" "DRV8870DDAR"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c9f8f835-4ccc-47e2-a28b-a037eda4fa93")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Distributor" "Digikey Electronics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d5c135bd-bcfc-42dd-9ec8-38178f637098")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Distributor#" "296-42660-1-ND"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "09b94237-0bd6-4372-a7cf-860d7fde9f17")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Role" "H-BRIDGE"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "58b8251b-594a-46ff-a411-4aab62b506f4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part #" "C86590"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dd7867ea-7f3f-4891-ba42-c66b66c9f9b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Max Current" "3A Limit"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7a177aee-31e4-43b3-a5af-bc46c93d99e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PWM Frequency" "200 KHz Max"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "883a3e0c-7c8d-4e54-9a23-01e4e7ff8aed")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(solder_mask_margin 0.07)
+	(attr smd)
+	(fp_line
+		(start -2.075 -2.575)
+		(end 2.075 -2.575)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e852d872-8bde-4739-a63a-9b98431b6554")
+	)
+	(fp_line
+		(start -2.075 2.575)
+		(end 2.075 2.575)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1d685178-54c7-4063-9693-8c3033c99801")
+	)
+	(fp_poly
+		(pts
+			(xy -2.675 -2.475) (xy -2.915 -2.805) (xy -2.435 -2.805) (xy -2.675 -2.475)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "427d273b-9916-4bee-ba88-5daede1d6edb")
+	)
+	(fp_line
+		(start -4.2 -2.75)
+		(end -4.2 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b6040afe-a74d-4322-a424-c721f998ce4c")
+	)
+	(fp_line
+		(start -4.2 -2.75)
+		(end 4.2 -2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0dd1f137-7284-4d7c-9c00-982f73b8a9fa")
+	)
+	(fp_line
+		(start -4.2 2.75)
+		(end 4.2 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6bbe053d-c960-434c-a662-48a3c8075ab0")
+	)
+	(fp_line
+		(start 4.2 -2.75)
+		(end 4.2 2.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4d7a91c4-6bbd-4555-80a8-c4939ec0fdf4")
+	)
+	(fp_line
+		(start -1.95 -1.45)
+		(end -0.95 -2.45)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e64739ea-1611-48b1-83be-8ccf06dcc3b8")
+	)
+	(fp_line
+		(start -1.95 2.45)
+		(end -1.95 -1.45)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7a81c4f9-493d-441e-8d83-ed4067d3331a")
+	)
+	(fp_line
+		(start -0.95 -2.45)
+		(end 1.95 -2.45)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7fae1c4f-51b4-4b2d-9cae-5b3cd3a4bb60")
+	)
+	(fp_line
+		(start 1.95 -2.45)
+		(end 1.95 2.45)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f33cc5b0-15ad-489f-8635-64ebd68b1460")
+	)
+	(fp_line
+		(start 1.95 2.45)
+		(end -1.95 2.45)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5cc7c263-6e66-4fa1-9be0-08daeb0b4eb9")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "2e65a9d9-a7ec-45f4-9d2e-6614dfd651f5")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.135)
+			)
+		)
+	)
+	(pad "" smd rect
+		(at 0 0)
+		(size 2.4 3.1)
+		(layers "F.Mask")
+		(uuid "da445045-b049-41e2-a36c-cc3ee8e12e43")
+	)
+	(pad "" smd rect
+		(at 0 0)
+		(size 2.4 3.1)
+		(layers "F.Paste")
+		(uuid "165bf9c3-cca2-416c-b936-7030c8d9e2b4")
+	)
+	(pad "1" smd rect
+		(at -2.875 -1.905)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "233981dc-be5a-48ed-a056-71c308060069")
+	)
+	(pad "2" smd rect
+		(at -2.875 -0.635)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d288a3c8-dad7-4c1a-8c1e-952935c2cb71")
+	)
+	(pad "3" smd rect
+		(at -2.875 0.635)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ce2b15fd-d3ce-467c-a0e2-ea1623a40adb")
+	)
+	(pad "4" smd rect
+		(at -2.875 1.905)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d407dac3-b926-495c-a769-91bff7ee4e70")
+	)
+	(pad "5" smd rect
+		(at 2.875 1.905)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "91dd9305-cb6b-4d53-85aa-f8e658a51d07")
+	)
+	(pad "6" smd rect
+		(at 2.875 0.635)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f3125bd0-18c2-473f-9799-9d5960254a3c")
+	)
+	(pad "7" smd rect
+		(at 2.875 -0.635)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "58686abb-501b-4c6e-b731-f085f551551b")
+	)
+	(pad "8" smd rect
+		(at 2.875 -1.905)
+		(size 2.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "50be1e0e-0501-4332-b34a-5b053a8bfbda")
+	)
+	(pad "9" smd rect
+		(at 0 0)
+		(size 2.6 3.3)
+		(layers "B.Cu")
+		(uuid "3b95505c-8c87-4fd9-8f25-fccc8f0c8101")
+	)
+	(pad "9" smd rect
+		(at 0 0)
+		(size 2.95 4.9)
+		(layers "F.Cu")
+		(uuid "c9baadae-3199-41ad-b4f2-35e92f62416f")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.85x4.9mm_Mask2.4x3.1mm_ThermalVias.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
